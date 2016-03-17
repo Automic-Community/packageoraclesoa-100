@@ -10,20 +10,20 @@ binaries:
 
       - name: backup_application
         type: TEXT
-        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle-soa_backup_application.py
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_backup_application.py
         version: 1.0.0
 
       - name: deploy_application
         type: TEXT
-        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle-soa_deploy_application.py
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_deploy_application.py
         version: 1.0.0
 
       - name: redeploy_application
         type: TEXT
-        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle-soa_redeploy_application.py
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_redeploy_application.py
         version: 1.0.0
 
       - name: undeploy_application
         type: TEXT
-        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle-soa_undeploy_application.py
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_undeploy_application.py
         version: 1.0.0
