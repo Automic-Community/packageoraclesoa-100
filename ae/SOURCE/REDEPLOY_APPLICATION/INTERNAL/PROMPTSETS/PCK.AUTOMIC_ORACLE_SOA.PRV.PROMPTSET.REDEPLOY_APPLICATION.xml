@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<PRPT name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.REDEPLOY_APPLICATION">
+<HEADER state="1">
+<Title>Oracle_SOA re_deploy</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="506" icon="PRPT" id="PRPTS" left="0" top="0" width="321"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Parameters"><properties><entry name="text">Parameters</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_APP_NAMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Application Name" tooltip="Name under which the application shall be installed" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Application Name</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_APP_NAMEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Name under which the application shall be installed</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_PACKAGEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Package" tooltip="Path of the application directory, archive file, or root of the exploded archive directory to be deployed." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Package</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_PACKAGEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Path of the application directory, archive file, or root of the exploded archive directory to be deployed.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_VERSIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Version identifier" tooltip="Version identifier. " upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Version identifier</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_VERSIONs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Version identifier. </entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_A_VERSIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Archive version number" tooltip="Archive version number." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Archive version number</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_A_VERSIONs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Archive version number.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_PLAN_PATHs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Plan Path" tooltip="Optional. Name of the deployment plan file. The filename can be absolute or relative to the application directory. This argument defaults to the plan/plan.xml file in the application directory, if one exists." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Plan Path</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_PLAN_PATHs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Optional. Name of the deployment plan file. The filename can be absolute or relative to the application directory. This argument defaults to the plan/plan.xml file in the application directory, if one exists.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_CREATE_PLANs.00" nl="1" quotes="" text="Create Plan" tooltip="Boolean value indicating to create a default plan." required="0">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry name="text">Create Plan</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_CREATE_PLANs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Boolean value indicating to create a default plan.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_REMOTEs.00" nl="1" quotes="" text="Remote" tooltip="Boolean value specifying whether the operation will be remote from the file system that contains the source. Use this option when you are on a different machine from the Administration Server and the deployment files are already at the specified location where the Administration Server is located." required="0">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry name="text">Remote</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_REMOTEs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Boolean value specifying whether the operation will be remote from the file system that contains the source. Use this option when you are on a different machine from the Administration Server and the deployment files are already at the specified location where the Administration Server is located.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_GRACEFULLYs.00" nl="1" quotes="" text="Retire gracefully" tooltip="Retirement policy to gracefully retire an application only after it has completed all in-flight work. This policy is only meaningful for stop and redeploy operations and is mutually exclusive to the retire timeout policy." required="0">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry name="text">Retire gracefully</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_GRACEFULLYs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Retirement policy to gracefully retire an application only after it has completed all in-flight work. This policy is only meaningful for stop and redeploy operations and is mutually exclusive to the retire timeout policy.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+         </properties>
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_UPLOADs.00" nl="1" quotes="" text="Upload" tooltip="Boolean value specifying whether the application files are uploaded to the WebLogic Server Administration Server&apos;s upload directory prior to deployment. Use this option when the Administration Server cannot access the application files through the file system." required="0">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry name="text">Upload</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_UPLOADs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Boolean value specifying whether the application files are uploaded to the WebLogic Server Administration Server&apos;s upload directory prior to deployment. Use this option when the Administration Server cannot access the application files through the file system.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+         </properties>
+      </dynradiogroup><integer alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_RTIMEOUTs.00" max="" min="" nl="1" text="Retire Timeout" tooltip="Time (in seconds) WLST waits before retiring an application that has been replaced with a newer version. This option default to -1, which specifies gracefull timeout.">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_NUMERIC</entry>
+            <entry name="text">Retire Timeout</entry>
+            <entry name="min"/>
+            <entry name="max"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_RTIMEOUTs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Time (in seconds) WLST waits before retiring an application that has been replaced with a newer version. This option default to -1, which specifies gracefull timeout.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue">0</entry>
+         </properties>
+      </integer><integer alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_TIMEOUTs.00" max="" min="" nl="1" text="Timeout" tooltip="Time (in milliseconds) that WLST waits for the deployment process to complete before canceling the operation. A value of 0 indicates that the operation will not time out. This argument defaults to 300,000 ms (or 5 minutes).">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_NUMERIC</entry>
+            <entry name="text">Timeout</entry>
+            <entry name="min"/>
+            <entry name="max"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_TIMEOUTs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Time (in milliseconds) that WLST waits for the deployment process to complete before canceling the operation. A value of 0 indicates that the operation will not time out. This argument defaults to 300,000 ms (or 5 minutes).</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue">0</entry>
+         </properties>
+      </integer></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_WEBLOGIC_APP_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_APP_NAME#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_APP_NAMEs.00><UC4RB_WEBLOGIC_PACKAGEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_PACKAGE#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_PACKAGEs.00><UC4RB_WEBLOGIC_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_VERSION#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_VERSIONs.00><UC4RB_WEBLOGIC_A_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_A_VERSION#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_A_VERSIONs.00><UC4RB_WEBLOGIC_PLAN_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_PLAN_PATH#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_PLAN_PATHs.00><UC4RB_WEBLOGIC_CREATE_PLANs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_CREATE_PLAN#" ReadFromTable="OPSE">NO</UC4RB_WEBLOGIC_CREATE_PLANs.00><UC4RB_WEBLOGIC_REMOTEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_REMOTE#" ReadFromTable="OPSE">NO</UC4RB_WEBLOGIC_REMOTEs.00><UC4RB_WEBLOGIC_GRACEFULLYs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_GRACEFULLY#" ReadFromTable="OPSE">NO</UC4RB_WEBLOGIC_GRACEFULLYs.00><UC4RB_WEBLOGIC_UPLOADs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_UPLOAD#" ReadFromTable="OPSE">NO</UC4RB_WEBLOGIC_UPLOADs.00><UC4RB_WEBLOGIC_RTIMEOUTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_RTIMEOUT#" ReadFromTable="OPSE">-1</UC4RB_WEBLOGIC_RTIMEOUTs.00><UC4RB_WEBLOGIC_TIMEOUTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_TIMEOUT#" ReadFromTable="OPSE">300000</UC4RB_WEBLOGIC_TIMEOUTs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

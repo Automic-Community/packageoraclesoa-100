@@ -1,0 +1,8 @@
+automationEngine: 
+  host: VVNFIBODEV01
+  port: 2217
+  client: 105
+  user: AUTOMIC
+  department: AUTOMIC
+  password: AUTOMIC
+  packagesPath: PACKAGES

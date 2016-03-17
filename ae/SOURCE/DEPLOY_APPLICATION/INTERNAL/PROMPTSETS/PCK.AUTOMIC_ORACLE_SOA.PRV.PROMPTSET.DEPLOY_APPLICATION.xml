@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<PRPT name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">
+<HEADER state="1">
+<Title>Oracle_SOA deploy application promptset</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="424" icon="PRPT" id="PRPTS" left="0" top="0" width="441"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Deploy Application"><properties><entry name="text">Deploy Application</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_APP_NAMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Application Name" tooltip="Name under which the application shall be installed" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Application Name</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_APP_NAMEs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Name under which the application shall be installed</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_PACKAGEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Package" tooltip="Path of the application directory, archive file, or root of the exploded archive directory to be deployed." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Package</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_PACKAGEs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Path of the application directory, archive file, or root of the exploded archive directory to be deployed.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_TARGETSs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Targets" tooltip="Installation targets. Multiple values can be given using &quot;,&quot; as seperator" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Targets</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_TARGETSs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Installation targets. Multiple values can be given using &quot;,&quot; as seperator</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_SUB_TARGETSs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Submodule Targets" tooltip="Submodule level targets for JMS modules. Option: subModuleTargets" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Submodule Targets</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_SUB_TARGETSs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Submodule level targets for JMS modules. Option: subModuleTargets</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </text><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_WEBLOGIC_STAGINGs.00" nl="1" strict="1" text="Staging Mode" tooltip="Options: stage, nostage, external_stage" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference" reftype="STATIC">PCK.AUTOMIC_ORACLE_SOA.PRV.VARA.DEPLOYMENT_STAGING_MODE</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Staging Mode</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_STAGINGs.00</entry>
+        <entry name="dynamic">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Options: stage, nostage, external_stage</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="onchangereset"/>
+        <entry name="customfield"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_VERSIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Version identifier" tooltip="Version identifier. Option. versionIdentifier" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Version identifier</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_VERSIONs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Version identifier. Option. versionIdentifier</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_A_VERSIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Archive version number" tooltip="Archive version number. Option: archiveVersion" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Archive version number</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_A_VERSIONs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Archive version number. Option: archiveVersion</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_PLAN_PATHs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Plan Path" tooltip="Optional. Name of the deployment plan file. The filename can be absolute or relative to the application directory. This argument defaults to the plan/plan.xml file in the application directory, if one exists." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Plan Path</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_PLAN_PATHs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Optional. Name of the deployment plan file. The filename can be absolute or relative to the application directory. This argument defaults to the plan/plan.xml file in the application directory, if one exists.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </text><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="UC4RB_WEBLOGIC_CREATE_PLANs.00" nl="1" text="Create Plan" tooltip="" required="0">
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Create Plan</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_CREATE_PLANs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="UC4RB_WEBLOGIC_REMOTEs.00" nl="1" text="Remote" tooltip="" required="0">
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Remote</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_REMOTEs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="UC4RB_WEBLOGIC_UPLOADs.00" nl="1" text="Upload" tooltip="" required="0">
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Upload</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_UPLOADs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </dynradiogroup><integer alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_TIMEOUTs.00" max="" min="" nl="1" text="Timeout" tooltip="">
+      <properties>
+        <entry listparam="N" name="reference" reftype="STATIC">UC_DATATYPE_NUMERIC</entry>
+        <entry name="text">Timeout</entry>
+        <entry name="min"/>
+        <entry name="max"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_TIMEOUTs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue">0</entry>
+         </properties>
+    </integer><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_OPTIONSs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Options" tooltip="Optional. Comma-separated list of deployment options, specified as name-value pairs" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Options</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_OPTIONSs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Optional. Comma-separated list of deployment options, specified as name-value pairs</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </text></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_WEBLOGIC_APP_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_APP_NAME#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_APP_NAMEs.00><UC4RB_WEBLOGIC_PACKAGEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_PACKAGE#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_PACKAGEs.00><UC4RB_WEBLOGIC_TARGETSs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_TARGETS#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_TARGETSs.00><UC4RB_WEBLOGIC_SUB_TARGETSs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_SUB_TARGETS#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_SUB_TARGETSs.00><UC4RB_WEBLOGIC_STAGINGs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_STAGING#" ReadFromTable="OPSE">nostage</UC4RB_WEBLOGIC_STAGINGs.00><UC4RB_WEBLOGIC_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_VERSION#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_VERSIONs.00><UC4RB_WEBLOGIC_A_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_A_VERSION#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_A_VERSIONs.00><UC4RB_WEBLOGIC_PLAN_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_PLAN_PATH#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_PLAN_PATHs.00><UC4RB_WEBLOGIC_CREATE_PLANs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_CREATE_PLAN#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_CREATE_PLANs.00><UC4RB_WEBLOGIC_REMOTEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_REMOTE#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_REMOTEs.00><UC4RB_WEBLOGIC_UPLOADs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_UPLOAD#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_UPLOADs.00><UC4RB_WEBLOGIC_TIMEOUTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_TIMEOUT#" ReadFromTable="OPSE">300000</UC4RB_WEBLOGIC_TIMEOUTs.00><UC4RB_WEBLOGIC_OPTIONSs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_OPTIONS#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_OPTIONSs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

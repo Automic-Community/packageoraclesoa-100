@@ -1,0 +1,29 @@
+# Package Build Configuration 
+name: PCK.AUTOMIC_ORACLE_SOA
+
+source: ae
+  
+# binary object resource mapping will be defined here
+binaries:
+  - object: RESOURCES/LIBS/PCK.AUTOMIC_ORACLE_SOA.PRV.STORE
+    resources: 
+
+      - name: backup_application
+        type: TEXT
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle-soa_backup_application.py
+        version: 1.0.0
+
+      - name: deploy_application
+        type: TEXT
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle-soa_deploy_application.py
+        version: 1.0.0
+
+      - name: redeploy_application
+        type: TEXT
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle-soa_redeploy_application.py
+        version: 1.0.0
+
+      - name: undeploy_application
+        type: TEXT
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle-soa_undeploy_application.py
+        version: 1.0.0
