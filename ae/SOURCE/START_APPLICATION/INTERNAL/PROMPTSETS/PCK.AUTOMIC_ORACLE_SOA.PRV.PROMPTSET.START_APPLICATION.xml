@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<PRPT name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">
+<HEADER state="1">
+<Title>weblogic start application</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="506" icon="PRPT" id="PRPTS" left="0" top="0" width="420"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Start Application"><properties><entry name="text">Start Application</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_APP_NAMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Application Name" tooltip="Name under which the application shall be installed" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Application Name</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_APP_NAMEs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Name under which the application shall be installed</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+         <entry name="customfield"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="UC4RB_WEBLOGIC_TESTMODEs.00" nl="1" text="Test Mode" tooltip="Boolean value specifying whether to start the Web application with restricted access." required="0">
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Test Mode</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_TESTMODEs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Boolean value specifying whether to start the Web application with restricted access.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="UC4RB_WEBLOGIC_FAIL_RUNNINGs.00" nl="1" text="Fail if application is running" tooltip="Specifies if the Job should fail in case the application is already running." required="0">
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Fail if application is running</entry>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_FAIL_RUNNINGs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip">Specifies if the Job should fail in case the application is already running.</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         </properties>
+    </dynradiogroup><integer alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_TIMEOUTs.00" max="" min="" nl="1" text="Timeout" tooltip="Time (in milliseconds) that WLST waits for the deployment process to complete before canceling the operation. A value of 0 indicates that the operation will not time out. This argument defaults to 300,000 ms (or 5 minutes).">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_NUMERIC</entry>
+            <entry name="text">Timeout</entry>
+            <entry name="min"/>
+            <entry name="max"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_WEBLOGIC_TIMEOUTs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Time (in milliseconds) that WLST waits for the deployment process to complete before canceling the operation. A value of 0 indicates that the operation will not time out. This argument defaults to 300,000 ms (or 5 minutes).</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue">0</entry>
+         <entry name="customfield"/>
+         </properties>
+      </integer></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_WEBLOGIC_APP_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_APP_NAME#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_APP_NAMEs.00><UC4RB_WEBLOGIC_TESTMODEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_TESTMODE#" ReadFromTable="OPSE">NO</UC4RB_WEBLOGIC_TESTMODEs.00><UC4RB_WEBLOGIC_FAIL_RUNNINGs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_FAIL_RUNNING#" ReadFromTable="OPSE">NO</UC4RB_WEBLOGIC_FAIL_RUNNINGs.00><UC4RB_WEBLOGIC_TIMEOUTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_TIMEOUT#" ReadFromTable="OPSE">300000</UC4RB_WEBLOGIC_TIMEOUTs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>
