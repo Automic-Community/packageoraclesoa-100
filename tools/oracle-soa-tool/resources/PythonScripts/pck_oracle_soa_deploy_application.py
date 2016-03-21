@@ -287,15 +287,15 @@ def getOptions(inputOptions):
 
 #pck_weblogic_utils END
 
-inputServerURL = sys.argv[1]
-inputUser = sys.argv[2]
-inputPassword = sys.argv[3]
-inputSar = sys.argv[4]
-inputOverwrite = sys.argv[5]
-inputForceDefault = sys.argv[6]
-inputConfigPlan = sys.argv[7]
-inputPartition = sys.argv[8]
-inputOptions = sys.argv[9]
+inputUser = sys.argv[1]
+inputPassword = sys.argv[2]
+inputServerURL = sys.argv[5] + '://' + sys.argv[3] + ':' + sys.argv[4]
+
+inputSar = sys.argv[6]
+inputOverwrite = sys.argv[7]
+inputForceDefault = sys.argv[8]
+inputConfigPlan = sys.argv[9]
+inputPartition = sys.argv[10]
 
 def printParam(name, value):  
   if name is None:
@@ -304,16 +304,16 @@ def printParam(name, value):
     value = ''
   print name + ': ' + value
 
-def printInputs():
-    printParam('Server URL',rf_prep_str(sys.argv[1]))
-    printParam('User',rf_prep_str(sys.argv[2]))
-    printParam('Password',rf_prep_str(sys.argv[3]))
-    printParam('Sar Location',rf_prep_str(inputSar))
-    printParam('Overwrite',to_t_f(inputOverwrite))
-    printParam('Force Default',to_t_f(inputForceDefault))
-    printParam('Config Plan',rf_prep_str(inputConfigPlan))
-    printParam('Partition',rf_prep_str(inputPartition))
-    printParam('Options',rf_prep_str(inputOptions))
+# Just for debug
+# def printInputs():
+    # printParam('Server URL',rf_prep_str(inputServerURL))
+    # printParam('User',rf_prep_str(inputUser))
+    # printParam('Password',rf_prep_str(inputPassword))
+    # printParam('Sar Location',rf_prep_str(inputSar))
+    # printParam('Overwrite',to_t_f(inputOverwrite))
+    # printParam('Force Default',to_t_f(inputForceDefault))
+    # printParam('Config Plan',rf_prep_str(inputConfigPlan))
+    # printParam('Partition',rf_prep_str(inputPartition))
 
 #printInputs()
 
@@ -328,6 +328,9 @@ if inputConfigPlan == '':
 else:
   configPlanPath_tmp = rf_prep_str(inputConfigPlan.replace ('\\','/'))
   #print 'converted plan path: '+configPlanPath_tmp
+
+if inputPartition == '':
+  inputPartition='default'
 
 progress=sca_deployComposite(rf_prep_str(inputServerURL)
   ,rf_prep_str(sar_path_tmp)
