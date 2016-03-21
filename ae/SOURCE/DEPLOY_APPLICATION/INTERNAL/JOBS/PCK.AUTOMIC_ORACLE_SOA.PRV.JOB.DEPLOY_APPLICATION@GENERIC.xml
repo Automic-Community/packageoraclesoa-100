@@ -108,6 +108,33 @@
 ! Normalize WL config plan path
 :INC PCK.AUTOMIC_FILESYSTEM.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_WEBLOGIC_CONFIG_PLAN"
 
+!Check host is not empty
+:IF &UC4RB_WEBLOGIC_HOST# =""
+echo "Host parameter must not empty."
+:  SWITCH &$PLATFORM#
+:    CASE "WINDOWS"
+
+     set /a errors=2 > nul
+     if %errors% GTR 0 (
+        set retcode=%errors%
+        goto :retcode
+     )
+:    CASE "UNIX"
+      errors=2
+      if [ $errors -gt 0 ]
+       then
+         exit $errors
+      fi
+:    OTHER
+:  ENDSWITCH
+:ENDIF
+
+! Concat Server URL
+:DEFINE &UC4RB_WEBLOGIC_SERVER_URL#, string
+:SET &UC4RB_WEBLOGIC_SERVER_URL# = STR_CAT(&UC4RB_WEBLOGIC_SERVER_URL#, '&UC4RB_WEBLOGIC_USE_PROTOCOL#://')
+:SET &UC4RB_WEBLOGIC_SERVER_URL# = STR_CAT(&UC4RB_WEBLOGIC_SERVER_URL#, '&UC4RB_WEBLOGIC_HOST#:')
+:SET &UC4RB_WEBLOGIC_SERVER_URL# = STR_CAT(&UC4RB_WEBLOGIC_SERVER_URL#, '&UC4RB_WEBLOGIC_PORT#')
+
 :INC PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.DEPLOY_APPLICATION_LOGGING_PARAMS
 
 ! Validate weblogic home directory
