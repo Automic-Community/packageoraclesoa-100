@@ -1,0 +1,15 @@
+*** Settings ***
+Force Tags        BASIC    SUDO    COMMON_OPTs    ADMIN_SERVER_CONN
+Default Tags      win    unix
+Resource          env/default.txt
+Resource          resources/context.txt
+
+*** Test Cases ***
+ConnectAE
+    Log    Revert AE
+    Log    Connect AE
+    Action Connect    ${_AE_HOST}    ${_AE_PORT}    ${_AE_USER}    ${_AE_PASS}    ${_AE_TEMP_FOLD}
+
+Initialize Agent
+    Log    revert agent
+    Init WL Agent

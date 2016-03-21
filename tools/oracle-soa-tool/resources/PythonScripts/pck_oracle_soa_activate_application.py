@@ -289,34 +289,15 @@ def getOptions(inputOptions):
 
 import sys, string, os, os.path, time, traceback, shutil 
 
-inputUser = sys.argv[1]
+inputUser = rf_prep_str(sys.argv[1])
 inputPassword = sys.argv[2]
-inputHost = sys.argv[3]
+inputHost = rf_prep_str(sys.argv[3])
 inputPort = sys.argv[4]
 inputProtocol = sys.argv[5]
-inputApplication = sys.argv[6]
-inputRevision = sys.argv[7]
-inputLabel = sys.argv[8]
-inputPartition = sys.argv[9]
-
-def printParam(name, value):  
-  if name is None:
-    return None
-  if value is None:
-    value = ''
-  print name + ': ' + value
-  
-def printInputs():
-    printParam('User', inputUser)
-    printParam('Host', inputHost)
-    printParam('Port', inputPort)
-    printParam('Protocol', inputProtocol)
-    printParam('Application Name', rf_prep_str(inputApplication))
-    printParam('Revision', rf_prep_str(inputRevision))
-    printParam('Label', rf_prep_str(inputLabel))
-    printParam('Partition', rf_prep_str(inputPartition))
-
-printInputs()
+inputApplication = rf_prep_str(sys.argv[6])
+inputRevision = rf_prep_str(sys.argv[7])
+inputLabel = rf_prep_str(sys.argv[8])
+inputPartition = rf_prep_str(sys.argv[9])
 
 #pck_weblogic_edit_session_wait START
 print "Execute python script with WLST"
@@ -347,7 +328,7 @@ try:
     failed = 0;
 #pck_weblogic_edit_finally_block START
 finally:
-    dumpStack();
+    # dumpStack();
     disconnect('true');
     exit('y', failed);
 #pck_weblogic_edit_finally_block END
