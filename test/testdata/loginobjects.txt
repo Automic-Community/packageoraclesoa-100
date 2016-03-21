@@ -1,0 +1,7 @@
+*** Variables ***
+${LOGIN.ALL}      UC4_RL.LOGIN.ALL
+${LOGIN.ORACLE}    LOGIN.ORACLE
+${LOGIN.SUDO}     LOGIN.SUDOERS    # login object for sudo user
+${LOGIN.SUDO.NOPASS}    LOGIN.SUDOERS.NOPW    # login object of sudo user but not require password
+${LOGIN.NOT.SUDOER}    LOGIN.NOT.SUDOERS    # login object of user which is not sudoer
+${LOGIN.ROOT}     LOGIN.ROOT    # login for user root

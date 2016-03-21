@@ -1,0 +1,4 @@
+--doc This argument file contains collection of testsuites and testcases for WL actions
+# This is a comment
+Init_Environments.txt
+testcases

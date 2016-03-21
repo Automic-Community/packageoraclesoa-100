@@ -5,6 +5,17 @@ source: ae
   
 # binary object resource mapping will be defined here
 binaries:
+  - object: RESOURCES/PCK.AUTOMIC_ORACLE_SOA.PRV.CUSTOM_TYPES
+    timestamp: disabled
+    resources: 
+    - name: DEPLOYMENTTARGET#ORACLE_SOA#1
+      type: TEXT
+      path: ara/types/deploymenttarget/OracleSOA.xml
+      version: 1.0
+    - name: COMPONENT#ORACLE_SOA#2
+      type: TEXT
+      path: ara/types/component/OracleSOA.xml
+      version: 1.0
   - object: RESOURCES/LIBS/PCK.AUTOMIC_ORACLE_SOA.PRV.STORE
     resources: 
 
