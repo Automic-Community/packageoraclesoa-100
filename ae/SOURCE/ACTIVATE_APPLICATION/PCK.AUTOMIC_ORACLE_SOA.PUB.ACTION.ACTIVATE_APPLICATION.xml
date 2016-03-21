@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <JOBP AllowExternal="1" name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION">
 <XHEADER state="1">
-<Title>Oracle SOA Start Application</Title>
+<Title>Oracle SOA Activate Application</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <Active>1</Active>
