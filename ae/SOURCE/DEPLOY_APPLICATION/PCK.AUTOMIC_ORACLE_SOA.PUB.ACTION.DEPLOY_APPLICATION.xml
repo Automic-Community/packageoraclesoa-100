@@ -349,42 +349,38 @@
 PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION
 
 = General description =
-Deploys an application to one or multiple targets.
-The action can be used to deploy an application from an application directory, package, or root of the exploded archive directory.
+Deploys a SOA composite application to the Oracle WebLogic Server. 
 
 = Inputs =
-* Host: IP or hostname of the Administration Server
-* Port: Port number used to connect to the Administration Server
+* Host: IP or hostname of the WebLogic Server
+* Port: Port number used to connect to the WebLogic SOA Server
 * Username: Username used to authenticate with WebLogic
 * Password: Password used to authenticate with WebLogic
 * Connection Protocol: Select connection protocol to connect WLST to server
-* Application Name: Name under which the application shall be installed
-* Package: Path of the application directory, archive file, or root of the exploded archive directory to be deployed.
+* Sar Location: Absolute path to one the following:
+	SOA archive (SAR) file.
+	A SAR file is a special JAR file that requires a prefix of sca_ (for example, sca_HelloWorld_rev1.0.jar). The SAR file can be deployed with the deployment commands (such as sca_deployComposite()), but a regular .jar file is not 	treated as a special SAR file.
+	ZIP file that includes multiple SARs, metadata archives (MARs), or both.
+	Enterprise archive (EAR) file that contains a SAR file.
+* Overwrite: Optional. Indicates whether to overwrite an existing SOA composite application file.
+	false (default): Does not overwrite the file.
+	true: Overwrites the file.
+* Force Default: Optional. Indicates whether to set the new composite as the default.
+	true (default): Makes it the default composite.
+	false: Does not make it the default composite.
+* Config plan: Optional. Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file.
+* Partition: Optional. The name of the partition in which to deploy the SOA composite application. The default value is default. If you do not specify a partition, the composite is automatically deployed into the default partition.
 * Weblogic Home: WebLogic home directory
 * Java Options: Java options
-* Targets: Installation targets. Multiple values can be given using "," as seperator
-* Submodule Targets: Submodule level targets for JMS modules. Option: subModuleTargets
-* Staging Mode: Options: stage, nostage, external_stage
-* Version identifier: Version identifier. Option. versionIdentifier
-* Archive version number: Archive version number. Option: archiveVersion
-* Plan Path: Optional. Name of the deployment plan file. The filename can be absolute or relative to the application directory. This argument defaults to the plan/plan.xml file in the application directory, if one exists.
-* Create Plan: Boolean value indicating that user would like to create a default plan. Option: createPlan
-* Remote: Boolean value specifying whether the operation will be remote from the file system that contains the source. Use this option when you are on a different machine from the Administration Server and the deployment files are already at the specified location where the Administration Server is located. This option defaults to false. Option: remote
-* Upload: Boolean value specifying whether the application files are uploaded to the WebLogic Server Administration Server's upload directory prior to deployment. Use this option when the Administration Server cannot access the application files through the file system. This option defaults to false. Option: upload
-* Timeout: Time (in milliseconds) that WLST waits for the deployment process to complete before canceling the operation. A value of 0 indicates that the operation will not time out. This argument defaults to 300,000 ms (or 5 minutes). Option: timeout
-Fail if application is running: Specifies if the Job should fail in case the application is already stopped. YES/NO
-* Options: Optional. Comma-separated list of deployment options, specified as name-value pairs
 
 = Behavior =
-Deploys an application to one or multiple targets.
-The action can be used to deploy an application from an application directory, package, or root of the exploded archive directory.
+This Action does not package the artifact files of the application for deployment.
 
 = Outputs =
 (none)
  
 = Rollback =
-* If the application was not deployed before --> it should be undeployed by the rollback function (you may use the runbook function 'Undeploy Application' for this purpose)
-* If the application was deployed before --> it should further remain deployed after rollback
+(none)
 
 = Logging =
 (none)
