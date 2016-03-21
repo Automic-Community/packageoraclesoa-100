@@ -27,7 +27,7 @@
 <row Name="Build Number" Value="38" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Categories" Value="Application Server" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Company" Value="Automic Software GmbH" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="Dependencies" Value="PCK.ITPA_SHARED ~&gt; 1.1, PCK.AUTOMIC_FILESYSTEM ~&gt; 1.1,PCK.AUTOMIC_ORACLE_SOA ~&gt; 1.1" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Dependencies" Value="PCK.ITPA_SHARED ~&gt; 1.1, PCK.AUTOMIC_FILESYSTEM ~&gt; 1.1, PCK.AUTOMIC_WEBLOGIC ~&gt; 1.1" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Description" Value="This package contains actions to interact with Oracle SOA" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Homepage" Value="www.automic.com" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="License" Value="" Value1="" Value2="" Value3="" Value4=""/>
