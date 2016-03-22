@@ -109,10 +109,37 @@
         <entry name="customfield"/>
       <entry name="initvalue"/>
          </properties>
-    </dynradiogroup></readpanel></dialog>]]></XUIEDITOR>
+    </dynradiogroup><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_HOMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" separator=";" showaspassword="0" text="Oracle Home" tooltip="Oracle home directory" upper="0" required="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Oracle Home</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_WEBLOGIC_HOMEs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Oracle home directory</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/></properties>
+    </text></readpanel></dialog>]]></XUIEDITOR>
 </PROMPTSETXUI>
 <PROMPTSETDATA state="1">
-<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_ORACLE_SOA_APP_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_ORACLE_SOA_APP_NAME#" ReadFromTable="OPSE"></UC4RB_ORACLE_SOA_APP_NAMEs.00><UC4RB_ORACLE_SOA_REVISIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_ORACLE_SOA_REVISION#" ReadFromTable="OPSE"></UC4RB_ORACLE_SOA_REVISIONs.00><UC4RB_ORACLE_SOA_LABELs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_ORACLE_SOA_LABEL#" ReadFromTable="OPSE"></UC4RB_ORACLE_SOA_LABELs.00><UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_ORACLE_SOA_FAIL_RUNNING#" ReadFromTable="OPSE">NO</UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_ORACLE_SOA_APP_NAMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_ORACLE_SOA_APP_NAME#" ReadFromTable="OPSE"></UC4RB_ORACLE_SOA_APP_NAMEs.00><UC4RB_ORACLE_SOA_REVISIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_ORACLE_SOA_REVISION#" ReadFromTable="OPSE"></UC4RB_ORACLE_SOA_REVISIONs.00><UC4RB_ORACLE_SOA_LABELs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_ORACLE_SOA_LABEL#" ReadFromTable="OPSE"></UC4RB_ORACLE_SOA_LABELs.00><UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_ORACLE_SOA_FAIL_RUNNING#" ReadFromTable="OPSE">NO</UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00><UC4RB_WEBLOGIC_HOMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_HOME#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_HOMEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
 </PROMPTSETDATA>
 <DOCU_Docu state="1" type="text">
 <DOC/>
