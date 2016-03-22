@@ -311,10 +311,7 @@ try:
     else:
         connect(inputUser, inputPassword)
 
-    if inputLabel == '':
-        inputLabel = None;
-
-    if inputPartition == '':
+    if inputPartition == '' or inputPartition == None:
         inputPartition = 'default';
 
     sca_activateComposite(inputHost,
