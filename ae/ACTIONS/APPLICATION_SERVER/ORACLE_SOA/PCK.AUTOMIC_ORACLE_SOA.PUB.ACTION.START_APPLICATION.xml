@@ -56,7 +56,7 @@
 <PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
 <UC4RB_WEBLOGIC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOST#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
-<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">--10</UC4RB_WEBLOGIC_PASSWORDs.00>
 <UC4RB_WEBLOGIC_PORTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PORT#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">7001</UC4RB_WEBLOGIC_PORTs.00>
 <UC4RB_WEBLOGIC_USE_PROTOCOLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USE_PROTOCOL#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">t3</UC4RB_WEBLOGIC_USE_PROTOCOLs.00>
 <UC4RB_WEBLOGIC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USERNAME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
@@ -74,27 +74,27 @@
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">
-<UC4RB_WEBLOGIC_APP_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
-<UC4RB_WEBLOGIC_FAIL_RUNNINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_FAIL_RUNNING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_WEBLOGIC_FAIL_RUNNINGs.00>
-<UC4RB_WEBLOGIC_TESTMODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TESTMODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_WEBLOGIC_TESTMODEs.00>
-<UC4RB_WEBLOGIC_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">300000</UC4RB_WEBLOGIC_TIMEOUTs.00>
+<UC4RB_ORACLE_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
+<UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_FAIL_RUNNING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00>
+<UC4RB_ORACLE_SOA_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
+<UC4RB_ORACLE_SOA_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_REVISION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
-<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
-<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
-<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -145,7 +145,7 @@
 <PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
 <UC4RB_WEBLOGIC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOST#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
-<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">--10</UC4RB_WEBLOGIC_PASSWORDs.00>
 <UC4RB_WEBLOGIC_PORTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PORT#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">7001</UC4RB_WEBLOGIC_PORTs.00>
 <UC4RB_WEBLOGIC_USE_PROTOCOLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USE_PROTOCOL#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">t3</UC4RB_WEBLOGIC_USE_PROTOCOLs.00>
 <UC4RB_WEBLOGIC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USERNAME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
@@ -163,27 +163,27 @@
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">
-<UC4RB_WEBLOGIC_APP_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
-<UC4RB_WEBLOGIC_FAIL_RUNNINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_FAIL_RUNNING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_WEBLOGIC_FAIL_RUNNINGs.00>
-<UC4RB_WEBLOGIC_TESTMODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TESTMODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_WEBLOGIC_TESTMODEs.00>
-<UC4RB_WEBLOGIC_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">300000</UC4RB_WEBLOGIC_TIMEOUTs.00>
+<UC4RB_ORACLE_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
+<UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_FAIL_RUNNING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00>
+<UC4RB_ORACLE_SOA_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
+<UC4RB_ORACLE_SOA_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_REVISION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
-<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
-<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
-<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -217,7 +217,7 @@
 <PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
 <UC4RB_WEBLOGIC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOST#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
-<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">--10</UC4RB_WEBLOGIC_PASSWORDs.00>
 <UC4RB_WEBLOGIC_PORTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PORT#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">7001</UC4RB_WEBLOGIC_PORTs.00>
 <UC4RB_WEBLOGIC_USE_PROTOCOLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USE_PROTOCOL#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">t3</UC4RB_WEBLOGIC_USE_PROTOCOLs.00>
 <UC4RB_WEBLOGIC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USERNAME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
@@ -235,27 +235,27 @@
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">
-<UC4RB_WEBLOGIC_APP_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
-<UC4RB_WEBLOGIC_FAIL_RUNNINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_FAIL_RUNNING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_WEBLOGIC_FAIL_RUNNINGs.00>
-<UC4RB_WEBLOGIC_TESTMODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TESTMODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_WEBLOGIC_TESTMODEs.00>
-<UC4RB_WEBLOGIC_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">300000</UC4RB_WEBLOGIC_TIMEOUTs.00>
+<UC4RB_ORACLE_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
+<UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_FAIL_RUNNING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00>
+<UC4RB_ORACLE_SOA_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
+<UC4RB_ORACLE_SOA_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_REVISION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
-<LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
+<LOGINs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">
-<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
-<UC4RB_SUDO_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
-<UC4RB_USE_SUDOs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
+<UC4RB_SUDO_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_PASSWORD#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">--10</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_SUDO_USERs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SUDO_USER#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO"/>
+<UC4RB_USE_SUDOs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_USE_SUDO#" promptsetname="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO">None</UC4RB_USE_SUDOs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -319,7 +319,9 @@
 </node>
 <node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" prptmode="1"/>
+<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" prptmode="1">
+<UC4RB_WEBLOGIC_PASSWORDs.00 altview="0" haslist="0">--10</UC4RB_WEBLOGIC_PASSWORDs.00>
+</PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" parent="PRPTS" type="PROMPTSET">
@@ -329,17 +331,29 @@
 </node>
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" prptmode="1"/>
+<PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION" prptmode="1">
+<UC4RB_ORACLE_SOA_APP_NAMEs.00 altview="0" haslist="0"/>
+<UC4RB_ORACLE_SOA_REVISIONs.00 altview="0" haslist="0"/>
+<UC4RB_ORACLE_SOA_LABELs.00 altview="0" haslist="0"/>
+<UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00 altview="0" haslist="0">NO</UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00>
+</PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" ontop="1">
-<PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" prptmode="1"/>
+<PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" prptmode="1">
+<AGENTs.00 altview="0" haslist="0"/>
+<LOGINs.00 altview="0" haslist="0"/>
+</PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" ontop="1">
-<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" prptmode="1"/>
+<PRPTBOX promptset="PCK.ITPA_SHARED.PUB.PROMPTSET.SUDO" prptmode="1">
+<UC4RB_SUDO_PASSWORDs.00 altview="0" haslist="0">--10</UC4RB_SUDO_PASSWORDs.00>
+<UC4RB_USE_SUDOs.00 altview="0" haslist="0">None</UC4RB_USE_SUDOs.00>
+<UC4RB_SUDO_USERs.00 altview="0" haslist="0"/>
+</PRPTBOX>
 </PROMPTSET>
 </node>
 </dyntree>
@@ -353,7 +367,7 @@
 <ComponentName/>
 </DEPLOYMENT>
 <ROLLBACK state="1">
-<RollbackFlag>1</RollbackFlag>
+<RollbackFlag>0</RollbackFlag>
 <CBackupObj>PCK.AUTOMIC_ORACLE_SOA.PRV.BACKUP.START_APPLICATION</CBackupObj>
 <CRollbackObj>PCK.AUTOMIC_ORACLE_SOA.PRV.ROLLBACK.START_APPLICATION</CRollbackObj>
 <FBackupPath/>
@@ -361,7 +375,7 @@
 <FInclSubDirs>0</FInclSubDirs>
 </ROLLBACK>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[:INCLUDE PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.WEBLOGIC_PREPARE_ROLLBACK]]></MSCRI>
+<MSCRI><![CDATA[!:INCLUDE PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.WEBLOGIC_PREPARE_ROLLBACK]]></MSCRI>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC><![CDATA[= RB name =
@@ -375,23 +389,19 @@ Host: IP or hostname of the Administration Server
 Port: Port number used to connect to the Administration Server
 Username: Username used to authenticate with WebLogic
 Password: Password used to authenticate with WebLogic
-Application Name: Name under which the application shall be installed
-Test mode: Boolean value specifying whether to start the Web application with restricted access. This option defaults to false. Option: testMode
-Timeout: Time (in milliseconds) that WLST waits for the deployment process to complete before canceling the operation. A value of 0 indicates that the operation will not time out. This argument defaults to 300,000 ms (or 5 minutes). Option: timeout
+Composite Name: Name under which the application shall be installed
+Revision: Revision of the SOA composite application
+Label: Label of the SOA composite application. The label identifies the metadata service (MDS) artifacts associated with the application. If the label is not specified, the system finds the latest one.
 Fail if application is running: Specifies if the Job should fail in case the application is already running. YES/NO
 
 = Behavior =
-Starts an application, making it available to users. The application must be fully configured and available in the WebLogic domain.
-
-Checks if the application is already running first. The option 'Fail if application is running' specifies wether the job fails if it is already running or if it will complete successfully.
+Starts a previously stopped SOA composite application.
 
 = Outputs =
 (none)
 
 = Rollback =
-the rollback function should restore the orginal state of the application
-    if it was running --> after a rollback, the application should run again
-    it it was stopped --> after a rollback, the application should be stopped again
+(none)
 
 = Logging =
 (none)

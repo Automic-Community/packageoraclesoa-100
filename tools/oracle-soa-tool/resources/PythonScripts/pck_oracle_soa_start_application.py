@@ -6,7 +6,7 @@ execfile(utilLibPath)
 print "Execute python script with WLST"
 inputUser = sys.argv[1]
 inputPassword = sys.argv[2]
-inputHost = sys.argv[3]
+inputHost = rf_prep_str(sys.argv[3])
 inputPort = sys.argv[4]
 inputProtocol = sys.argv[5]
 inputAppName = sys.argv[7]
@@ -37,13 +37,16 @@ if compositeState == 'on':
 else:
     try:
         if inputLabel == '':
-            progress = sca_startComposite(inputHost, inputPort,inputUser,inputPassword,inputAppName,inputRevision)
+            print 'startComposite without label'
+            sca_startComposite(inputHost, inputPort,inputUser,inputPassword,inputAppName,inputRevision)
         else:
-            progress = sca_startComposite(inputHost, inputPort,inputUser,inputPassword,inputAppName,inputRevision, inputLabel)
-        print 'Application started'
+            print 'startComposite with label'
+            sca_startComposite(inputHost, inputPort,inputUser,inputPassword,inputAppName,inputRevision, inputLabel)
+        print 'Composite started'
         failed = 0
     finally:
         if failed:
             print 'Composite failed to start'
         disconnect()
         sys.exit()
+
