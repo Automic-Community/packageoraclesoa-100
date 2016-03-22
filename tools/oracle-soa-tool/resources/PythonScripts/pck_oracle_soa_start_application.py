@@ -6,7 +6,7 @@ execfile(utilLibPath)
 print "Execute python script with WLST"
 inputUser = sys.argv[1]
 inputPassword = sys.argv[2]
-inputHost = rf_prep_str(sys.argv[3])
+inputHost = sys.argv[3]
 inputPort = sys.argv[4]
 inputProtocol = sys.argv[5]
 inputAppName = sys.argv[7]
