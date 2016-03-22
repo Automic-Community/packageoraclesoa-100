@@ -37,7 +37,6 @@
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_WEBLOGIC_SAR_LOCATION#" Value="EXT:/oracle_soa/sar_location" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_WEBLOGIC_VERSION#" Value="EXT:/oracle_soa/version" Value1="" Value2="" Value3="" Value4=""/>
 </Variables>
 </VARA>
 <DOCU_Docu state="1" type="text">
