@@ -10,7 +10,7 @@
 <DESIGNER/>
 </PROMPTDESIGNER>
 <PROMPTSETXUI state="1">
-<XUIEDITOR><![CDATA[<dialog height="424" icon="PRPT" id="PRPTS" left="0" top="0" width="441"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Deploy Application"><properties><entry name="text">Deploy Application</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_SAR_LOCATIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Sar Location" tooltip="Absolute path to SOA archive (SAR) file, ZIP file that includes multiple SARs, metadata archives (MARs), or both, Enterprise archive (EAR) file that contains a SAR file." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+<XUIEDITOR><![CDATA[<dialog height="424" icon="PRPT" id="PRPTS" left="0" top="0" width="441"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Deploy Application"><properties><entry name="text">Deploy Application</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SOA_SAR_LOCATIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Sar Location" tooltip="Absolute path to SOA archive (SAR) file, ZIP file that includes multiple SARs, metadata archives (MARs), or both, Enterprise archive (EAR) file that contains a SAR file." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
       <properties>
         <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
@@ -23,7 +23,7 @@
         <entry name="separator">;</entry>
         <entry name="len"/>
         <entry name="quotes"/>
-        <entry name="id">UC4RB_WEBLOGIC_SAR_LOCATIONs.00</entry>
+        <entry name="id">UC4RB_SOA_SAR_LOCATIONs.00</entry>
         <entry name="regex"/>
         <entry name="inputassistance">0</entry>
         <entry name="enabled">0</entry>
@@ -38,14 +38,14 @@
         <entry name="resetable">1</entry>
       <entry name="initvalue"/>
          </properties>
-    </text><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="UC4RB_WEBLOGIC_OVERWRITEs.00" nl="1" text="Overwrite" tooltip="Optional. Indicates whether to overwrite an existing SOA composite application file." required="0">
+    </text><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="UC4RB_SOA_OVERWRITEs.00" nl="1" text="Overwrite" tooltip="Optional. Indicates whether to overwrite an existing SOA composite application file." required="0">
       <properties>
         <entry listparam="C,N" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
         <entry name="xmlkey"/>
         <entry name="xmlpath"/>
         <entry name="text">Overwrite</entry>
         <entry name="quotes"/>
-        <entry name="id">UC4RB_WEBLOGIC_OVERWRITEs.00</entry>
+        <entry name="id">UC4RB_SOA_OVERWRITEs.00</entry>
         <entry name="enabled">0</entry>
         <entry name="focus">0</entry>
         <entry name="tooltip">Optional. Indicates whether to overwrite an existing SOA composite application file.</entry>
@@ -53,14 +53,14 @@
         <entry name="customfield"/>
       <entry name="initvalue"/>
          </properties>
-    </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="UC4RB_WEBLOGIC_FORCE_DEFAULTs.00" nl="1" text="Force Default" tooltip="Optional. Indicates whether to set the new composite as the default." required="0">
+    </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="UC4RB_SOA_FORCE_DEFAULTs.00" nl="1" text="Force Default" tooltip="Optional. Indicates whether to set the new composite as the default." required="0">
       <properties>
         <entry listparam="C,N" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
         <entry name="xmlkey"/>
         <entry name="xmlpath"/>
         <entry name="text">Force Default</entry>
         <entry name="quotes"/>
-        <entry name="id">UC4RB_WEBLOGIC_FORCE_DEFAULTs.00</entry>
+        <entry name="id">UC4RB_SOA_FORCE_DEFAULTs.00</entry>
         <entry name="enabled">0</entry>
         <entry name="focus">0</entry>
         <entry name="tooltip">Optional. Indicates whether to set the new composite as the default.</entry>
@@ -68,7 +68,7 @@
         <entry name="customfield"/>
       <entry name="initvalue"/>
          </properties>
-    </dynradiogroup><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_CONFIG_PLANs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Config Plan" tooltip="Optional. Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+    </dynradiogroup><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SOA_CONFIG_PLANs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Config Plan" tooltip="Optional. Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
       <properties>
         <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
@@ -81,7 +81,7 @@
         <entry name="separator">;</entry>
         <entry name="len"/>
         <entry name="quotes"/>
-        <entry name="id">UC4RB_WEBLOGIC_CONFIG_PLANs.00</entry>
+        <entry name="id">UC4RB_SOA_CONFIG_PLANs.00</entry>
         <entry name="regex"/>
         <entry name="inputassistance">0</entry>
         <entry name="enabled">0</entry>
@@ -96,7 +96,7 @@
         <entry name="resetable">1</entry>
       <entry name="initvalue"/>
          </properties>
-    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_PARTITIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Partition" tooltip="Optional. The name of the partition in which to deploy the SOA composite application. The default value is default." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_SOA_PARTITIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Partition" tooltip="Optional. The name of the partition in which to deploy the SOA composite application. The default value is default." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
       <properties>
         <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
@@ -109,7 +109,7 @@
         <entry name="separator">;</entry>
         <entry name="len"/>
         <entry name="quotes"/>
-        <entry name="id">UC4RB_WEBLOGIC_PARTITIONs.00</entry>
+        <entry name="id">UC4RB_SOA_PARTITIONs.00</entry>
         <entry name="regex"/>
         <entry name="inputassistance">0</entry>
         <entry name="enabled">0</entry>
@@ -124,13 +124,13 @@
         <entry name="resetable">1</entry>
       <entry name="initvalue"/>
          </properties>
-    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_HOMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Weblogic Home" tooltip="WebLogic home directory" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_HOMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Oracle Home" tooltip="The full path of the Oracle home" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
       <properties>
         <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
         <entry name="xmlkey"/>
         <entry name="xmlpath"/>
-        <entry name="text">Weblogic Home</entry>
+        <entry name="text">Oracle Home</entry>
         <entry name="multiline">0</entry>
         <entry name="multilineIcon">0</entry>
         <entry name="multiselect">0</entry>
@@ -145,7 +145,7 @@
         <entry name="upper">0</entry>
         <entry name="focus">0</entry>
         <entry name="showaspassword">0</entry>
-        <entry name="tooltip">WebLogic home directory</entry>
+        <entry name="tooltip">The full path of the Oracle home</entry>
         <entry name="modifiable">1</entry>
         <entry name="customfield"/>
         <entry name="onchangereset"/>
@@ -155,7 +155,7 @@
     </text></readpanel></dialog>]]></XUIEDITOR>
 </PROMPTSETXUI>
 <PROMPTSETDATA state="1">
-<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_WEBLOGIC_SAR_LOCATIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_SAR_LOCATION#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_SAR_LOCATIONs.00><UC4RB_WEBLOGIC_OVERWRITEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_OVERWRITE#" ReadFromTable="OPSE">NO</UC4RB_WEBLOGIC_OVERWRITEs.00><UC4RB_WEBLOGIC_FORCE_DEFAULTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_FORCE_DEFAULT#" ReadFromTable="OPSE">YES</UC4RB_WEBLOGIC_FORCE_DEFAULTs.00><UC4RB_WEBLOGIC_CONFIG_PLANs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_CONFIG_PLAN#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_CONFIG_PLANs.00><UC4RB_WEBLOGIC_PARTITIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_PARTITION#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_PARTITIONs.00><UC4RB_WEBLOGIC_HOMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_HOME#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_HOMEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_SOA_SAR_LOCATIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SOA_SAR_LOCATION#" ReadFromTable="OPSE"></UC4RB_SOA_SAR_LOCATIONs.00><UC4RB_SOA_OVERWRITEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SOA_OVERWRITE#" ReadFromTable="OPSE">NO</UC4RB_SOA_OVERWRITEs.00><UC4RB_SOA_FORCE_DEFAULTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SOA_FORCE_DEFAULT#" ReadFromTable="OPSE">YES</UC4RB_SOA_FORCE_DEFAULTs.00><UC4RB_SOA_CONFIG_PLANs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SOA_CONFIG_PLAN#" ReadFromTable="OPSE"></UC4RB_SOA_CONFIG_PLANs.00><UC4RB_SOA_PARTITIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_SOA_PARTITION#" ReadFromTable="OPSE"></UC4RB_SOA_PARTITIONs.00><UC4RB_WEBLOGIC_HOMEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_WEBLOGIC_HOME#" ReadFromTable="OPSE"></UC4RB_WEBLOGIC_HOMEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
 </PROMPTSETDATA>
 <DOCU_Docu state="1" type="text">
 <DOC/>

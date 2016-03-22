@@ -332,7 +332,7 @@ else:
 if inputPartition == '':
   inputPartition='default'
 
-progress=sca_deployComposite(rf_prep_str(inputServerURL)
+sca_deployComposite(rf_prep_str(inputServerURL)
   ,rf_prep_str(sar_path_tmp)
   ,to_boolean(inputOverwrite)
   ,user=rf_prep_str(inputUser)
