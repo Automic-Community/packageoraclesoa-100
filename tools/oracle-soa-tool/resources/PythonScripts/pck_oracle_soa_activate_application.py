@@ -306,10 +306,7 @@ print "Execute python script with WLST"
 try:
     failed = 1;
     url = '%s://%s:%s' % (inputProtocol, inputHost, inputPort)
-    if inputHost != '':
-        connect(inputUser, inputPassword, url)
-    else:
-        connect(inputUser, inputPassword)
+    connect(inputUser, inputPassword, url)
 
     if inputPartition == '' or inputPartition == None:
         inputPartition = 'default';
