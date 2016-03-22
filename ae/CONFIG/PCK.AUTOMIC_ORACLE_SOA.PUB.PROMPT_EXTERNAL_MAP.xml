@@ -66,6 +66,16 @@
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.REDEPLOY_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.REDEPLOY_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.REDEPLOY_APPLICATION/UC4RB_WEBLOGIC_VERSION#" Value="EXT:/oracle_soa/version" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_SOA_APP_NAME#" Value="EXT:/oracle_soa/application_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_SOA_APP_REV#" Value="EXT:/oracle_soa/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_HOME#" Value="EXT:/oracle_soa/oracle_home" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_HOST#" Value="EXT:/oracle_soa/server/host" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_PORT#" Value="EXT:/oracle_soa/server/port" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_PASSWORD#" Value="EXT:/oracle_soa/server/password" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_ORACLE_SOA_APP_NAME#" Value="EXT:/oracle_soa/application_name" Value1="" Value2="" Value3="" Value4=""/>
