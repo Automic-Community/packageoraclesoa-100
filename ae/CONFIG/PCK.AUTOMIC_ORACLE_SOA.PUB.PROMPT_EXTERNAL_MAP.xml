@@ -76,6 +76,7 @@
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_PORT#" Value="EXT:/oracle_soa/server/port" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_PASSWORD#" Value="EXT:/oracle_soa/server/password" Value1="" Value2="" Value3="" Value4=""/>
 
 </Variables>
 </VARA>
