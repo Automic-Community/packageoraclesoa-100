@@ -315,7 +315,7 @@ def printParam(name, value):
     # printParam('Config Plan',rf_prep_str(inputConfigPlan))
     # printParam('Partition',rf_prep_str(inputPartition))
 
-#printInputs()
+# printInputs()
 
 import sys, string, os, os.path, time, traceback, shutil 
 
@@ -331,6 +331,8 @@ else:
 
 if inputPartition == '':
   inputPartition='default'
+
+connect(rf_prep_str(sys.argv[1]),rf_prep_str(sys.argv[2]), rf_prep_str(sys.argv[3]) + ':' + rf_prep_str(sys.argv[4]))
 
 progress=sca_deployComposite(rf_prep_str(inputServerURL)
   ,rf_prep_str(sar_path_tmp)
