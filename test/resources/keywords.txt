@@ -70,3 +70,5 @@ Delete folder
     Action Execute
     Action Report Should Be Found
     Action Return Status Should Be    ${ENDED_OK}
+
+Deploy a Composite Application

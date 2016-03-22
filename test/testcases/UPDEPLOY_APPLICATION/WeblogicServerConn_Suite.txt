@@ -1,0 +1,69 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Setup_suite
+Suite Teardown    Teardown_suite
+Force Tags        UNDEPLOY_APPLICATION
+Default Tags      win    unix
+Test Template     Undeploy Application Template
+Resource          prt_keywords.txt
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    OK_NOK      Host                              Port           Username             Password                 Connection Protocol     RETURN CODE    RETURN STATUS
+01_Success execute with Valid inputs
+                      #[Setup]    Deploy a Composite Application
+                      OK          ${_WL_HOST}                       ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    0              ${ENDED_OK}
+
+02_Failed execute with Invalid Host
+                      NOK         Invalid_input                     ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
+
+03_Failed execute with Invalid Port
+                      NOK         ${_WL_HOST}                       1000           ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
+
+04_Failed execute with Invalid Admin User
+                      NOK         ${_WL_HOST}                       ${_WL_PORT}    Invalid_input        ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
+
+05_Failed execute with Invalid Admin Password
+                      NOK         ${_WL_HOST}                       ${_WL_PORT}    ${_WL_ADMIN_USER}    Invalid_input            ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
+
+06_Failed execute with Invalid Connection Protocol
+                      NOK         ${_WL_HOST}                       ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    https                   1              ${ENDED_NOK}
+
+*** Keywords ***
+Undeploy Application Template
+    [Arguments]    ${OK_NOK}    ${WEBLOGIC_HOST}    ${WEBLOGIC_PORT}    ${WEBLOGIC_USERNAME}    ${WEBLOGIC_PASSWORD}    ${WEBLOGIC_USE_PROTOCOL}
+    ...    ${returnCode}    ${returnStatus}
+    [Documentation]    This template is used for test UNDEPLOY_APPLICATION with needed arguments
+    ...    All inputs are default and valid, except input variables for WEBLOGIC CONNECTION promptset. Required inputs:
+    ...    - ${WEBLOGIC_HOST} : IP or hostname of the Weblogic Server
+    ...    - ${WEBLOGIC_PORT}: Port number used to connect to the Weblogic Server
+    ...    - ${WEBLOGIC_USERNAME}: Username used to authenticate with WebLogic
+    ...    - ${WEBLOGIC_PASSWORD}: Password used to authenticate with WebLogic
+    ...    - ${WEBLOGIC_USE_PROTOCOL}: Select connection protocol to connect WLST to server
+    ...    - ${returnCode}: expected return code after execution
+    ...    - ${returnStatus}: expected return status after execution
+    ...    - ${message}: expected message contained in report after execution
+    Init Action    ${ACTION_UNDEPLOY_APPLICATION}
+    Action Set    ${PRT_WEBLOGIC_HOST}    ${WEBLOGIC_HOST}
+    Action Set    ${PRT_WEBLOGIC_PORT}    ${WEBLOGIC_PORT}
+    Action Set    ${PRT_WEBLOGIC_USERNAME}    ${WEBLOGIC_USERNAME}
+    Action Set    ${PRT_WEBLOGIC_PASSWORD}    ${WEBLOGIC_PASSWORD}
+    Action Set    ${PRT_WEBLOGIC_USE_PROTOCOL}    ${WEBLOGIC_USE_PROTOCOL}
+    Set Default Valid Promptset
+    Action Set Timeout    500
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${header_logging}
+    Action Report Should Contain    ${param_logging}
+    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${execution_logging}
+    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${footer_logging_OK}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start testing Server Connection for Undeploy Application Template
+
+Teardown_suite
+    [Documentation]    TODO: Write all steps for cleanup after testing here
+    Log    Testing Server Connection for Undeploy Application Template end

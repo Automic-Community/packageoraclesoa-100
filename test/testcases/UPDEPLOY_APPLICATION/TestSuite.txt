@@ -1,0 +1,60 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Setup_suite
+Suite Teardown    Teardown_suite
+Force Tags        UNDEPLOY_APPLICATION    BASIC
+Default Tags      win    unix
+Test Template     Undeploy Application Template
+Resource          ../../resources/keywords.txt
+Resource          prt_keywords.txt
+
+*** Test Cases ***    OK_NOK      Application Name                  Revision    Partition              Oracle Home    RETURN CODE    RETURN STATUS
+1. Success activate application default value
+                      #[Setup]    Deploy a Composite Application
+                      OK          Project1                          1.0         default                ${_WL_HOME}    0              ${ENDED_OK}
+
+2. Fail activate application wrong name
+                      NOK         Project1_not_exist                1.0         ${EMPTY}               ${_WL_HOME}    1              ${ENDED_NOK}
+
+3. Fail activate application wrong revision
+                      NOK         Project1                          9.9         ${EMPTY}               ${_WL_HOME}    1              ${ENDED_NOK}
+
+4. Fail activate application wrong partition
+                      NOK         Project1                          1.0         PARTITION_NOT_EXIST    ${_WL_HOME}    1              ${ENDED_NOK}
+
+*** Keywords ***
+Undeploy Application Template
+    [Arguments]    ${OK_NOK}    ${WEBLOGIC_APP_NAME}    ${WEBLOGIC_APP_REVISION}    ${WEBLOGIC_APP_PARTITION}    ${WEBLOGIC_ORACLE_HOME}    ${returnCode}
+    ...    ${returnStatus}
+    [Documentation]    This template is used for test UNDEPLOY_APPLICATION with needed arguments
+    ...    - ${OK_NOK}: boolean value indicate if the runbook(action) should be ENDED_OK or ENDED_NOT_OK. value of this variable should be OK or NOK.
+    ...    - ${appName}: string value indicate the application to be activated
+    ...    - ${revision}: string value indicate revision which application will be activated
+    ...    - ${partition}: string value indicate partition of activated application
+    ...    - ${oracle_home}: string value indicate Oracle Home in target machine
+    ...    - ${retcode}: expected return code after execute action(runbook)
+    ...    - ${status}: expected return status after execute action(runbook)
+    Init Action    ${ACTION_UNDEPLOY_APPLICATION}
+    Action Set    ${PRT_UNDEPLOY_APPLICATION_NAME}    ${WEBLOGIC_APP_NAME}
+    Action Set    ${PRT_UNDEPLOY_APPLICATION_REVISION}    ${WEBLOGIC_APP_REVISION}
+    Action Set    ${PRT_UNDEPLOY_APPLICATION_PARTITION}    ${WEBLOGIC_APP_PARTITION}
+    Action Set    ${PRT_UNDEPLOY_APPLICATION_ORACLE_HOME}    ${WEBLOGIC_ORACLE_HOME}
+    Set Default Weblogic Server Connection
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${header_logging}
+    Action Report Should Contain    ${param_logging}
+    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${execution_logging}
+    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${footer_logging_OK}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start testing for Undeploy Application Template
+
+Teardown_suite
+    [Documentation]    TODO: Write all steps for cleanup after testing here
+    Log    Testing for Undeploy Application Template end
