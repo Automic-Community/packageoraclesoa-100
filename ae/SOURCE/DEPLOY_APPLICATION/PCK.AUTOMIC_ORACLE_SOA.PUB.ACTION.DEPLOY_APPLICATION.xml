@@ -376,7 +376,6 @@ Deploys a SOA composite application to the Oracle WebLogic Server.
 * Config plan: Optional. Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file.
 * Partition: Optional. The name of the partition in which to deploy the SOA composite application. The default value is default. If you do not specify a partition, the composite is automatically deployed into the default partition.
 * Weblogic Home: WebLogic home directory
-* Java Options: Java options
 
 = Behavior =
 This Action does not package the artifact files of the application for deployment.
