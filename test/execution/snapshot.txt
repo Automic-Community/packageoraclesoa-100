@@ -1,0 +1,5 @@
+--doc This argument file contains collection of testsuites and testcases for WL actions
+--name WL.Snapshot
+# This is a comment
+Init_Environments.txt
+testcases/SNAPSHOT

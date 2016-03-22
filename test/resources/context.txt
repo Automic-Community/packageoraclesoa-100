@@ -1,0 +1,85 @@
+*** Settings ***
+Documentation     THIS CONTEXT FILE WORKING WITH AUTOMATED TEST SYSTEM
+Resource          actions.txt
+Resource          ../testdata/dataForPromptset.txt
+Resource          ../testdata/loginobjects.txt
+Resource          ../env/default.txt
+
+*** Variables ***
+#- CONTEXT VARIABLES ---
+${_AGENT}         /
+${_LOGIN}         /
+${_SOURCE_DIR}    /
+${_OUTPUT_DIR}    /
+${_WORKING_DIR}    /
+${_WL_HOME}       /
+${_WL_HOST}       /
+${_WL_PORT}       /
+${_WL_ADMIN_SERVER_URL}    /
+${_WL_ADMIN_SERVER_NAME}    /
+${_WL_ADMIN_USER}    /
+${_WL_ADMIN_PASSWORD}    /
+${_WL_ADMIN_SERVER_SERVICE}    /
+${_WL_ADMIN_START_SCRIPT}    /
+${_WL_ADMIN_STOP_SCRIPT}    /
+${_WL_CONN_PROTOCOL}    /
+${_SUDOER_USER_WITH_PASS}    /
+${_SUDOER_PASS}    /
+${_SUDOER_USER_WITH_OUT_PASS}    /
+${_NOT_SUDOER}    /
+${_NOT_SUDOER_PASS}    /
+${_CURRENT_TIMESTAMP_}    /
+${_AGENT_DIR}     /
+
+*** Key Words ***
+Init WL Agent
+    [Documentation]    Requirement
+    Run Keyword If    '${ENV}' == 'WIN'    Init Win Agent
+    Run Keyword If    '${ENV}' == 'UNIX'    Init Unix Agent
+    Run Keyword If    '${ENV}' == 'VVNARASOA02' and '${APP}' == 'ORACLE_SOA'    Init VVNARASOA02 For Oracle SOA
+
+Init Win Agent
+    [Documentation]    TODO: Write agent used to test description here
+    Set Global Variable    ${_AGENT}    FL01AT03
+    Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
+    Set Global Variable    ${_WORKING_DIR}    C:\\automic\\testcases\\PCK.AUTOMIC_ORACLE_SOA
+    Set Global Variable    ${/}    \\
+
+Init Unix Agent
+    [Documentation]    TODO: Write agent used to test description here
+    Set Global Variable    ${_AGENT}    FL02AT03
+    Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
+    Set Global Variable    ${_WORKING_DIR}    /opt/automic/testcases/PCK.AUTOMIC_ORACLE_SOA
+    Set Global Variable    ${/}    /
+
+Revert Test Agent
+    [Arguments]    ${agent_host}    ${snapshot_name}
+    Log    init agent
+    Vm Connect    @{VM}
+    Vm Revert    ${agent_host}    ${snapshot_name}
+    Log    Wait for agent up...
+    Sleep    5 minutes
+    Log    Agent might be up!
+
+Init VVNARASOA02 For Oracle SOA
+    [Documentation]    TODO: Write agent used to test description here
+    Set Global Variable    ${/}    /
+    Set Global Variable    ${_OS}    WIN
+    Set Global Variable    ${_AGENT}    VVNARASOA02
+    Set Global Variable    ${_LOGIN}    ${LOGIN.ALL}
+    Set Global Variable    ${_AGENT_DIR}    ${VVNARASOA02_AGENT_DIR}
+    Set Global Variable    ${_WORKING_DIR}    ${VVNARASOA02_WORKING_DIR}
+    Set Global Variable    ${_SOURCE_DIR}    ${VVNARASOA02_SOURCE_DIR}
+    Set Global Variable    ${_OUTPUT_DIR}    ${VVNARASOA02_OUTPUT_DIR}
+    Set Global Variable    ${_WL_HOME}    ${VVNARASOA02_WL_HOME}
+    Set Global Variable    ${_WL_HOST}    ${VVNARASOA02_WEBLOGIC_HOST}
+    Set Global Variable    ${_WL_PORT}    ${VVNARASOA02_WEBLOGIC_PORT}
+    Set Global Variable    ${_WL_ADMIN_USER}    ${VVNARASOA02_WEBLOGIC_USERNAME}
+    Set Global Variable    ${_WL_ADMIN_PASSWORD}    ${VVNARASOA02_WEBLOGIC_PASSWORD}
+    Set Global Variable    ${_WL_CONN_PROTOCOL}    ${VVNARASOA02_WEBLOGIC_USE_PROTOCOL}
+    #-------- Set global Sudo Variables -------------
+    Set Global Variable    ${_SUDOER_USER_WITH_PASS}    ${VVNARASOA02_SUDOER_USER_WITH_PASS}
+    Set Global Variable    ${_SUDOER_PASS}    ${VVNARASOA02_SUDOER_PASS}
+    Set Global Variable    ${_SUDOER_USER_WITH_OUT_PASS}    ${VVNARASOA02_SUDOER_USER_WITH_OUT_PASS}
+    Set Global Variable    ${_NOT_SUDOER}    ${VVNARASOA02_NOT_SUDOER}
+    Set Global Variable    ${_NOT_SUDOER_PASS}    ${VVNARASOA02_NOT_SUDOER_PASS}

@@ -1,0 +1,6 @@
+*** Keywords ***
+Set Default Valid Promptset
+    Action Set    ${PRT_STOP_APPLICATION_NAME}    VacationRequest
+    Action Set    ${PRT_STOP_APPLICATION_REVISION}    1.0
+    Action Set    ${PRT_STOP_APPLICATION_LABEL}    ${EMPTY}
+    Action Set    ${PRT_STOP_APPLICATION_ORACLE_HOME}    ${_WL_HOME}

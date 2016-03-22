@@ -7,20 +7,9 @@ source: ae
 binaries:
   - object: RESOURCES/LIBS/PCK.AUTOMIC_ORACLE_SOA.PRV.STORE
     resources: 
-
-      - name: backup_application
-        type: TEXT
-        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_backup_application.py
-        version: 1.0.0
-
       - name: deploy_application
         type: TEXT
         path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_deploy_application.py
-        version: 1.0.0
-
-      - name: redeploy_application
-        type: TEXT
-        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_redeploy_application.py
         version: 1.0.0
 
       - name: undeploy_application
@@ -31,4 +20,8 @@ binaries:
       - name: activate_application
         type: TEXT
         path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_activate_application.py
+        version: 1.0.0
+      - name: stop_application
+        type: TEXT
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_stop_application.py
         version: 1.0.0
