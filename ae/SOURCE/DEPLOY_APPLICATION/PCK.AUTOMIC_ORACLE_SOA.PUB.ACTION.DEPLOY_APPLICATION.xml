@@ -71,12 +71,7 @@
 <UC4RB_SOA_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_OVERWRITE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_SOA_OVERWRITEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
 <UC4RB_SOA_SAR_LOCATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_SAR_LOCATION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_CONFIG_PLANs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_CONFIG_PLAN#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_FORCE_DEFAULTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_FORCE_DEFAULT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">YES</UC4RB_WEBLOGIC_FORCE_DEFAULTs.00>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_OVERWRITEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_OVERWRITE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_OVERWRITEs.00>
-<UC4RB_WEBLOGIC_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_SAR_LOCATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_SAR_LOCATION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -156,12 +151,7 @@
 <UC4RB_SOA_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_OVERWRITE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_SOA_OVERWRITEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
 <UC4RB_SOA_SAR_LOCATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_SAR_LOCATION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_CONFIG_PLANs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_CONFIG_PLAN#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_FORCE_DEFAULTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_FORCE_DEFAULT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">YES</UC4RB_WEBLOGIC_FORCE_DEFAULTs.00>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_OVERWRITEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_OVERWRITE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_OVERWRITEs.00>
-<UC4RB_WEBLOGIC_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_SAR_LOCATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_SAR_LOCATION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -227,12 +217,7 @@
 <UC4RB_SOA_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_OVERWRITE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_SOA_OVERWRITEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
 <UC4RB_SOA_SAR_LOCATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_SAR_LOCATION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_CONFIG_PLANs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_CONFIG_PLAN#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_FORCE_DEFAULTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_FORCE_DEFAULT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">YES</UC4RB_WEBLOGIC_FORCE_DEFAULTs.00>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_OVERWRITEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_OVERWRITE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_OVERWRITEs.00>
-<UC4RB_WEBLOGIC_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_SAR_LOCATIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_SAR_LOCATION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -389,8 +374,10 @@ Deploys a SOA composite application to the Oracle WebLogic Server.
 Deploys a SOA composite application to the Oracle WebLogic Server. This action does not package the artifact files of the application for deployment. 
 
 = Outputs =
-(none)
- 
+* Return code is 0 if composite application is deployed successful. 
+* Return code is 1 in case connect failed or invalid connection url or credential.
+* Return code is 50 in case deploy failed.
+
 = Rollback =
 (none)
 

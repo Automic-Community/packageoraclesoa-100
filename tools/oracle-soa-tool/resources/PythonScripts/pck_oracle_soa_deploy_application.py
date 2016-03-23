@@ -62,7 +62,7 @@ def rf_prep_svrs(str1):
   
     return retarr 
 
-# remove all space char(which is before or after comma char) in comma delimited string	
+# remove all space char(which is before or after comma char) in comma delimited string  
 def rf_prep_comma_delim_str(str1):
     if str1 == None: 
         return None 
@@ -71,7 +71,7 @@ def rf_prep_comma_delim_str(str1):
     retarr = rf_prep_svrs(str1)
     retstr = ','.join(retarr)
     return retstr
-	
+    
 # check str are yes/true or no/false 
 def to_t_f(str): 
     if str.lower() == 'yes' or str.lower() == 'true': 
@@ -287,57 +287,46 @@ def getOptions(inputOptions):
 
 #pck_weblogic_utils END
 
-inputUser = sys.argv[1]
+inputUser = rf_prep_str(sys.argv[1])
 inputPassword = sys.argv[2]
-inputServerURL = sys.argv[5] + '://' + sys.argv[3] + ':' + sys.argv[4]
-
-inputSar = sys.argv[6]
+inputHost = rf_prep_str(sys.argv[3])
+inputPort = rf_prep_str(sys.argv[4])
+inputProtocol = rf_prep_str(sys.argv[5])
+inputSar = rf_prep_str(sys.argv[6])
 inputOverwrite = sys.argv[7]
 inputForceDefault = sys.argv[8]
-inputConfigPlan = sys.argv[9]
-inputPartition = sys.argv[10]
-
-def printParam(name, value):  
-  if name is None:
-    return None
-  if value is None:
-    value = ''
-  print name + ': ' + value
-
-# Just for debug
-# def printInputs():
-    # printParam('Server URL',rf_prep_str(inputServerURL))
-    # printParam('User',rf_prep_str(inputUser))
-    # printParam('Password',rf_prep_str(inputPassword))
-    # printParam('Sar Location',rf_prep_str(inputSar))
-    # printParam('Overwrite',to_t_f(inputOverwrite))
-    # printParam('Force Default',to_t_f(inputForceDefault))
-    # printParam('Config Plan',rf_prep_str(inputConfigPlan))
-    # printParam('Partition',rf_prep_str(inputPartition))
-
-#printInputs()
+inputConfigPlan = rf_prep_str(sys.argv[9])
+inputPartition = rf_prep_str(sys.argv[10])
 
 import sys, string, os, os.path, time, traceback, shutil 
+print "Execute python script with WLST"
+failed = 1;
+try:
+    sar_path_tmp=inputSar.replace('\\','/');
+    configPlanPath_tmp = None;
 
-sar_path_tmp=inputSar.replace('\\','/')   
+    if inputConfigPlan != None:
+        configPlanPath_tmp = inputConfigPlan.replace('\\','/');
 
-configPlanPath_tmp = ''    
-if inputConfigPlan == '':
-  configPlanPath_tmp=None
-  #print 'converted plan path: '+'None'
-else:
-  configPlanPath_tmp = rf_prep_str(inputConfigPlan.replace ('\\','/'))
-  #print 'converted plan path: '+configPlanPath_tmp
+    if inputPartition == '' or inputPartition == None:
+        inputPartition='default';
 
-if inputPartition == '':
-  inputPartition='default'
+    inputServerURL = '%s://%s:%s' % (inputProtocol, inputHost, inputPort);
+    connect(inputUser, inputPassword, inputServerURL);
 
-sca_deployComposite(rf_prep_str(inputServerURL)
-  ,rf_prep_str(sar_path_tmp)
-  ,to_boolean(inputOverwrite)
-  ,user=rf_prep_str(inputUser)
-  ,password=rf_prep_str(inputPassword)
-  ,forceDefault=to_boolean(inputForceDefault)
-  ,configplan=configPlanPath_tmp 
-  ,partition=rf_prep_str(inputPartition)
-  )
+    sca_deployComposite(inputServerURL
+        ,sar_path_tmp
+        ,to_boolean(inputOverwrite)
+        ,user=inputUser
+        ,password=inputPassword
+        ,forceDefault=to_boolean(inputForceDefault)
+        ,configplan=configPlanPath_tmp 
+        ,partition=inputPartition);
+    failed = 0;
+
+except Exception, detail:
+    print 'Exception: ', detail;
+    dumpStack();
+
+disconnect('true');
+exit('y', failed);
