@@ -9,9 +9,7 @@
 <CustomAttributes KeyListID="0" dataRequestID="0"/>
 </XHEADER>
 <SYNCREF state="1">
-<Syncs>
-<row Abend="SET_FREE" Else="Wait" End="SET_FREE" Name="PCK.AUTOMIC_ORACLE_SOA.PRV.SYNC.PARALLEL_SYNC" Start="SET_EXCLUSIVE"/>
-</Syncs>
+<Syncs/>
 </SYNCREF>
 <ATTR_JOBP state="1">
 <Queue>CLIENT_QUEUE</Queue>
@@ -383,9 +381,9 @@
 <ComponentName/>
 </DEPLOYMENT>
 <ROLLBACK state="1">
-<RollbackFlag>1</RollbackFlag>
-<CBackupObj>PCK.AUTOMIC_ORACLE_SOA.PRV.BACKUP.DEPLOY_APPLICATION</CBackupObj>
-<CRollbackObj>PCK.AUTOMIC_ORACLE_SOA.PRV.ROLLBACK.DEPLOY_APPLICATION</CRollbackObj>
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
 <FBackupPath/>
 <FDeleteBefore>0</FDeleteBefore>
 <FInclSubDirs>0</FInclSubDirs>

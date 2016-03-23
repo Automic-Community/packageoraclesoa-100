@@ -170,6 +170,10 @@
 			<Value>{/custom/revision}</Value>
 			<Description>Application Revision</Description>
 		</Property>
+		<Property name="/oracle_soa/label" highlighted="false">
+			<Value>{/custom/label}</Value>
+			<Description>Label of the SOA composite application</Description>
+		</Property>
 
 		<Property name="/oracle_soa/oracle_home" highlighted="false">
 			<Value>{@target/custom/oracle_home}</Value>
