@@ -62,7 +62,7 @@
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_APPNAME#" Value="EXT:/oracle_soa/application_name" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_LABEL#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_LABEL#" Value="EXT:/oracle_soa/label" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_FAIL_IF_STOPPED#" Value="NO" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_REVISION#" Value="EXT:/oracle_soa/revision" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_HOME#" Value="EXT:/oracle_soa/oracle_home" Value1="" Value2="" Value3="" Value4=""/>
