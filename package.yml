@@ -29,6 +29,16 @@ binaries:
         path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_undeploy_application.py
         version: 1.0.0
 
+      - name: start_application
+        type: TEXT
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_start_application.py
+        version: 1.0.0
+
+      - name: utils
+        type: TEXT
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_utils.py
+        version: 1.0.0
+
       - name: activate_application
         type: TEXT
         path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_activate_application.py

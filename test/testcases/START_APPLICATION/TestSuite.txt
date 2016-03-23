@@ -1,0 +1,62 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Setup_suite
+Suite Teardown    Teardown_suite
+Force Tags        START_APPLICATION    BASIC
+Default Tags      win    unix
+Test Template     Start Application Template
+Resource          ../../resources/keywords.txt
+Resource          prt_keywords.txt
+
+*** Test Cases ***    OK_NOK                                       Application Name             Revision           Label       Fail               Oracle Home    RETURN CODE    RETURN STATUS
+1. Success start application default value
+                      OK                                           VacationRequest              1.0                ${EMPTY}    NO                 ${_WL_HOME}    0              ${ENDED_OK}
+
+2. Fail start application wrong name
+                      NOK                                          VacationRequest_not_exist    1.0                ${EMPTY}    NO                 ${_WL_HOME}    1              ${ENDED_NOK}
+
+3. Fail start application running fail equal YES
+                      NOK                                          VacationRequest              1.0                ${EMPTY}    YES                ${_WL_HOME}    1              ${ENDED_NOK}
+                      #3. Fail start application wrong revision
+                      #                                            NOK                          VacationRequest    9.9         ${EMPTY}           ${_WL_HOME}    1              ${ENDED_NOK}
+                      #4. Fail start application wrong label
+                      #                                            NOK                          VacationRequest    1.0         LABEL_NOT_EXIST    ${_WL_HOME}    1              ${ENDED_NOK}
+
+*** Keywords ***
+Start Application Template
+    [Arguments]    ${OK_NOK}    ${SOA_APP_NAME}    ${SOA_APP_REVISION}    ${SOA_APP_LABEL}    ${SOA_APP_FAIL}    ${SOA_ORACLE_HOME}
+    ...    ${returnCode}    ${returnStatus}
+    [Documentation]    This template is used for test START_APPLICATION with needed arguments
+    ...    - ${OK_NOK}: boolean value indicate if the runbook(action) should be ENDED_OK or ENDED_NOT_OK. value of this variable should be OK or NOK.
+    ...    - ${appName}: string value indicate the application to be activated
+    ...    - ${revision}: string value indicate revision which application will be activated
+    ...    - ${label}: string value indicate label which application will be activated to
+    ...    - ${partition}: string value indicate partition of activated application
+    ...    - ${oracle_home}: string value indicate Oracle Home in target machine
+    ...    - ${retcode}: expected return code after execute action(runbook)
+    ...    - ${status}: expected return status after execute action(runbook)
+    Init Action    ${ACTION_START_APPLICATION}
+    Action Set    ${PRT_START_APPLICATION_NAME}    ${SOA_APP_NAME}
+    Action Set    ${PRT_START_APPLICATION_REVISION}    ${SOA_APP_REVISION}
+    Action Set    ${PRT_START_APPLICATION_LABEL}    ${SOA_APP_LABEL}
+    Action Set    ${PRT_START_APPLICATION_ORACLE_HOME}    ${SOA_ORACLE_HOME}
+    Action Set    ${PRT_START_APPLICATION_FAIL}    ${SOA_APP_FAIL}
+    Set Default Weblogic Server Connection
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${header_logging}
+    Action Report Should Contain    ${param_logging}
+    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${execution_logging}
+    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${footer_logging_OK}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start testing for Start Application Template
+
+Teardown_suite
+    [Documentation]    TODO: Write all steps for cleanup after testing here
+    Log    Testing for Start Application Template end

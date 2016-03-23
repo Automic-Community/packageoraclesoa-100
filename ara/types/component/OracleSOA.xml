@@ -170,6 +170,10 @@
 			<Value>{/custom/revision}</Value>
 			<Description>Application Revision</Description>
 		</Property>
+		<Property name="/oracle_soa/label" highlighted="false">
+			<Value>{/custom/label}</Value>
+			<Description>Label of the SOA composite application</Description>
+		</Property>
 
 		<Property name="/oracle_soa/sar_location" highlighted="false">
 			<Value>{/custom/sar_location}</Value>
@@ -179,7 +183,7 @@
 			<Value>{/custom/config_plan}</Value>
 			<Description>Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file.</Description>
 		</Property>
-		
+
 		<Property name="/oracle_soa/oracle_home" highlighted="false">
 			<Value>{@target/custom/oracle_home}</Value>
 			<Description>Oracle Home directory</Description>

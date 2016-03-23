@@ -19,9 +19,9 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>0</AutoDeactNo>
+<AutoDeactNo>1</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>1</AutoDeactErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
@@ -55,23 +55,38 @@
 <node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
-<UC4RB_WEBLOGIC_HOSTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOST#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
-<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">--10</UC4RB_WEBLOGIC_PASSWORDs.00>
-<UC4RB_WEBLOGIC_PORTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PORT#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">7001</UC4RB_WEBLOGIC_PORTs.00>
-<UC4RB_WEBLOGIC_USE_PROTOCOLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USE_PROTOCOL#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">t3</UC4RB_WEBLOGIC_USE_PROTOCOLs.00>
-<UC4RB_WEBLOGIC_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USERNAME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOST#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_PORTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PORT#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">7001</UC4RB_WEBLOGIC_PORTs.00>
+<UC4RB_WEBLOGIC_USE_PROTOCOLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USE_PROTOCOL#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">t3</UC4RB_WEBLOGIC_USE_PROTOCOLs.00>
+<UC4RB_WEBLOGIC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USERNAME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
+<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
+<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
+<UC4RB_WEBLOGIC_JAVA_OPTIONSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_JAVA_OPTIONS#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">
-<UC4RB_SOA_CONFIG_PLANs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_CONFIG_PLAN#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_SOA_FORCE_DEFAULTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_FORCE_DEFAULT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">YES</UC4RB_SOA_FORCE_DEFAULTs.00>
-<UC4RB_SOA_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_OVERWRITE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_SOA_OVERWRITEs.00>
-<UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_SOA_SAR_LOCATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_SAR_LOCATION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_A_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_A_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_APP_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_CREATE_PLANs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_CREATE_PLAN#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_CREATE_PLANs.00>
+<UC4RB_WEBLOGIC_OPTIONSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_OPTIONS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_PACKAGEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PACKAGE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_PLAN_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PLAN_PATH#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_REMOTEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_REMOTE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_REMOTEs.00>
+<UC4RB_WEBLOGIC_STAGINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_STAGING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">nostage</UC4RB_WEBLOGIC_STAGINGs.00>
+<UC4RB_WEBLOGIC_SUB_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_SUB_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_TIMEOUTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">300000</UC4RB_WEBLOGIC_TIMEOUTs.00>
+<UC4RB_WEBLOGIC_UPLOADs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_UPLOAD#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_UPLOADs.00>
+<UC4RB_WEBLOGIC_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -135,23 +150,38 @@
 <node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
-<UC4RB_WEBLOGIC_HOSTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOST#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
-<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">--10</UC4RB_WEBLOGIC_PASSWORDs.00>
-<UC4RB_WEBLOGIC_PORTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PORT#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">7001</UC4RB_WEBLOGIC_PORTs.00>
-<UC4RB_WEBLOGIC_USE_PROTOCOLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USE_PROTOCOL#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">t3</UC4RB_WEBLOGIC_USE_PROTOCOLs.00>
-<UC4RB_WEBLOGIC_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USERNAME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOST#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_PORTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PORT#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">7001</UC4RB_WEBLOGIC_PORTs.00>
+<UC4RB_WEBLOGIC_USE_PROTOCOLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USE_PROTOCOL#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">t3</UC4RB_WEBLOGIC_USE_PROTOCOLs.00>
+<UC4RB_WEBLOGIC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USERNAME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
+<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
+<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
+<UC4RB_WEBLOGIC_JAVA_OPTIONSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_JAVA_OPTIONS#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">
-<UC4RB_SOA_CONFIG_PLANs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_CONFIG_PLAN#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_SOA_FORCE_DEFAULTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_FORCE_DEFAULT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">YES</UC4RB_SOA_FORCE_DEFAULTs.00>
-<UC4RB_SOA_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_OVERWRITE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_SOA_OVERWRITEs.00>
-<UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_SOA_SAR_LOCATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_SAR_LOCATION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_A_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_A_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_APP_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_CREATE_PLANs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_CREATE_PLAN#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_CREATE_PLANs.00>
+<UC4RB_WEBLOGIC_OPTIONSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_OPTIONS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_PACKAGEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PACKAGE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_PLAN_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PLAN_PATH#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_REMOTEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_REMOTE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_REMOTEs.00>
+<UC4RB_WEBLOGIC_STAGINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_STAGING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">nostage</UC4RB_WEBLOGIC_STAGINGs.00>
+<UC4RB_WEBLOGIC_SUB_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_SUB_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_TIMEOUTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">300000</UC4RB_WEBLOGIC_TIMEOUTs.00>
+<UC4RB_WEBLOGIC_UPLOADs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_UPLOAD#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_UPLOADs.00>
+<UC4RB_WEBLOGIC_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -201,23 +231,38 @@
 <node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
 <PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">
-<UC4RB_WEBLOGIC_HOSTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOST#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
-<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">--10</UC4RB_WEBLOGIC_PASSWORDs.00>
-<UC4RB_WEBLOGIC_PORTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PORT#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">7001</UC4RB_WEBLOGIC_PORTs.00>
-<UC4RB_WEBLOGIC_USE_PROTOCOLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USE_PROTOCOL#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">t3</UC4RB_WEBLOGIC_USE_PROTOCOLs.00>
-<UC4RB_WEBLOGIC_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USERNAME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOST#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PASSWORD#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+<UC4RB_WEBLOGIC_PORTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PORT#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">7001</UC4RB_WEBLOGIC_PORTs.00>
+<UC4RB_WEBLOGIC_USE_PROTOCOLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USE_PROTOCOL#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION">t3</UC4RB_WEBLOGIC_USE_PROTOCOLs.00>
+<UC4RB_WEBLOGIC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_USERNAME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION"/>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
+<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
+<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
+<UC4RB_WEBLOGIC_JAVA_OPTIONSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_JAVA_OPTIONS#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">
-<UC4RB_SOA_CONFIG_PLANs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_CONFIG_PLAN#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_SOA_FORCE_DEFAULTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_FORCE_DEFAULT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">YES</UC4RB_SOA_FORCE_DEFAULTs.00>
-<UC4RB_SOA_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_OVERWRITE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_SOA_OVERWRITEs.00>
-<UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_SOA_SAR_LOCATIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_SAR_LOCATION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_A_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_A_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_APP_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_CREATE_PLANs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_CREATE_PLAN#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_CREATE_PLANs.00>
+<UC4RB_WEBLOGIC_OPTIONSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_OPTIONS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_PACKAGEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PACKAGE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_PLAN_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_PLAN_PATH#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_REMOTEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_REMOTE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_REMOTEs.00>
+<UC4RB_WEBLOGIC_STAGINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_STAGING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">nostage</UC4RB_WEBLOGIC_STAGINGs.00>
+<UC4RB_WEBLOGIC_SUB_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_SUB_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_TIMEOUTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">300000</UC4RB_WEBLOGIC_TIMEOUTs.00>
+<UC4RB_WEBLOGIC_UPLOADs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_UPLOAD#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_UPLOADs.00>
+<UC4RB_WEBLOGIC_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -295,19 +340,23 @@
 </node>
 <node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" prptmode="1">
-<UC4RB_WEBLOGIC_HOSTs.00 altview="0" haslist="0"/>
-<UC4RB_WEBLOGIC_PORTs.00 altview="0" haslist="0">7001</UC4RB_WEBLOGIC_PORTs.00>
-<UC4RB_WEBLOGIC_USERNAMEs.00 altview="0" haslist="0"/>
-<UC4RB_WEBLOGIC_PASSWORDs.00 altview="0" haslist="0">--10</UC4RB_WEBLOGIC_PASSWORDs.00>
-<UC4RB_WEBLOGIC_USE_PROTOCOLs.00 altview="0" haslist="0">t3</UC4RB_WEBLOGIC_USE_PROTOCOLs.00>
-</PRPTBOX>
+<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" prptmode="1"/>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" ontop="1">
+<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" prptmode="1"/>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION" ontop="1">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.DEPLOY_APPLICATION" prptmode="1">
-<UC4RB_WEBLOGIC_HOMEs.00 altview="0" haslist="0"/>
+<UC4RB_WEBLOGIC_VERSIONs.00 altview="0" haslist="0"/>
+<UC4RB_WEBLOGIC_A_VERSIONs.00 altview="0" haslist="0"/>
+<UC4RB_WEBLOGIC_CREATE_PLANs.00 altview="0" haslist="0">NO</UC4RB_WEBLOGIC_CREATE_PLANs.00>
+<UC4RB_WEBLOGIC_REMOTEs.00 altview="0" haslist="0">NO</UC4RB_WEBLOGIC_REMOTEs.00>
+<UC4RB_WEBLOGIC_UPLOADs.00 altview="0" haslist="0">NO</UC4RB_WEBLOGIC_UPLOADs.00>
+<UC4RB_WEBLOGIC_TIMEOUTs.00 altview="0" haslist="0">300000</UC4RB_WEBLOGIC_TIMEOUTs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -340,46 +389,49 @@
 <FInclSubDirs>0</FInclSubDirs>
 </ROLLBACK>
 <SCRIPT mode="1" state="1">
-<MSCRI/>
+<MSCRI><![CDATA[:INC PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.PREPARE_ROLLBACK]]></MSCRI>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC><![CDATA[= RB name =
 PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION
 
 = General description =
-Deploys a SOA composite application to the Oracle WebLogic Server. 
+Deploys an application to one or multiple targets.
+The action can be used to deploy an application from an application directory, package, or root of the exploded archive directory.
 
 = Inputs =
-* Host: IP or hostname of the WebLogic Server
-* Port: Port number used to connect to the WebLogic SOA Server
+* Host: IP or hostname of the Administration Server
+* Port: Port number used to connect to the Administration Server
 * Username: Username used to authenticate with WebLogic
 * Password: Password used to authenticate with WebLogic
 * Connection Protocol: Select connection protocol to connect WLST to server
-* Sar Location: Absolute path to one the following:
-	SOA archive (SAR) file.
-	A SAR file is a special JAR file that requires a prefix of sca_ (for example, sca_HelloWorld_rev1.0.jar). The SAR file can be deployed with the deployment commands (such as sca_deployComposite()), but a regular .jar file is not 	treated as a special SAR file.
-	ZIP file that includes multiple SARs, metadata archives (MARs), or both.
-	Enterprise archive (EAR) file that contains a SAR file.
-* Overwrite: Optional. Indicates whether to overwrite an existing SOA composite application file.
-	false (default): Does not overwrite the file.
-	true: Overwrites the file.
-* Force Default: Optional. Indicates whether to set the new composite as the default.
-	true (default): Makes it the default composite.
-	false: Does not make it the default composite.
-* Config plan: Optional. Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file.
-* Partition: Optional. The name of the partition in which to deploy the SOA composite application. The default value is default. If you do not specify a partition, the composite is automatically deployed into the default partition.
-* Oracle Home: Set to the full path of the Oracle home (for example, C:\Oracle\Middleware\Oracle_Home).
+* Application Name: Name under which the application shall be installed
+* Package: Path of the application directory, archive file, or root of the exploded archive directory to be deployed.
+* Weblogic Home: WebLogic home directory
+* Java Options: Java options
+* Targets: Installation targets. Multiple values can be given using "," as seperator
+* Submodule Targets: Submodule level targets for JMS modules. Option: subModuleTargets
+* Staging Mode: Options: stage, nostage, external_stage
+* Version identifier: Version identifier. Option. versionIdentifier
+* Archive version number: Archive version number. Option: archiveVersion
+* Plan Path: Optional. Name of the deployment plan file. The filename can be absolute or relative to the application directory. This argument defaults to the plan/plan.xml file in the application directory, if one exists.
+* Create Plan: Boolean value indicating that user would like to create a default plan. Option: createPlan
+* Remote: Boolean value specifying whether the operation will be remote from the file system that contains the source. Use this option when you are on a different machine from the Administration Server and the deployment files are already at the specified location where the Administration Server is located. This option defaults to false. Option: remote
+* Upload: Boolean value specifying whether the application files are uploaded to the WebLogic Server Administration Server's upload directory prior to deployment. Use this option when the Administration Server cannot access the application files through the file system. This option defaults to false. Option: upload
+* Timeout: Time (in milliseconds) that WLST waits for the deployment process to complete before canceling the operation. A value of 0 indicates that the operation will not time out. This argument defaults to 300,000 ms (or 5 minutes). Option: timeout
+Fail if application is running: Specifies if the Job should fail in case the application is already stopped. YES/NO
+* Options: Optional. Comma-separated list of deployment options, specified as name-value pairs
 
 = Behavior =
-Deploys a SOA composite application to the Oracle WebLogic Server. This action does not package the artifact files of the application for deployment. 
+Deploys an application to one or multiple targets.
+The action can be used to deploy an application from an application directory, package, or root of the exploded archive directory.
 
 = Outputs =
-* Return code is 0 if composite application is deployed successful. 
-* Return code is 1 in case connect failed or invalid connection url or credential.
-* Return code is 50 in case deploy failed.
-
-= Rollback =
 (none)
+ 
+= Rollback =
+* If the application was not deployed before --> it should be undeployed by the rollback function (you may use the runbook function 'Undeploy Application' for this purpose)
+* If the application was deployed before --> it should further remain deployed after rollback
 
 = Logging =
 (none)
