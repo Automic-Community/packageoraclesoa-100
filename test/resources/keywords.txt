@@ -93,3 +93,25 @@ Undeploy a Composite Application
     Set Default Weblogic Server Connection
     Action Execute
     Action Report Should Be Found
+
+Start a Composite Application
+    Init Action    PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION
+    Action Set    &UC4RB_ORACLE_SOA_APP_NAME#    ${_APP_NAME}
+    Action Set    &UC4RB_ORACLE_SOA_REVISION#    ${_APP_REV}
+    Action Set    &UC4RB_ORACLE_SOA_LABEL#    ${_APP_LABEL}
+    Action Set    &UC4RB_ORACLE_SOA_FAIL_RUNNING#    NO
+    Action Set    &UC4RB_WEBLOGIC_HOME#    ${_WL_HOME}
+    Set Default Weblogic Server Connection
+    Action Execute
+    Action Report Should Be Found
+
+Stop a Composite Application
+    Init Action    PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION
+    Action Set    &UC4RB_SOA_APPNAME#    ${_APP_NAME}
+    Action Set    &UC4RB_SOA_REVISION#    ${_APP_REV}
+    Action Set    &UC4RB_SOA_LABEL#    ${_APP_LABEL}
+    Action Set    &UC4RB_SOA_FAIL_IF_STOPPED#    NO
+    Action Set    &UC4RB_WEBLOGIC_HOME#    ${_WL_HOME}
+    Set Default Weblogic Server Connection
+    Action Execute
+    Action Report Should Be Found

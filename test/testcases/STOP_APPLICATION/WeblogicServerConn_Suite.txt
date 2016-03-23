@@ -62,7 +62,10 @@ Stop Application Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Stop testing Server Connection for Stop Application Template
+    Deploy a Composite Application
+    Start a Composite Application
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
     Log    Testing Server Connection for Stop Application Template end
+    Undeploy a Composite Application
