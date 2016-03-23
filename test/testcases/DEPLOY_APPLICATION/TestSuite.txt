@@ -56,7 +56,6 @@ Deploy Application Template
     Action Set    ${PRT_DEPLOY_APPLICATION_CONFIG}    ${config}
     Action Set    ${PRT_DEPLOY_APPLICATION_PARTITION}    ${partition}
     Action Set    ${PRT_DEPLOY_APPLICATION_ORACLE_HOME}    ${oracle_home}
-    Action Set    ${PRT_WEBLOGIC_USE_PROTOCOL}    ${PROTOCOL}
     Action Set Timeout    300
     Action Execute
     Action Report Should Be Found

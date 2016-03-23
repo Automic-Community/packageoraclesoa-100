@@ -3,9 +3,9 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
-Force Tags        DEPLOY_APPLICATION    _template_
+Force Tags        ACTIVATE_APPLICATION    _template_
 Default Tags      win    unix
-Test Template     Deploy Application Template
+Test Template     Start Application Template
 Resource          prt_keywords.txt
 Resource          ../../resources/keywords.txt
 
@@ -26,13 +26,13 @@ Resource          ../../resources/keywords.txt
                       NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    Invalid_input            ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
 
 06_Failed execute with Invalid Connection Protocol
-                      NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    t3                      1              ${ENDED_NOK}
+                      NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    https                   1              ${ENDED_NOK}
 
 *** Keywords ***
-Deploy Application Template
+Start Application Template
     [Arguments]    ${OK_NOK}    ${WEBLOGIC_HOST}    ${WEBLOGIC_PORT}    ${WEBLOGIC_USERNAME}    ${WEBLOGIC_PASSWORD}    ${WEBLOGIC_USE_PROTOCOL}
     ...    ${returnCode}    ${returnStatus}
-    [Documentation]    This template is used for test DEPLOY_APPLICATION with needed arguments
+    [Documentation]    This template is used for test START_APPLICATION with needed arguments
     ...    All inputs are default and valid, except input variables for WEBLOGIC CONNECTION promptset. Required inputs:
     ...    - ${WEBLOGIC_HOST} : IP or hostname of the Weblogic Server
     ...    - ${WEBLOGIC_PORT}: Port number used to connect to the Weblogic Server
@@ -42,7 +42,7 @@ Deploy Application Template
     ...    - ${returnCode}: expected return code after execution
     ...    - ${returnStatus}: expected return status after execution
     ...    - ${message}: expected message contained in report after execution
-    Init Action    ${ACTION_DEPLOY_APPLICATION}
+    Init Action    ${ACTION_START_APPLICATION}
     Action Set    ${PRT_WEBLOGIC_HOST}    ${WEBLOGIC_HOST}
     Action Set    ${PRT_WEBLOGIC_PORT}    ${WEBLOGIC_PORT}
     Action Set    ${PRT_WEBLOGIC_USERNAME}    ${WEBLOGIC_USERNAME}
@@ -61,10 +61,8 @@ Deploy Application Template
 
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
-    Log    Start testing Server Connection for Deploy Application Template
-    Undeploy a Composite Application
+    Log    Start testing Server Connection for Start Application Template
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
-    Log    Testing Server Connection for Deploy Application Template end
-    Undeploy a Composite Application
+    Log    Testing Server Connection for Start Application Template end
