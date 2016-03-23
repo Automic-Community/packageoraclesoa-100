@@ -43,3 +43,8 @@ binaries:
         type: TEXT
         path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_activate_application.py
         version: 1.0.0
+
+      - name: stop_application
+        type: TEXT
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_stop_application.py
+        version: 1.0.0

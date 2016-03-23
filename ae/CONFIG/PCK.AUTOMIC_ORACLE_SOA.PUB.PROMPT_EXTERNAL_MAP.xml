@@ -59,6 +59,18 @@
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_PORT#" Value="EXT:/oracle_soa/server/port" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_APPNAME#" Value="EXT:/oracle_soa/application_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_LABEL#" Value="EXT:/oracle_soa/label" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_FAIL_IF_STOPPED#" Value="NO" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_REVISION#" Value="EXT:/oracle_soa/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_HOME#" Value="EXT:/oracle_soa/oracle_home" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_HOST#" Value="EXT:/oracle_soa/server/host" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_PASSWORD#" Value="EXT:/oracle_soa/server/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_PORT#" Value="EXT:/oracle_soa/server/port" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
 </Variables>
 </VARA>
 <DOCU_Docu state="1" type="text">
