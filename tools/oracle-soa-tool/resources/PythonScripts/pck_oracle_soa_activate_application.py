@@ -288,6 +288,8 @@ def getOptions(inputOptions):
 #pck_weblogic_utils END
 
 import sys, string, os, os.path, time, traceback, shutil 
+from javax.management import MBeanException 
+from java.lang.reflect import InvocationTargetException
 
 inputUser = rf_prep_str(sys.argv[1])
 inputPassword = sys.argv[2]
@@ -302,9 +304,8 @@ inputPartition = rf_prep_str(sys.argv[9])
 #pck_weblogic_edit_session_wait START
 print "Execute python script with WLST"
 #pck_weblogic_edit_session_wait END
-
+failed = 1;
 try:
-    failed = 1;
     url = '%s://%s:%s' % (inputProtocol, inputHost, inputPort)
     connect(inputUser, inputPassword, url)
 
@@ -320,9 +321,12 @@ try:
         label=inputLabel, 
         partition=inputPartition);
     failed = 0;
+
 #pck_weblogic_edit_finally_block START
-finally:
-    # dumpStack();
-    disconnect('true');
-    exit('y', failed);
+except Exception, detail:
+    print 'Exception: ', detail;
+    dumpStack();
+
+disconnect('true');
+exit('y', failed);
 #pck_weblogic_edit_finally_block END

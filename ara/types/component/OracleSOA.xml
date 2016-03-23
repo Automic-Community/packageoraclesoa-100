@@ -171,6 +171,19 @@
 			<Description>Application Revision</Description>
 		</Property>
 
+		<Property name="/oracle_soa/sar_location" highlighted="false">
+			<Value>{@application/system/sar_location}</Value>
+			<Description>Absolute path to a specified SAR file or to all SAR files included in the ZIP file.</Description>
+		</Property>
+		<Property name="/oracle_soa/config_plan" highlighted="false">
+			<Value>{@application/system/config_plan}</Value>
+			<Description>Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file.</Description>
+		</Property>
+		<Property name="/oracle_soa/partition" highlighted="false">
+			<Value>{@application/system/partition}</Value>
+			<Description>The name of the partition in which to deploy the SOA composite application. The default value is default.</Description>
+		</Property>
+		
 		<Property name="/oracle_soa/oracle_home" highlighted="false">
 			<Value>{@target/custom/oracle_home}</Value>
 			<Description>Oracle Home directory</Description>
