@@ -309,7 +309,7 @@ try:
     url = '%s://%s:%s' % (inputProtocol, inputHost, inputPort)
     connect(inputUser, inputPassword, url)
 
-    if inputPartition == '' or inputPartition == None:
+    if inputPartition == None:
         inputPartition = 'default';
 
     sca_activateComposite(inputHost,

@@ -9,19 +9,21 @@ Test Template     Undeploy Application Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK      Application Name                  Revision    Partition              Oracle Home    RETURN CODE    RETURN STATUS
+*** Test Cases ***    OK_NOK    Application Name          Revision       Partition                      Oracle Home              RETURN CODE    RETURN STATUS
 1. Success activate application default value
-                      #[Setup]    Deploy a Composite Application
-                      OK          Project1                          1.0         default                ${_WL_HOME}    0              ${ENDED_OK}
+                      OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              0              ${ENDED_OK}
 
 2. Fail activate application wrong name
-                      NOK         Project1_not_exist                1.0         ${EMPTY}               ${_WL_HOME}    1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              50             ${ENDED_NOK}
 
 3. Fail activate application wrong revision
-                      NOK         Project1                          9.9         ${EMPTY}               ${_WL_HOME}    1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}              9.9            ${_APP_PARTITION}              ${_WL_HOME}              50             ${ENDED_NOK}
 
 4. Fail activate application wrong partition
-                      NOK         Project1                          1.0         PARTITION_NOT_EXIST    ${_WL_HOME}    1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              50             ${ENDED_NOK}
+
+5. Fail activate application wrong oracle home
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    2              ${ENDED_NOK}
 
 *** Keywords ***
 Undeploy Application Template
@@ -54,7 +56,9 @@ Undeploy Application Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Undeploy Application Template
+    Deploy a Composite Application
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
     Log    Testing for Undeploy Application Template end
+    Undeploy a Composite Application

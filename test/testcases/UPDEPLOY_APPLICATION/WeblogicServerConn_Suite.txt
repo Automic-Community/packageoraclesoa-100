@@ -63,7 +63,9 @@ Undeploy Application Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing Server Connection for Undeploy Application Template
+    Deploy a Composite Application
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
     Log    Testing Server Connection for Undeploy Application Template end
+    Undeploy a Composite Application

@@ -164,7 +164,7 @@
 <LoginFsc/>
 </OUTPUTSCAN>
 <POST_SCRIPT mode="1" replacementmode="1" state="1">
-<OSCRI><![CDATA[:SET &HND# = PREP_PROCESS_REPORT(,,,"*code=500")
+<OSCRI><![CDATA[:SET &HND# = PREP_PROCESS_REPORT(,,,"*Response code=500*")
 :PROCESS &HND#
 :   MODIFY_STATE RETCODE=50
 :ENDPROCESS]]></OSCRI>

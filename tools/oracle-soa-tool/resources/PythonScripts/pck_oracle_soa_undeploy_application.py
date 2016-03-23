@@ -258,23 +258,24 @@ inputPartition = rf_prep_str(sys.argv[8])
 import sys, string, os, os.path, time, traceback, shutil
 
 print "Execute python script with WLST"
-
+failed = 1
 try:
-  failed = 1    
-  url = '%s://%s:%s' % (inputProtocol, inputHost, inputPort)
-  connect(inputUser, inputPassword, url)
+    url = '%s://%s:%s' % (inputProtocol, inputHost, inputPort)
+    connect(inputUser, inputPassword, url)
 
-  if inputPartition == '' or inputPartition == None:
-      inputPartition = 'default';
-  progress=sca_undeployComposite(url
-    ,inputAppName
-    ,inputRevision
-    ,user=inputUser
-    ,password=inputPassword
-    ,partition=inputPartition
-  )
-  failed = 0
+    if inputPartition == None:
+        inputPartition = 'default';
+    sca_undeployComposite(url
+        ,inputAppName
+        ,inputRevision
+        ,user=inputUser
+        ,password=inputPassword
+        ,partition=inputPartition);
+    failed = 0;
 
-finally:
-    disconnect('true');
-    exit('y', failed);
+except Exception, detail:
+    print 'Exception: ', detail;
+    dumpStack();
+
+disconnect('true');
+exit('y', failed);

@@ -72,3 +72,24 @@ Delete folder
     Action Return Status Should Be    ${ENDED_OK}
 
 Deploy a Composite Application
+    Init Action    PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION
+    Action Set    &UC4RB_SOA_SAR_LOCATION#    ${_SAR_LOCATION}
+    Action Set    &UC4RB_SOA_OVERWRITE#    YES
+    Action Set    &UC4RB_SOA_FORCE_DEFAULT#    YES
+    Action Set    &UC4RB_SOA_CONFIG_PLAN#    ${_CONFIG_PLAN}
+    Action Set    &UC4RB_SOA_PARTITION#    ${_APP_PARTITION}
+    Action Set    &UC4RB_WEBLOGIC_HOME#    ${_WL_HOME}
+    Set Default Weblogic Server Connection
+    Action Execute
+    Action Report Should Be Found
+    Action Return Status Should Be    ${ENDED_OK}
+
+Undeploy a Composite Application
+    Init Action    PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION
+    Action Set    &UC4RB_SOA_APP_NAME#    ${_APP_NAME}
+    Action Set    &UC4RB_SOA_APP_REV#    ${_APP_REV}
+    Action Set    &UC4RB_SOA_PARTITION#    ${_APP_PARTITION}
+    Action Set    &UC4RB_WEBLOGIC_HOME#    ${_WL_HOME}
+    Set Default Weblogic Server Connection
+    Action Execute
+    Action Report Should Be Found

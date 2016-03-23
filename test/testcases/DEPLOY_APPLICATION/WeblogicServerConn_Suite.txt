@@ -9,11 +9,6 @@ Test Template     Deploy Application Template
 Resource          prt_keywords.txt
 Resource          ../../resources/keywords.txt
 
-*** Variables ***
-${SAR_LOCATION}    C:\\JDeveloper\\mywork\\Oracle_SOA_Package\\SOAProject\\deploy\\sca_SOAProject.jar
-${CONFIG_PLAN}    C:\\JDeveloper\\mywork\\Oracle_SOA_Package\\SOAProject\\SOAProject_cfgplan.xml
-${PROTOCOL}       http
-
 *** Test Cases ***    OK_NOK    Host             Port           Username             Password                 Connection Protocol    RETURN CODE    RETURN STATUS
 01_Success execute with Valid inputs
                       OK        ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${PROTOCOL}            0              ${ENDED_OK}
@@ -67,7 +62,9 @@ Deploy Application Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing Server Connection for Deploy Application Template
+    Undeploy a Composite Application
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
     Log    Testing Server Connection for Deploy Application Template end
+    Undeploy a Composite Application

@@ -30,6 +30,12 @@ ${_NOT_SUDOER}    /
 ${_NOT_SUDOER_PASS}    /
 ${_CURRENT_TIMESTAMP_}    /
 ${_AGENT_DIR}     /
+${_APP_NAME}      /
+${_APP_REV}       /
+${_APP_LABEL}     /
+${_APP_PARTITION}    /
+${_SAR_LOCATION}    /
+${_CONFIG_PLAN}    /
 
 *** Key Words ***
 Init WL Agent
@@ -77,6 +83,12 @@ Init VVNARASOA02 For Oracle SOA
     Set Global Variable    ${_WL_ADMIN_USER}    ${VVNARASOA02_WEBLOGIC_USERNAME}
     Set Global Variable    ${_WL_ADMIN_PASSWORD}    ${VVNARASOA02_WEBLOGIC_PASSWORD}
     Set Global Variable    ${_WL_CONN_PROTOCOL}    ${VVNARASOA02_WEBLOGIC_USE_PROTOCOL}
+    Set Global Variable    ${_APP_NAME}    ${VVNARASOA02_APP_NAME}
+    Set Global Variable    ${_APP_REV}    ${VVNARASOA02_APP_REV}
+    Set Global Variable    ${_APP_LABEL}    ${VVNARASOA02_APP_LABEL}
+    Set Global Variable    ${_APP_PARTITION}    ${VVNARASOA02_APP_PARTITION}
+    Set Global Variable    ${_SAR_LOCATION}    ${VVNARASOA02_SAR_LOCATION}
+    Set Global Variable    ${_CONFIG_PLAN}    ${VVNARASOA02_CONFIG_PLAN}
     #-------- Set global Sudo Variables -------------
     Set Global Variable    ${_SUDOER_USER_WITH_PASS}    ${VVNARASOA02_SUDOER_USER_WITH_PASS}
     Set Global Variable    ${_SUDOER_PASS}    ${VVNARASOA02_SUDOER_PASS}

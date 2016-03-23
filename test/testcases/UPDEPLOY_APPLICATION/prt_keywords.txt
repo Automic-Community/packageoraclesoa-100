@@ -1,6 +1,6 @@
 *** Keywords ***
 Set Default Valid Promptset
-    Action Set    ${PRT_UNDEPLOY_APPLICATION_NAME}    Project1
-    Action Set    ${PRT_UNDEPLOY_APPLICATION_REVISION}    1.0
-    Action Set    ${PRT_UNDEPLOY_APPLICATION_PARTITION}    ${EMPTY}
+    Action Set    ${PRT_UNDEPLOY_APPLICATION_NAME}    ${_APP_NAME}
+    Action Set    ${PRT_UNDEPLOY_APPLICATION_REVISION}    ${_APP_REV}
+    Action Set    ${PRT_UNDEPLOY_APPLICATION_PARTITION}    ${_APP_PARTITION}
     Action Set    ${PRT_UNDEPLOY_APPLICATION_ORACLE_HOME}    ${_WL_HOME}
