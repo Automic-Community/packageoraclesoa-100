@@ -9,29 +9,24 @@ Test Template     Deploy Application Template
 Resource          prt_keywords.txt
 Resource          ../../resources/keywords.txt
 
-*** Variables ***
-${SAR_LOCATION}    C:\\JDeveloper\\mywork\\Oracle_SOA_Package\\SOAProject\\deploy\\sca_SOAProject.jar
-${CONFIG_PLAN}    C:\\JDeveloper\\mywork\\Oracle_SOA_Package\\SOAProject\\SOAProject_cfgplan.xml
-${PROTOCOL}       http
-
-*** Test Cases ***    OK_NOK    Host             Port           Username             Password                 Connection Protocol    RETURN CODE    RETURN STATUS
+*** Test Cases ***    OK_NOK    Host             Port           Username             Password                 Connection Protocol     RETURN CODE    RETURN STATUS
 01_Success execute with Valid inputs
-                      OK        ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${PROTOCOL}            0              ${ENDED_OK}
+                      OK        ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    0              ${ENDED_OK}
 
 02_Failed execute with Invalid Host
-                      NOK       Invalid_input    ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${PROTOCOL}            1              ${ENDED_NOK}
+                      NOK       Invalid_input    ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
 
 03_Failed execute with Invalid Port
-                      NOK       ${_WL_HOST}      1000           ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${PROTOCOL}            1              ${ENDED_NOK}
+                      NOK       ${_WL_HOST}      1000           ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
 
 04_Failed execute with Invalid Admin User
-                      NOK       ${_WL_HOST}      ${_WL_PORT}    Invalid_input        ${_WL_ADMIN_PASSWORD}    ${PROTOCOL}            1              ${ENDED_NOK}
+                      NOK       ${_WL_HOST}      ${_WL_PORT}    Invalid_input        ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
 
 05_Failed execute with Invalid Admin Password
-                      NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    Invalid_input            ${PROTOCOL}            1              ${ENDED_NOK}
+                      NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    Invalid_input            ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
 
 06_Failed execute with Invalid Connection Protocol
-                      NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    t3                     1              ${ENDED_NOK}
+                      NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    t3                      1              ${ENDED_NOK}
 
 *** Keywords ***
 Deploy Application Template
@@ -67,7 +62,9 @@ Deploy Application Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing Server Connection for Deploy Application Template
+    Undeploy a Composite Application
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
     Log    Testing Server Connection for Deploy Application Template end
+    Undeploy a Composite Application

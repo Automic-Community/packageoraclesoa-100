@@ -62,7 +62,7 @@ def rf_prep_svrs(str1):
   
     return retarr 
 
-# remove all space char(which is before or after comma char) in comma delimited string	
+# remove all space char(which is before or after comma char) in comma delimited string  
 def rf_prep_comma_delim_str(str1):
     if str1 == None: 
         return None 
@@ -71,7 +71,7 @@ def rf_prep_comma_delim_str(str1):
     retarr = rf_prep_svrs(str1)
     retstr = ','.join(retarr)
     return retstr
-	
+  
 # check str are yes/true or no/false 
 def to_t_f(str): 
     if str.lower() == 'yes' or str.lower() == 'true': 
@@ -245,194 +245,37 @@ def rf_prep_svrs_delimiter(str1, delimiter):
   
     return retarr 
 
-# Options
-def getOptions(inputOptions):
-    paramMaps={
-        'adminMode': 'false',
-        'altDD': '',
-        'altWlsDD': '',
-        'archiveVersion': '',
-        'block': 'true',
-        'clusterDeploymentTimeout': 0,
-        'createPlan': 'false',
-        'defaultSubmoduleTargets': 'true',
-        'deploymentPrincipalName': '',
-        'deploymentOrder': 100,
-        'forceUndeployTimeout': 0,
-        'gracefulIgnoreSessions': 'false',
-        'gracefulProductionToAdmin': 'false',
-        'libImplVersion': '',
-        'libraryModule': 'false',
-        'libSpecVersion': '',
-        'planStageMode': '',
-        'planVersion': '',
-        'remote': 'false',
-        'retireGracefully': '',
-        'retireTimeout': -1,
-        'rmiGracePeriod': -1,
-        'securityModel': '',
-        'securityValidationEnabled': 'false',
-        'timeout': 300000,
-        'upload': 'false',
-        'versionIdentifier': ''
-    }
-    # check if inputOptions = empty
-    if inputOptions is None or inputOptions.strip() == '': 
-        return paramMaps
-    
-    params = rf_prep_svrs_delimiter(inputOptions, ',')
-    for param in params:
-        eachParam = rf_prep_svrs_delimiter(param, '=')
-        if len(eachParam) != 2:
-            raise 'Input must be specified as name-value pairs'
-        paramMaps[eachParam[0]] = eachParam[1]    
-    return paramMaps
-
 #pck_weblogic_utils END
+inputUser = rf_prep_str(sys.argv[1])
+inputPassword = rf_prep_str(sys.argv[2])
+inputHost = rf_prep_str(sys.argv[3])
+inputPort = rf_prep_str(sys.argv[4])
+inputProtocol = rf_prep_str(sys.argv[5])
+inputAppName = rf_prep_str(sys.argv[6])
+inputRevision = rf_prep_str(sys.argv[7])
+inputPartition = rf_prep_str(sys.argv[8])
 
-inputAppName = sys.argv[4]
-inputTargets = sys.argv[5]
-inputSubmodule = sys.argv[6]
-inputVersionIdentifier = sys.argv[7]
-inputArchiveVersion = sys.argv[8]
-inputForceUndeploy = sys.argv[9]
-inputTimeout = sys.argv[10]
-inputFailIfMissing = sys.argv[11]
-inputOptions = sys.argv[12]
+import sys, string, os, os.path, time, traceback, shutil
 
-def printParam(name, value):  
-  if name is None:
-    return None
-  if value is None:
-    value = ''
-  print name + ': ' + value
-
-def printInputs():
-    printParam('User',sys.argv[1])
-    #printParam('pass',sys.argv[2])
-    printParam('Host and port',rf_prep_str(sys.argv[3]))
-    printParam('Application Name',rf_prep_str(inputAppName))
-    printParam('Targets',rf_prep_comma_delim_str(inputTargets))
-    printParam('Submodule Targets',rf_prep_comma_delim_str(inputSubmodule))
-    printParam('Version Identifier',rf_prep_str(inputVersionIdentifier))
-    printParam('Archive Version',rf_prep_str(inputArchiveVersion))
-    printParam('Force Undeploy Timeout',inputForceUndeploy)     
-    printParam('Timeout',inputTimeout)             
-    printParam('Fail if application is missing',to_t_f(inputFailIfMissing))
-    printParam('Options',inputOptions)
-            
-    
-printInputs()
-
-connect(sys.argv[1].strip(), sys.argv[2].strip(), sys.argv[3].strip())
-import sys, string, os, os.path, time, traceback, shutil 
-
-appName = rf_prep_str(inputAppName)
-appTargets = rf_prep_comma_delim_str(inputTargets)
-appVersion = rf_prep_str(inputVersionIdentifier)
-failIfMissing = to_t_f(inputFailIfMissing)
-
-# Dictionary param-value
-paramsMaps = getOptions(rf_prep_str(inputOptions))
-libraryModule = to_t_f(rf_prep_str(paramsMaps['libraryModule']))
-
-if not checkAppExists(appName,appVersion,appTargets,libraryModule):  
-  print 'Application/Library \"'+ appName +'\" does not exist!'   
-  if failIfMissing == 'true':
-    raise 'Fail if missing flag set to YES, Job failed!'
-  else:
-    failed=0
-    print 'Fail if missing flag set to NO, Job ended!'
-    exit('y', failed)
-# If not input app version => using activeVersion
-if appVersion is None:
-  appBean = getAppMBeanCore(appName, appVersion, True, libraryModule)
-  appVersion = appBean.getVersionIdentifier()
-
-#pck_weblogic_edit_session_wait START
 print "Execute python script with WLST"
-failed = 1    
+failed = 1
 try:
-  edit()    
-  startEdit(300000,1800000)   
-except:
-   raise 'ERROR: Edit session wait block problem. Job failed'
-#pck_weblogic_edit_session_wait END
+    url = '%s://%s:%s' % (inputProtocol, inputHost, inputPort)
+    connect(inputUser, inputPassword, url)
 
-try:   
-  progress=undeploy(appName=appName
-    ,targets=appTargets    
-    ,subModuleTargets=rf_prep_comma_delim_str(inputSubmodule)     
-    ,versionIdentifier=appVersion
-    ,archiveVersion=rf_prep_str(inputArchiveVersion)    
-    ,forceUndeployTimeout=int(inputForceUndeploy)
-    ,timeout=int(inputTimeout) 
-    ,adminMode=to_t_f(rf_prep_str(paramsMaps['adminMode']))
-    ,altDD=rf_prep_str(paramsMaps['altDD'])
-    ,altWlsDD=rf_prep_str(paramsMaps['altWlsDD'])
-    ,block=to_t_f(rf_prep_str(paramsMaps['block']))
-    ,clusterDeploymentTimeout=int(paramsMaps['clusterDeploymentTimeout'])
-    ,createPlan=to_t_f(rf_prep_str(paramsMaps['createPlan']))
-    ,defaultSubmoduleTargets=to_t_f(rf_prep_str(paramsMaps['defaultSubmoduleTargets']))
-    ,deploymentPrincipalName=rf_prep_str(paramsMaps['deploymentPrincipalName'])
-    ,deploymentOrder=int(paramsMaps['deploymentOrder'])
-    ,gracefulIgnoreSessions=to_t_f(rf_prep_str(paramsMaps['gracefulIgnoreSessions']))
-    ,gracefulProductionToAdmin=to_t_f(rf_prep_str(paramsMaps['gracefulProductionToAdmin']))
-    ,libImplVersion=rf_prep_str(paramsMaps['libImplVersion'])
-    ,libraryModule=libraryModule
-    ,libSpecVersion=(rf_prep_str(paramsMaps['libSpecVersion']))
-    ,planStageMode=rf_prep_str(paramsMaps['planStageMode'])
-    ,planVersion=rf_prep_str(paramsMaps['planVersion'])
-    ,remote=to_t_f(rf_prep_str(paramsMaps['remote']))
-    ,retireGracefully=rf_prep_str(paramsMaps['retireGracefully'])
-    ,retireTimeout=int(paramsMaps['retireTimeout'])
-    ,rmiGracePeriod=int(paramsMaps['rmiGracePeriod'])
-    ,securityModel=rf_prep_str(paramsMaps['securityModel'])
-    ,securityValidationEnabled=to_t_f((rf_prep_str(paramsMaps['securityValidationEnabled'])))
-    ,upload=to_t_f(rf_prep_str(paramsMaps['upload']))  
-  )   
-      
-  save()
-  activate(block='true')
+    if inputPartition == None:
+        inputPartition = 'default';
+    sca_undeployComposite(url
+        ,inputAppName
+        ,inputRevision
+        ,user=inputUser
+        ,password=inputPassword
+        ,partition=inputPartition);
+    failed = 0;
 
-  count = 0    
-  # checking deployment action is in progress and wait for 3 minute
-  while progress.isRunning() and count < 180:        
-    print 'Undeploying application...'
-    time.sleep(5)        
-    count = count + 5
-  progress.printStatus()
+except Exception, detail:
+    print 'Exception: ', detail;
+    dumpStack();
 
-  if progress.isCompleted() and not progress.isFailed():
-    print 'Application \"'+ inputAppName +'\" is undeployed successfully!'
-    failed=0             
-
-#pck_weblogic_edit_finally_block START
-finally:                    
-   if failed:               
-    print 'Job failed. finally block info:'      
-    try:                    
-      edit()                
-      undo('true', 'y')      
-      print 'undo is done'  
-    except:                 
-      print 'undo not done'    
-   try:                    
-      edit()                
-      c2 = getConfigManager() 
-      if c2.getCurrentEditor() is not None:  
-         stopEdit('y')         
-         print 'edit session was active. stopEdit is done'   
-   except:                 
-      print 'stopEdit not done, try cancelEdit'  
-         
-      try:                     
-        edit()                   
-        cancelEdit('y')             
-        print 'cancelEdit is done'   
-      except:                         
-        print 'cancelEdit not done.'        
-disconnect('true') 
-exit('y', failed)
-
-#pck_weblogic_edit_finally_block END
+disconnect('true');
+exit('y', failed);

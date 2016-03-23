@@ -9,24 +9,24 @@ Test Template     Activate Application Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    Application Name             Revision    Label              Partition              Oracle Home           RETURN CODE    RETURN STATUS
+*** Test Cases ***    OK_NOK    Application Name          Revision       Label                      Partition                      Oracle Home              RETURN CODE    RETURN STATUS
 1. Success activate application default value
-                      OK        VacationRequest              1.0         ${EMPTY}           ${EMPTY}               ${_WL_HOME}           0              ${ENDED_OK}
+                      OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              0              ${ENDED_OK}
 
 2. Fail activate application wrong name
-                      NOK       VacationRequest_NOT_EXIST    1.0         ${EMPTY}           ${EMPTY}               ${_WL_HOME}           1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              1              ${ENDED_NOK}
 
 3. Fail activate application wrong revision
-                      NOK       VacationRequest              9.9         ${EMPTY}           ${EMPTY}               ${_WL_HOME}           1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}              9.9            ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              1              ${ENDED_NOK}
 
 4. Fail activate application wrong label
-                      NOK       VacationRequest              1.0         LABEL_NOT_EXIST    ${EMPTY}               ${_WL_HOME}           1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              1              ${ENDED_NOK}
 
 5. Fail activate application wrong partition
-                      NOK       VacationRequest              1.0         ${EMPTY}           PARTITION_NOT_EXIST    ${_WL_HOME}           1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              1              ${ENDED_NOK}
 
 6. Fail activate application wrong oracle home
-                      NOK       VacationRequest              1.0         ${EMPTY}           ${EMPTY}               ${EMPTY}_NOT_EXIST    2              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    2              ${ENDED_NOK}
 
 *** Keywords ***
 Activate Application Template
@@ -61,7 +61,9 @@ Activate Application Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Activate Application Template
+    Deploy a Composite Application
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
     Log    Testing for Activate Application Template end
+    Undeploy a Composite Application

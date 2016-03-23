@@ -8,36 +8,31 @@ Default Tags      win    unix
 Test Template     Deploy Application Template
 Resource          ../../resources/keywords.txt
 
-*** Variables ***
-${SAR_LOCATION}    C:\\JDeveloper\\mywork\\Oracle_SOA_Package\\SOAProject\\deploy\\sca_SOAProject.jar
-${CONFIG_PLAN}    C:\\JDeveloper\\mywork\\Oracle_SOA_Package\\SOAProject\\SOAProject_cfgplan.xml
-${PROTOCOL}       http
-
-*** Test Cases ***    OK_NOK                                                                                Sar Location                 Overwrite    Force Default    Config Plan                 Partition              Oracle Home              RETURN CODE    RETURN STATUS
+*** Test Cases ***    OK_NOK     Sar Location                        Overwrite    Force Default    Config Plan                  Partition                      Oracle Home              RETURN CODE    RETURN STATUS
 1. Success deploy application with default value
-                      #[Setup] will be implement after merge to develop branch with undeploy application
-                      OK                                                                                    ${SAR_LOCATION}              NO           YES              ${CONFIG_PLAN}              ${EMPTY}               ${_WL_HOME}              0              ${ENDED_OK}
+                      OK         ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              0              ${ENDED_OK}
 
 2. Success deploy application with Overwrite is YES
-                      OK                                                                                    ${SAR_LOCATION}              YES          YES              ${CONFIG_PLAN}              ${EMPTY}               ${_WL_HOME}              0              ${ENDED_OK}
+                      OK         ${_SAR_LOCATION}                    YES          YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              0              ${ENDED_OK}
 
 3. Success deploy application with Force Default is NO
-                      OK                                                                                    ${SAR_LOCATION}              YES          NO               ${CONFIG_PLAN}              ${EMPTY}               ${_WL_HOME}              0              ${ENDED_OK}
+                      [Setup]    Undeploy a Composite Application
+                      OK         ${_SAR_LOCATION}                    NO           NO               ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              0              ${ENDED_OK}
 
 4. Fail deploy application with Overwrite is NO
-                      NOK                                                                                   ${SAR_LOCATION}              NO           YES              ${CONFIG_PLAN}              ${EMPTY}               ${_WL_HOME}              50             ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              50             ${ENDED_NOK}
 
 5. Fail deploy application with wrong SAR location
-                      NOK                                                                                   ${SAR_LOCATION}_NOT_EXIST    NO           YES              ${CONFIG_PLAN}              ${EMPTY}               ${_WL_HOME}              2              ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}_NOT_EXIST          NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              2              ${ENDED_NOK}
 
 6. Fail deploy application with wrong config plan
-                      NOK                                                                                   ${SAR_LOCATION}              NO           YES              ${CONFIG_PLAN}_NOT_EXIST    ${EMPTY}               ${_WL_HOME}              2              ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              2              ${ENDED_NOK}
 
 7. Fail deploy application with wrong partition
-                      NOK                                                                                   ${SAR_LOCATION}              NO           YES              ${CONFIG_PLAN}              PARTITION_NOT_EXIST    ${_WL_HOME}              50             ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              50             ${ENDED_NOK}
 
 8. Fail deploy application with wrong oracle home
-                      NOK                                                                                   ${SAR_LOCATION}              NO           YES              ${CONFIG_PLAN}              ${EMPTY}               ${_WL_HOME}_NOT_EXIST    2              ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    2              ${ENDED_NOK}
 
 *** Keywords ***
 Deploy Application Template
@@ -61,7 +56,6 @@ Deploy Application Template
     Action Set    ${PRT_DEPLOY_APPLICATION_CONFIG}    ${config}
     Action Set    ${PRT_DEPLOY_APPLICATION_PARTITION}    ${partition}
     Action Set    ${PRT_DEPLOY_APPLICATION_ORACLE_HOME}    ${oracle_home}
-    Action Set    ${PRT_WEBLOGIC_USE_PROTOCOL}    ${PROTOCOL}
     Action Set Timeout    300
     Action Execute
     Action Report Should Be Found
@@ -75,7 +69,9 @@ Deploy Application Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Deploy Application Template
+    Undeploy a Composite Application
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
     Log    Testing for Deploy Application Template end
+    Undeploy a Composite Application

@@ -1,7 +1,7 @@
 *** Keywords ***
 Set Default Valid Promptset
-    Action Set    ${PRT_ACTIVATE_APPLICATION_NAME}    VacationRequest
-    Action Set    ${PRT_ACTIVATE_APPLICATION_REVISION}    1.0
-    Action Set    ${PRT_ACTIVATE_APPLICATION_LABEL}    ${EMPTY}
-    Action Set    ${PRT_ACTIVATE_APPLICATION_PARTITION}    ${EMPTY}
+    Action Set    ${PRT_ACTIVATE_APPLICATION_NAME}    ${_APP_NAME}
+    Action Set    ${PRT_ACTIVATE_APPLICATION_REVISION}    ${_APP_REV}
+    Action Set    ${PRT_ACTIVATE_APPLICATION_LABEL}    ${_APP_LABEL}
+    Action Set    ${PRT_ACTIVATE_APPLICATION_PARTITION}    ${_APP_PARTITION}
     Action Set    ${PRT_ACTIVATE_APPLICATION_ORACLE_HOME}    ${_WL_HOME}

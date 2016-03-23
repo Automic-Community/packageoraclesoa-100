@@ -9,9 +9,7 @@
 <CustomAttributes KeyListID="0" dataRequestID="0"/>
 </XHEADER>
 <SYNCREF state="1">
-<Syncs>
-<row Abend="SET_FREE" Else="Wait" End="SET_FREE" Name="PCK.AUTOMIC_ORACLE_SOA.PRV.SYNC.PARALLEL_SYNC" Start="SET_EXCLUSIVE"/>
-</Syncs>
+<Syncs/>
 </SYNCREF>
 <ATTR_JOBP state="1">
 <Queue>CLIENT_QUEUE</Queue>
@@ -21,9 +19,9 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
@@ -65,26 +63,13 @@
 </PRPTBOX>
 </PROMPTSET>
 </node>
-<node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
-<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
-<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
-<UC4RB_WEBLOGIC_JAVA_OPTIONSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_JAVA_OPTIONS#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
-</PRPTBOX>
-</PROMPTSET>
-</node>
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">
-<UC4RB_WEBLOGIC_A_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_A_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_APP_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_FAIL_MISSINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_FAIL_MISSING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_FAIL_MISSINGs.00>
-<UC4RB_WEBLOGIC_OPTIONSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_OPTIONS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_SUB_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_SUB_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">300000</UC4RB_WEBLOGIC_TIMEOUTs.00>
-<UC4RB_WEBLOGIC_UTIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_UTIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">0</UC4RB_WEBLOGIC_UTIMEOUTs.00>
-<UC4RB_WEBLOGIC_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_APP_REVs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_REV#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -139,10 +124,7 @@
 </node>
 <node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
 <VALUE state="2">
-<Values>
-<row ERTUsage="0" Mod="0" Name="&amp;UC4RB_BACKUP_DIRECTORY#" Value=""/>
-<row ERTUsage="0" Mod="0" Name="&amp;UC4RB_BACKUP_REPORT#" Value=""/>
-</Values>
+<Values/>
 <Mode>0</Mode>
 </VALUE>
 </node>
@@ -159,26 +141,13 @@
 </PRPTBOX>
 </PROMPTSET>
 </node>
-<node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
-<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
-<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
-<UC4RB_WEBLOGIC_JAVA_OPTIONSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_JAVA_OPTIONS#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
-</PRPTBOX>
-</PROMPTSET>
-</node>
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">
-<UC4RB_WEBLOGIC_A_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_A_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_APP_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_FAIL_MISSINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_FAIL_MISSING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_FAIL_MISSINGs.00>
-<UC4RB_WEBLOGIC_OPTIONSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_OPTIONS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_SUB_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_SUB_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">300000</UC4RB_WEBLOGIC_TIMEOUTs.00>
-<UC4RB_WEBLOGIC_UTIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_UTIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">0</UC4RB_WEBLOGIC_UTIMEOUTs.00>
-<UC4RB_WEBLOGIC_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_APP_REVs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_REV#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -236,26 +205,13 @@
 </PRPTBOX>
 </PROMPTSET>
 </node>
-<node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
-<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS">
-<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
-<UC4RB_WEBLOGIC_JAVA_OPTIONSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_JAVA_OPTIONS#" promptsetname="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS"/>
-</PRPTBOX>
-</PROMPTSET>
-</node>
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">
-<UC4RB_WEBLOGIC_A_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_A_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_APP_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_FAIL_MISSINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_FAIL_MISSING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">NO</UC4RB_WEBLOGIC_FAIL_MISSINGs.00>
-<UC4RB_WEBLOGIC_OPTIONSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_OPTIONS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_SUB_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_SUB_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_TARGETSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TARGETS#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
-<UC4RB_WEBLOGIC_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_TIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">300000</UC4RB_WEBLOGIC_TIMEOUTs.00>
-<UC4RB_WEBLOGIC_UTIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_UTIMEOUT#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">0</UC4RB_WEBLOGIC_UTIMEOUTs.00>
-<UC4RB_WEBLOGIC_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_VERSION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_APP_REVs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_REV#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -327,10 +283,7 @@
 <dyntree>
 <node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
 <VALUE state="1">
-<Values>
-<row ERTUsage="0" Name="&amp;UC4RB_BACKUP_DIRECTORY#" Value=""/>
-<row ERTUsage="0" Name="&amp;UC4RB_BACKUP_REPORT#" Value=""/>
-</Values>
+<Values/>
 <Mode>0</Mode>
 </VALUE>
 </node>
@@ -339,16 +292,13 @@
 <PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.ADMINSRV_CONNECTION" prptmode="1"/>
 </PROMPTSET>
 </node>
-<node content="1" id="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" parent="PRPTS" type="PROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_WEBLOGIC.PRV.PROMPTSET.COMMON_OPTIONS" prptmode="1"/>
-</PROMPTSET>
-</node>
 <node content="1" id="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION" name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION" ontop="1">
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION" prptmode="1">
-<UC4RB_WEBLOGIC_FAIL_MISSINGs.00 altview="0" haslist="0">NO</UC4RB_WEBLOGIC_FAIL_MISSINGs.00>
-<UC4RB_WEBLOGIC_OPTIONSs.00 altview="0" haslist="0"/>
+<UC4RB_SOA_APP_NAMEs.00 altview="0" haslist="0"/>
+<UC4RB_SOA_APP_REVs.00 altview="0" haslist="0"/>
+<UC4RB_SOA_PARTITIONs.00 altview="0" haslist="0"/>
+<UC4RB_WEBLOGIC_HOMEs.00 altview="0" haslist="0"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -373,60 +323,37 @@
 <ComponentName/>
 </DEPLOYMENT>
 <ROLLBACK state="1">
-<RollbackFlag>1</RollbackFlag>
-<CBackupObj>PCK.AUTOMIC_ORACLE_SOA.PRV.BACKUP.UNDEPLOY_APPLICATION</CBackupObj>
-<CRollbackObj>PCK.AUTOMIC_ORACLE_SOA.PRV.ROLLBACK.UNDEPLOY_APPLICATION</CRollbackObj>
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
 <FBackupPath/>
 <FDeleteBefore>0</FDeleteBefore>
 <FInclSubDirs>0</FInclSubDirs>
 </ROLLBACK>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[: INCLUDE PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.PREPARE_ROLLBACK
-]]></MSCRI>
+<MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC><![CDATA[= RB name =
 PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION
-
 = General description =
-Undeploys an application from the specified servers.
-In case the application is not deployed the job will fail if 'Fail if application is missing' is set to true, otherwise the job will complete successfully.
-
+Undeploys a currently deployed SOA composite application.
 = Inputs =
-* Host: IP or hostname of the Administration Server
-* Port: Port number used to connect to the Administration Server
-* Username: Username used to authenticate with WebLogic
-* Password: Password used to authenticate with WebLogic
-* Connection Protocol: Select connection protocol to connect WLST to server
-* Application Name: Name under which the application shall be installed
-* Weblogic Home: WebLogic home directory
-* Java Options: Java options
-* Targets: Installation targets. Multiple values can be given using "," as seperator
-* Submodule Targets: Submodule level targets for JMS modules. Option: subModuleTargets
-* Version identifier: Version identifier. Option. versionIdentifier
-* Archive version number: Archive version number. Option: archiveVersion
-* Force Undeploy Timeout: Force undeployment timeout value. Option: forceUndeployTimeout
-* Timeout: Time (in milliseconds) that WLST waits for the deployment process to complete before canceling the operation. A value of 0 indicates that the operation will not time out. This argument defaults to 300,000 ms (or 5 minutes). Option: timeout
-Fail if application is running: Specifies if the Job should fail in case the application is already stopped. YES/NO
-* Fail if application is missing: Specifies if the Job should fail in case the application could not be found. YES/NO
-* Options: Optional. Comma-separated list of deployment options, specified as name-value pairs
-
+Host: IP or hostname of the Oracle WebLogic Server (for example, myhost).
+Port: Port of the Oracle WebLogic Server (for example, 7001).
+Username: User name for connecting to the running server to get MBean information (for example, weblogic).
+Password: Password of the user name.
+Protocol: Connection Protocol to connect to Oracle WebLogic Server (for example, t3)
+Application Name: Name of the SOA composite application.
+Revision: Revision of the SOA composite application
+Partition: Optional. The name of the partition in which the SOA composite application is located. The default value is default. If you do not specify a partition, the default partition is searched for the SOA composite application. However, no other partitions are searched.
+Oracle Home: Set to the full path of the Oracle home (for example, C:\Oracle\Middleware\Oracle_Home).
 = Behavior =
-Undeploys an application from the specified servers.
-In case the application is not deployed the job will fail if 'Fail if application is missing' is set to true, otherwise the job will complete successfully.
-
+Undeploys a currently deployed SOA composite application.
 = Outputs =
-(none)
- 
+* Return code is 0 if composite application is undeployed successfully. Return code is 1 in case connect failed or exception found.
 = Rollback =
-* Before executing the roll forward function, backup the application. Also backup its existing target assignments.
-* The rollback should redeploy the backed up application to its original targets
-= Logging =
-(none)
-
-= Example =
-(none)
-]]></DOC>
+(none)]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

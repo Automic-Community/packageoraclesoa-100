@@ -1,8 +1,8 @@
 *** Keywords ***
 Set Default Valid Promptset
-    Action Set    ${PRT_DEPLOY_APPLICATION_SAR}    ${SAR_LOCATION}
+    Action Set    ${PRT_DEPLOY_APPLICATION_SAR}    ${_SAR_LOCATION}
     Action Set    ${PRT_DEPLOY_APPLICATION_OVERWRITE}    NO
     Action Set    ${PRT_DEPLOY_APPLICATION_FORCE}    YES
-    Action Set    ${PRT_DEPLOY_APPLICATION_CONFIG}    ${CONFIG_PLAN}
-    Action Set    ${PRT_DEPLOY_APPLICATION_PARTITION}    ${EMPTY}
+    Action Set    ${PRT_DEPLOY_APPLICATION_CONFIG}    ${_CONFIG_PLAN}
+    Action Set    ${PRT_DEPLOY_APPLICATION_PARTITION}    ${_APP_PARTITION}
     Action Set    ${PRT_DEPLOY_APPLICATION_ORACLE_HOME}    ${_WL_HOME}

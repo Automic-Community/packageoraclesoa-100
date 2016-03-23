@@ -308,7 +308,7 @@ try:
     if inputConfigPlan != None:
         configPlanPath_tmp = inputConfigPlan.replace('\\','/');
 
-    if inputPartition == '' or inputPartition == None:
+    if inputPartition == None:
         inputPartition='default';
 
     inputServerURL = '%s://%s:%s' % (inputProtocol, inputHost, inputPort);
