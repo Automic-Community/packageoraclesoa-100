@@ -4,3 +4,4 @@ Set Default Valid Promptset
     Action Set    ${PRT_START_APPLICATION_REVISION}    ${_APP_REV}
     Action Set    ${PRT_START_APPLICATION_LABEL}    ${_APP_LABEL}
     Action Set    ${PRT_START_APPLICATION_ORACLE_HOME}    ${_WL_HOME}
+    Action Set    ${PRT_START_APPLICATION_FAIL}    NO
