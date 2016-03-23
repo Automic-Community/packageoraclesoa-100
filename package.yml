@@ -5,8 +5,20 @@ source: ae
   
 # binary object resource mapping will be defined here
 binaries:
+  - object: RESOURCES/PCK.AUTOMIC_ORACLE_SOA.PRV.CUSTOM_TYPES
+    timestamp: disabled
+    resources: 
+    - name: DEPLOYMENTTARGET#ORACLE_SOA#1
+      type: TEXT
+      path: ara/types/deploymenttarget/OracleSOA.xml
+      version: 1.0
+    - name: COMPONENT#ORACLE_SOA#2
+      type: TEXT
+      path: ara/types/component/OracleSOA.xml
+      version: 1.0
   - object: RESOURCES/LIBS/PCK.AUTOMIC_ORACLE_SOA.PRV.STORE
     resources: 
+
       - name: deploy_application
         type: TEXT
         path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_deploy_application.py
@@ -17,10 +29,21 @@ binaries:
         path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_undeploy_application.py
         version: 1.0.0
 
+      - name: start_application
+        type: TEXT
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_start_application.py
+        version: 1.0.0
+
+      - name: utils
+        type: TEXT
+        path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_utils.py
+        version: 1.0.0
+
       - name: activate_application
         type: TEXT
         path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_activate_application.py
         version: 1.0.0
+
       - name: stop_application
         type: TEXT
         path: tools/oracle-soa-tool/resources/PythonScripts/pck_oracle_soa_stop_application.py
