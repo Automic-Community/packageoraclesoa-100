@@ -9,19 +9,19 @@ Test Template     Stop Application Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK                                       Application Name             Revision           Label       Fail               Oracle Home    RETURN CODE    RETURN STATUS
+*** Test Cases ***    OK_NOK                                      Application Name             Revision           Label       Fail               Oracle Home    RETURN CODE    RETURN STATUS
 1. Success stop application default value
-                      OK                                           VacationRequest              1.0                ${EMPTY}    NO                 ${_WL_HOME}    0              ${ENDED_OK}
+                      OK                                          VacationRequest2             1.0                ${EMPTY}    NO                 ${_WL_HOME}    0              ${ENDED_OK}
 
 2. Fail stop application wrong name
-                      NOK                                          VacationRequest_not_exist    1.0                ${EMPTY}    NO                 ${_WL_HOME}    1              ${ENDED_NOK}
+                      NOK                                         VacationRequest_not_exist    1.0                ${EMPTY}    NO                 ${_WL_HOME}    1              ${ENDED_NOK}
 
 3. Fail stop application running fail equal YES
-                      NOK                                          VacationRequest              1.0                ${EMPTY}    YES                ${_WL_HOME}    1              ${ENDED_NOK}
+                      NOK                                         VacationRequest              1.0                ${EMPTY}    YES                ${_WL_HOME}    1              ${ENDED_NOK}
                       #3. Fail stop application wrong revision
-                      #                                            NOK                          VacationRequest    9.9         ${EMPTY}           ${_WL_HOME}    1              ${ENDED_NOK}
+                      #                                           NOK                          VacationRequest    9.9         ${EMPTY}           ${_WL_HOME}    1              ${ENDED_NOK}
                       #4. Fail stop application wrong label
-                      #                                            NOK                          VacationRequest    1.0         LABEL_NOT_EXIST    ${_WL_HOME}    1              ${ENDED_NOK}
+                      #                                           NOK                          VacationRequest    1.0         LABEL_NOT_EXIST    ${_WL_HOME}    1              ${ENDED_NOK}
 
 *** Keywords ***
 Stop Application Template
@@ -37,7 +37,7 @@ Stop Application Template
     ...    - ${retcode}: expected return code after execute action(runbook)
     ...    - ${status}: expected return status after execute action(runbook)
     Init Action    ${ACTION_STOP_APPLICATION}
-    Action Set    ${PRT_START_APPLICATION_NAME}    ${SOA_APP_NAME}
+    Action Set    ${PRT_STOP_APPLICATION_NAME}    ${SOA_APP_NAME}
     Action Set    ${PRT_STOP_APPLICATION_REVISION}    ${SOA_APP_REVISION}
     Action Set    ${PRT_STOP_APPLICATION_LABEL}    ${SOA_APP_LABEL}
     Action Set    ${PRT_WEBLOGIC_HOME}    ${SOA_ORACLE_HOME}
