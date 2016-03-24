@@ -3,7 +3,7 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
-Force Tags        ACTIVATE_APPLICATION    _template_
+Force Tags        ACTIVATE_APPLICATION
 Default Tags      win    unix
 Test Template     Activate Application Template
 Resource          prt_keywords.txt

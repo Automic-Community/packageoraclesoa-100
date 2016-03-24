@@ -3,7 +3,7 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
-Force Tags        STOP_APPLICATION    _template_
+Force Tags        STOP_APPLICATION
 Default Tags      win    unix
 Test Template     Stop Application Template
 Resource          prt_keywords.txt
