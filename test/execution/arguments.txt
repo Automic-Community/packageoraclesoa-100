@@ -1,0 +1,4 @@
+--doc This argument file contains execution order of package Oracle SOA
+# This is a comment
+Init_Environments.txt
+testcases
