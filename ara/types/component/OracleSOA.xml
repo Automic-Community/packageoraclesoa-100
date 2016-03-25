@@ -5,6 +5,22 @@
 	<DefaultDeploymentTargetType>OracleSOA</DefaultDeploymentTargetType>
 	<Properties>
 
+		<!-- COMPOSITE -->
+		<Group name="conposite_group" displayName="Composite">
+			<Property name="sar_location" type="SingleLineText" mode="EDITABLE" displayName="Sar Location">
+				<Defaultvalue></Defaultvalue>
+				<Description>Absolute path to a specified SAR file or to all SAR files included in the ZIP file</Description>
+			</Property>
+			<Property name="config_plan" type="SingleLineText" mode="EDITABLE" displayName="Config Plan">
+				<Defaultvalue></Defaultvalue>
+				<Description>Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file</Description>
+			</Property>
+			<Property name="label" type="SingleLineText" mode="EDITABLE" displayName="Label">
+				<Defaultvalue></Defaultvalue>
+				<Description>Label of the SOA composite application</Description>
+			</Property>
+		</Group>
+
 		<!-- EXECUTABLE SCRIPT -->
 		<Group name="script_group" displayName="Script">
 			<Property name="connect_to_server" type="SingleChoice" mode="EDITABLE" displayName="Connect to Server"> <!-- e.g.: WL_HOME\common\templates\scripts\wlst\basicWLSDomain.py  -->
@@ -56,8 +72,11 @@
 
 		<!-- JDBC -->
 		<Group name="jdbc_group" displayName="JDBC">
-			<Property name="jdbc_name" type="SingleLineText" mode="EDITABLE" displayName="Datasource name">
-				<Description>Name of the datasrouce</Description>
+			<Property name="jdbc_name" type="SingleLineText" mode="EDITABLE" displayName="JDBC name">
+				<Description>Name of the JDBC</Description>
+			</Property>
+			<Property name="jndi_name" type="SingleLineText" mode="EDITABLE" displayName="JNDI name">
+				<Description>Name of the JNDI</Description>
 			</Property>
 			<Property name="jdbc_driver" type="SingleLineText" mode="EDITABLE" displayName="Driver class">
 				<Description>Driver / Java class name used for the connection eg: oracle.jdbc.xa.client.OracleXADataSource</Description>
@@ -260,7 +279,7 @@
 			<Description>Name of the datasource</Description>
 		</Property>
 		<Property name="/oracle_soa/jdbc/jndi_name" highlighted="false">
-			<Value>{/weblogic/jdbc/name}</Value>
+			<Value>{/custom/jndi_name}</Value>
 			<Description>JNDI name of the datasource</Description>
 		</Property>
 		<Property name="/oracle_soa/jdbc/url" highlighted="false">
@@ -339,7 +358,7 @@
 			<Description>Password used to authenticate with WebLogic</Description>
 		</Property>
 		<Property name="/oracle_soa/server/url" highlighted="false">
-			<Value>{/weblogic/server/protocol}://{/weblogic/server/host}:{/weblogic/server/port}</Value>
+			<Value>{/oracle_soa/server/protocol}://{/oracle_soa/server/host}:{/oracle_soa/server/port}</Value>
 			<Description>URL of the Administration Server</Description>
 		</Property>
 		<Property name="/oracle_soa/server/start_script" highlighted="false">
