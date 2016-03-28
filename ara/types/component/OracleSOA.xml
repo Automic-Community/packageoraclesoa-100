@@ -7,7 +7,7 @@
 
 		<!-- COMPOSITE -->
 		<Group name="conposite_group" displayName="Composite">
-			<Property name="sar_location" type="SingleLineText" mode="EDITABLE" displayName="Sar Location">
+			<Property name="sar_file" type="SingleLineText" mode="EDITABLE" displayName="Sar File">
 				<Defaultvalue></Defaultvalue>
 				<Description>Absolute path to a specified SAR file or to all SAR files included in the ZIP file</Description>
 			</Property>
@@ -195,7 +195,7 @@
 		</Property>
 
 		<Property name="/oracle_soa/sar_location" highlighted="false">
-			<Value>{/custom/sar_location}</Value>
+			<Value>{/target/target_files_dirs}/{/custom/sar_file}</Value>
 			<Description>Absolute path to a specified SAR file or to all SAR files included in the ZIP file.</Description>
 		</Property>
 		<Property name="/oracle_soa/config_plan" highlighted="false">
