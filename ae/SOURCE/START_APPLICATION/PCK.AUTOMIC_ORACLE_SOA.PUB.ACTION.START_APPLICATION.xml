@@ -343,7 +343,9 @@
 <FInclSubDirs>0</FInclSubDirs>
 </ROLLBACK>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[!:INCLUDE PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.WEBLOGIC_PREPARE_ROLLBACK]]></MSCRI>
+<MSCRI><![CDATA[
+
+]]></MSCRI>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC><![CDATA[= RB name =
