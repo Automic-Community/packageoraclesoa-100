@@ -19,6 +19,9 @@
 				<Defaultvalue></Defaultvalue>
 				<Description>Label of the SOA composite application</Description>
 			</Property>
+			<Property name="sar_revision" displayName="Revision" mode="EDITABLE" type="SingleLineText">
+				<Description>Revision of SOA composite application</Description>
+			</Property>
 		</Group>
 
 		<!-- EXECUTABLE SCRIPT -->
@@ -185,9 +188,9 @@
 			<Value>{@application/system/name}</Value>
 			<Description>Name of the application which will be used for install and uninstall actions among others</Description>
 		</Property>
-		<Property name="/oracle_soa/revision" highlighted="false">
-			<Value>{/custom/revision}</Value>
-			<Description>Application Revision</Description>
+		<Property name="/oracle_soa/revision" protected="false" highlighted="false" type="SingleLineText" allowCustomValues="false">
+			<Value>{/custom/sar_revision}</Value>
+			<Description>Revision of SOA composite application</Description>
 		</Property>
 		<Property name="/oracle_soa/label" highlighted="false">
 			<Value>{/custom/label}</Value>
