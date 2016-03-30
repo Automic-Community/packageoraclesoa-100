@@ -5,25 +5,6 @@
 	<DefaultDeploymentTargetType>OracleSOA</DefaultDeploymentTargetType>
 	<Properties>
 
-		<!-- COMPOSITE -->
-		<Group name="conposite_group" displayName="Composite">
-			<Property name="sar_file" type="SingleLineText" mode="EDITABLE" displayName="Sar File">
-				<Defaultvalue></Defaultvalue>
-				<Description>Absolute path to a specified SAR file or to all SAR files included in the ZIP file</Description>
-			</Property>
-			<Property name="config_plan" type="SingleLineText" mode="EDITABLE" displayName="Config Plan">
-				<Defaultvalue></Defaultvalue>
-				<Description>Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file</Description>
-			</Property>
-			<Property name="label" type="SingleLineText" mode="EDITABLE" displayName="Label">
-				<Defaultvalue></Defaultvalue>
-				<Description>Label of the SOA composite application</Description>
-			</Property>
-			<Property name="sar_revision" displayName="Revision" mode="EDITABLE" type="SingleLineText">
-				<Description>Revision of SOA composite application</Description>
-			</Property>
-		</Group>
-
 		<!-- EXECUTABLE SCRIPT -->
 		<Group name="script_group" displayName="Script">
 			<Property name="connect_to_server" type="SingleChoice" mode="EDITABLE" displayName="Connect to Server"> <!-- e.g.: WL_HOME\common\templates\scripts\wlst\basicWLSDomain.py  -->
@@ -40,12 +21,24 @@
 		<!-- PACKAGE -->
 		<Group name="package_group" displayName="Package">
 			<Property name="package" type="SingleLineText" mode="EDITABLE" displayName="Name"> <!-- e.g.: pkg.war, ...  -->
-				<Defaultvalue>myPackage.war</Defaultvalue>
-				<Description>Path of the application directory, archive file, or root of the exploded archive directory to be deployed</Description>
+				<Defaultvalue>sca_myPackage.sar</Defaultvalue>
+				<Description>Absolute path to a specified SAR file or to all SAR files included in the ZIP file</Description>
 			</Property>
 			<Property name="revision" type="SingleLineText" mode="EDITABLE" displayName="Revision"> <!-- e.g.: 1.0, ...  -->
 				<Defaultvalue></Defaultvalue>
-				<Description>Application Revision</Description>
+				<Description>Revision of SOA composite application</Description>
+			</Property>
+			<Property name="config_plan" type="SingleLineText" mode="EDITABLE" displayName="Config Plan">
+				<Defaultvalue></Defaultvalue>
+				<Description>Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file</Description>
+			</Property>
+			<Property name="label" type="SingleLineText" mode="EDITABLE" displayName="Label">
+				<Defaultvalue></Defaultvalue>
+				<Description>Label of the SOA composite application</Description>
+			</Property>
+			<Property name="partition" type="SingleLineText" mode="EDITABLE" displayName="Partition">
+				<Defaultvalue></Defaultvalue>
+				<Description>Partition of the SOA composite application</Description>
 			</Property>
 			<Property name="options" type="SingleLineText" mode="EDITABLE" displayName="Options"> <!-- e.g.: libraryModule=true,deploymentOrder=125  -->
 				<Defaultvalue></Defaultvalue>
@@ -189,18 +182,18 @@
 			<Description>Name of the application which will be used for install and uninstall actions among others</Description>
 		</Property>
 		<Property name="/oracle_soa/revision" protected="false" highlighted="false" type="SingleLineText" allowCustomValues="false">
-			<Value>{/custom/sar_revision}</Value>
+			<Value>{/custom/revision}</Value>
 			<Description>Revision of SOA composite application</Description>
 		</Property>
 		<Property name="/oracle_soa/label" highlighted="false">
 			<Value>{/custom/label}</Value>
 			<Description>Label of the SOA composite application</Description>
 		</Property>
-
-		<Property name="/oracle_soa/sar_location" highlighted="false">
-			<Value>{/target/target_files_dirs}/{/custom/sar_file}</Value>
-			<Description>Absolute path to a specified SAR file or to all SAR files included in the ZIP file.</Description>
+		<Property name="/oracle_soa/partition" highlighted="false">
+			<Value>{/custom/partition}</Value>
+			<Description>Partition of the SOA composite application</Description>
 		</Property>
+
 		<Property name="/oracle_soa/config_plan" highlighted="false">
 			<Value>{/custom/config_plan}</Value>
 			<Description>Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file.</Description>
@@ -233,7 +226,7 @@
 		</Property>
 		<Property name="/oracle_soa/package" highlighted="false">
 			<Value>{/target/target_files_dirs}/{/custom/package}</Value>
-			<Description>Path of the application directory, archive file, or root of the exploded archive directory to be deployed</Description>
+			<Description>Absolute path to a specified SAR file or to all SAR files included in the ZIP file.</Description>
 		</Property>
 		<Property name="/oracle_soa/options" highlighted="false">
 			<Value>{/custom/options}</Value>
