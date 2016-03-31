@@ -1,5 +1,7 @@
 #pck_weblogic_utils START
 # remove chars if first char or last one are commas
+#from selenium.webdriver.remote.utils import return_value_if_exists
+
 def rf_trim_comma(str):
     if str[:1] == ',':
       str = str[1:len(str)]
@@ -211,12 +213,13 @@ def getAppMBeanCore(name, version, useActiveVersion):
         return mb
     return mb
 
-def startApp_printInputs(inputUser, inputProtocol, inputHost, inputPort, inputAppName, inputRevision, inputLabel, inputFailFlag):
+def start_stop_App_printInputs(inputUser, inputProtocol, inputHost, inputPort, inputAppName, inputRevision, inputLabel, inputPartition, inputFailFlag):
     print 'User: ' + inputUser
     print 'Host and port: ' + inputProtocol + '://' + inputHost + ':' + inputPort
     print 'Composite name: ' + inputAppName
     print 'Revision: ' + inputRevision
     print 'Label: ' + inputLabel
+    print 'Partition: ' + inputPartition
     print 'Fail Flag: ' + inputFailFlag
 
 def findMBean(prefix, name):
@@ -239,5 +242,14 @@ def rf_remove_pref(str, index):
       str = str[index:len(str)]
 
     return str
+
+def checkDeployStatus(filename, formatAppName, partition):
+    returnValue = 2
+    for line in open(filename):
+        if formatAppName in str(line) and 'state=on' in str(line) and 'partition=' + partition in str(line):
+            returnValue = 0
+        if formatAppName in str(line) and 'state=off' in str(line) and 'partition=' + partition in str(line):
+            returnValue = 1
+    return returnValue
 
 #pck_weblogic_utils END
