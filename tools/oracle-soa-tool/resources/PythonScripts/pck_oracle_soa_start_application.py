@@ -18,6 +18,8 @@ inputPartition = rf_remove_pref(sys.argv[11], 6)
 inputTempPath = sys.argv[12]
 
 inputURL = inputProtocol + '://' + inputHost + ':' + inputPort
+if os.path.exists(inputTempPath):
+    os.remove(inputTempPath)
 
 #print out list parameter
 start_stop_App_printInputs(inputUser, inputProtocol, inputHost, inputPort, inputAppName, inputRevision, inputLabel, inputPartition, inputFailFlag)
@@ -59,3 +61,5 @@ finally:
     disconnect()
     sys.exit()
 
+close(filename)
+os.remove(filename)
