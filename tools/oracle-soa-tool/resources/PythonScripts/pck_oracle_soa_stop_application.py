@@ -17,8 +17,9 @@ inputPartition = rf_remove_pref(sys.argv[11], 6)
 inputTempPath = sys.argv[12]
 
 inputURL = inputProtocol + '://' + inputHost + ':' + inputPort
-if os.path.exists(inputTempPath):
-    os.remove(inputTempPath)
+#create backup folder and create file path for backup file
+os.makedirs(inputTempPath)
+filePath = inputTempPath + '/sca_deploy.out'
 
 #print out list parameter
 start_stop_App_printInputs(inputUser, inputProtocol, inputHost, inputPort, inputAppName, inputRevision, inputLabel, inputPartition, inputFailFlag)
@@ -30,11 +31,11 @@ if inputPartition == '':
     inputPartition = 'default'
 
 oldstdout=sys.stdout
-sys.stdout = open(inputTempPath,"w+")
+sys.stdout = open(filePath,"w")
 sca_listDeployedComposites(inputHost, inputPort, inputUser, inputPassword)
 sys.stdout = oldstdout
 
-deployStatus = checkDeployStatus(inputTempPath, formatAppName, inputPartition)
+deployStatus = checkDeployStatus(filePath, formatAppName, inputPartition)
 if  deployStatus == 2:
     raise 'Wrong composite name or wrong revision, please input correct value!'
 if deployStatus == 1:
