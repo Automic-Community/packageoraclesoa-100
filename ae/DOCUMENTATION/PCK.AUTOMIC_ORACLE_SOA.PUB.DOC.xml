@@ -10,107 +10,29 @@
 <DOC><![CDATA[About Automic's Oracle_SOA Package
 ================================
 
-Manage your application deployments to a WebLogic application server using these actions
+Manage SOA composite application deployments to a Oracle SOA server using these actions
+* Start Application
+* Stop Application
+* Activate Application
+* Deploy Application
+* Undeploy Application
 
-=Supported WebLogic versions=
+=Supported Fusion Middleware versions=
 
 Currently the following Application Servers are supported:
 
-* Oracle WebLogic 10gR3 (10.3)
-* Oracle WebLogic 11gR1 (10.3.1)
-* Oracle WebLogic 11gR1 PatchSet 1 (10.3.2)
-* Oracle WebLogic 11gR1 PatchSet 2 (10.3.3)
-* Oracle WebLogic 11gR1 PatchSet 3 (10.3.4)
-* Oracle WebLogic 12c (12.1.2)
+* Oracle SOA Suite 12c (12.1.3)
 
 =Setup=
 
 * Java JDK 1.7 or higher must be installed and executeable as 'java'.
 
-* The Agent to execute the wsadmin tool will be the OS Agent. The executing OS Agent is expected to be on the Weblogic Administration Server.
+* The Agent to execute the wsadmin tool will be the OS Agent. The executing OS Agent is expected to be on the Oracle SOA Suite Server.
 
-* To be able to create application snapshots, the application has to be reachable (on the filesystem) from the Administration Server
-
-* Set environment variable WL_HOME to the WebLogic home directory. May be set during WebLogic installation. Eg: C:\Oracle\Middleware\wlserver_10.3. From this location WL_HOME/server/lib all the required java libraries are loaded which are needed for creating a snapshot. In case of an application snapshot, the application has to be accessible on the executing server.
+* Set environment variable ORACLE_HOME to the WebLogic home directory.
 
 =Rollback=
-   
-The WebLogic actions support rollback. The rollbacks are implemented as follows:
-
-* CHECK_SERVER_STATE_AND_HEALTH: No custom rollback provided.
-
-* CREATE_CLUSTER: No custom rollback provided.
-
-* CREATE_DATASOURCE: Before executing the roll forward function,  the information, if the datasource has existed before is stored. The rollback restores the original state of the datasource. If it existed has existed before, it further exists after rollback. If it has not existed before, it should be removed by the rollback.
-
-* CREATE_JMS_MESSAGE_QUEUE_OR_TOPIC: Before executing the roll forward function, the information, if the JMS Message Queue/Topic has existed before is stored. The rollback restores the orginal state. If the JMS Message Queue/Topic has not existed before it exists after rollback. If the JMS Message Queue/Topic has existed before it further exist after rollback.
-
-* CRATE_JMS_MODULE: Before executing the roll forward function, the information, if the JMS module has existed before is stored. The rollback restores the orginal state. If the JMS module has not existed before it exists after rollback. If the JMS module has existed before it further exist after rollback.
-
-* CREATE_JMS_SUB_DEPLOYMENT: Before executing the roll forward function, the information, if the JMS Sub Deployment has existed before is stored. The rollback restores the orginal state. If the JMS Sub Deployment  has not existed before it exists after rollback. If the JMS Sub Deployment has existed before it further exist after rollback.
-
-* CREATE_MACHINE: No custom rollback provided.
-
-* CREATE_MULTI_DATASOURCE: Before executing the roll forward function, the information if the Multi Datasource has existed before, is stored. The rollback restores the orginal state. If the Datasource has not existed before, it should be deleted after rollback. If the Datasource has existed before, it further exist after rollback.
-
-* CREATE_PERSISTENT_STORE: No custom rollback provided.
-
-* CREATE_SERVER: Before executing the roll forward function, the information is stored if the servers existed and if yes, to which cluster they were assigned. The rollback function restores the original server state. Servers which has not existed before are removed by the rollback. Servers, which has existed before further exist after the rollback. They are (re)assigned to those clusters, which they were assigned before.
-
-* CREATE_SNAPSHOT: No custom rollback provided.
-
-* DELETE_DATASOURCE: Before executing the roll forward function, the datasource with all their settings is backed up. The rollback recreates the removed datasource.
-
-* DELETE_JMS_MESSAGE_QUEUE_OR_TOPIC: Before executing the roll forward function the JMS queue/topic settings are backed up. A rollback restores the JMS queue/topic together with all settings.
-
-* DELETE_JMS_MODULE: before executing the roll forward function the JMS module settings are backed up. A rollback restores the removed JMS module together with all settings.
-
-* DELETE_JMS_SUB_DEPLOYMENT: before executing the roll forward function the JMS sub deployment settings are backed up. A rollback restores the removed JMS sub deployment together with all settings.
-
-* DELETE_SERVER: when removing a server, a backup is created from the application server only. Note, that applications deployed to the server are not backed up, meaning, that after a rollback the applications are not redeployed on the server!! Before executing the roll forward function, the server configuration is baced up according to pages 11-12 of the document http://www.oracle.com/technetwork/database/features/availability/maa-wp-wls-br-scenarios-128715.pdf
-The rollback should restores the server configuration from the backup.
-
-* DEPLOY_APPLICATION: Before executing the roll forward function, it is checked if the application was already deployed before. The rollback restores the original state. If the application was not deployed before it is undeployed by the rollback function. If the application was deployed before it further remains deployed after rollback.
-
-* DISTRIBUTE_APPLICATION: Before executing the roll forward function, the information is stored where the application is already distributed. The rollback function restores the original state. After the rollback, the application is distributed only to those targets, where it was distributed before.
-
-* EXECUTE_SCRIPT: No custom rollback provided, since a script can carry out arbitrary steps!!
-
-* REDEPLOY_APPLICATION: Before executing the roll forward function, the old application is backed up. The rollback should restores the original version of the application.
-
-* RESUME_SERVER: Before executing the roll forward function, the original state of the servers are stored. The rollback restores the original state. Servers which were suspended before are suspended after a rollback. Servers, which were running before run again after a rollback.
-
-* SET_DOMAIN_PROPERTIES: No custom rollback provided.
-
-* SHUTDOWN_SERVER_OR_CLUSTER: No custom rollback provided.
-
-* START_ADMINSERVER_VIA_NM: No custom rollback provided.
-
-* START_ADMINSERVER_VIA_SCRIPT: No custom rollback provided.
-
-* START_ADMINSERVER_VIA_SERVICE: If this service is stopped before executing the action, shutdown it again. If this service is running before executing the action, skip rollback task.
-
-* START_ADMINSERVER_WO_NM: No custom rollback provided.
-
-* START_APPLICATION: Before executing the roll forward function, it is checked if the application is running or not. The rollback function restores the orginal state of the application. If it was running, after a rollback the application runs again. If it was stopped, after a rollback the application should be stopped again.
-
-* START_NODE_MANAGER_VIA_SCRIPT: No custom rollback provided.
-
-* START_NODE_MANAGER_VIA_SERVICE: No custom rollback provided.
-
-* START_SERVER_OR_CLUSTER: No custom rollback provided.
-
-* STOP_ADMINSERVER_VIA_NM: No custom rollback provided.
-
-* STOP_ADMINSERVER_VIA_SCRIPT: No custom rollback provided.
-
-* STOP_ADMINSERVER_VIA_SERVICE: If this service is running before executing the action then start it again using Action - Start Domain Administration Server via Windows service action. If this service is stopped before executing the action, skip rollback task.
-
-* STOP_APPLICATION: Before executing the roll forward function, it is checked if the application is running or not. The rollback function restores the orginal state of the application. If it was running, after a rollback the application runs again. If it was stopped, after a rollback the application is stopped again.
-
-* SUSPEND_SERVER: Before executing the roll forward function, the original state of the servers are stored. The rollback should restore the original state. Servers which were suspended before are suspended after a rollback. Servers, which wererunning before run again after a rollback.
-
-* UNDEPLOY_APPLICATION: Before executing the roll forward function, the application is backed up. Also its existing target assignments are backed up. The rollback  redeploy the backed up application to its original targets.
+These actions do not support rollback.
 ]]></DOC>
 </DOCU_Docu>
 </DOCU>
