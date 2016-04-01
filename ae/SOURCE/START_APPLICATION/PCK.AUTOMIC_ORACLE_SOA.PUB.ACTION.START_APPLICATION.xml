@@ -69,6 +69,7 @@
 <UC4RB_ORACLE_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 <UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_FAIL_RUNNING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00>
 <UC4RB_ORACLE_SOA_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
+<UC4RB_ORACLE_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 <UC4RB_ORACLE_SOA_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_REVISION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 </PRPTBOX>
@@ -148,6 +149,7 @@
 <UC4RB_ORACLE_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 <UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_FAIL_RUNNING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00>
 <UC4RB_ORACLE_SOA_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
+<UC4RB_ORACLE_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 <UC4RB_ORACLE_SOA_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_REVISION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 </PRPTBOX>
@@ -213,6 +215,7 @@
 <UC4RB_ORACLE_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 <UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_FAIL_RUNNING#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION">NO</UC4RB_ORACLE_SOA_FAIL_RUNNINGs.00>
 <UC4RB_ORACLE_SOA_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
+<UC4RB_ORACLE_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 <UC4RB_ORACLE_SOA_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_ORACLE_SOA_REVISION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.START_APPLICATION"/>
 </PRPTBOX>
@@ -343,9 +346,7 @@
 <FInclSubDirs>0</FInclSubDirs>
 </ROLLBACK>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[
-
-]]></MSCRI>
+<MSCRI><![CDATA[:INC PCK.ITPA_SHARED.PRV.INCLUDE.SET_BACKUP_DIRECTORY]]></MSCRI>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC><![CDATA[= RB name =
