@@ -9,29 +9,32 @@ Test Template     Activate Application Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    Application Name          Revision       Label                      Partition                      Oracle Home              RETURN CODE    RETURN STATUS
+*** Test Cases ***    OK_NOK    Application Name          Revision       Label                      Partition                      Oracle Home              Online Mode    RETURN CODE    RETURN STATUS
 1. Success activate application default value
-                      OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              0              ${ENDED_OK}
+                      OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              NO             0              ${ENDED_OK}
 
-2. Fail activate application wrong name
-                      NOK       ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              1              ${ENDED_NOK}
+2. Success activate application Online mode
+                      OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
 
-3. Fail activate application wrong revision
-                      NOK       ${_APP_NAME}              9.9            ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              1              ${ENDED_NOK}
+3. Fail activate application wrong name
+                      NOK       ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              NO             1              ${ENDED_NOK}
 
-4. Fail activate application wrong label
-                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              1              ${ENDED_NOK}
+4. Fail activate application wrong revision
+                      NOK       ${_APP_NAME}              9.9            ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              NO             1              ${ENDED_NOK}
 
-5. Fail activate application wrong partition
-                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              1              ${ENDED_NOK}
+5. Fail activate application wrong label
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              NO             1              ${ENDED_NOK}
 
-6. Fail activate application wrong oracle home
-                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    2              ${ENDED_NOK}
+6. Fail activate application wrong partition
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              NO             1              ${ENDED_NOK}
+
+7. Fail activate application wrong oracle home
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    NO             2              ${ENDED_NOK}
 
 *** Keywords ***
 Activate Application Template
     [Arguments]    ${OK_NOK}    ${WEBLOGIC_APP_NAME}    ${WEBLOGIC_APP_REVISION}    ${WEBLOGIC_APP_LABEL}    ${WEBLOGIC_APP_PARTITION}    ${WEBLOGIC_HOME}
-    ...    ${returnCode}    ${returnStatus}
+    ...    ${ONLINE_MODE}    ${returnCode}    ${returnStatus}
     [Documentation]    This template is used for test UNDEPLOY_APPLICATION with needed arguments
     ...    - ${OK_NOK}: boolean value indicate if the runbook(action) should be ENDED_OK or ENDED_NOT_OK. value of this variable should be OK or NOK.
     ...    - ${appName}: string value indicate the application to be activated
@@ -47,6 +50,7 @@ Activate Application Template
     Action Set    ${PRT_ACTIVATE_APPLICATION_LABEL}    ${WEBLOGIC_APP_LABEL}
     Action Set    ${PRT_ACTIVATE_APPLICATION_PARTITION}    ${WEBLOGIC_APP_PARTITION}
     Action Set    ${PRT_ACTIVATE_APPLICATION_ORACLE_HOME}    ${WEBLOGIC_HOME}
+    Action Set    ${PRT_ACTIVATE_APPLICATION_ONLINE_MODE}    ${ONLINE_MODE}
     Set Default Weblogic Server Connection
     Action Set Timeout    300
     Action Execute

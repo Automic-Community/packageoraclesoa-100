@@ -6,3 +6,4 @@ Set Default Valid Promptset
     Action Set    ${PRT_DEPLOY_APPLICATION_CONFIG}    ${_CONFIG_PLAN}
     Action Set    ${PRT_DEPLOY_APPLICATION_PARTITION}    ${_APP_PARTITION}
     Action Set    ${PRT_DEPLOY_APPLICATION_ORACLE_HOME}    ${_WL_HOME}
+    Action Set    ${PRT_DEPLOY_APPLICATION_ONLINE_MODE}    NO
