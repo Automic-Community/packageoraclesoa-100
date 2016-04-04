@@ -25,8 +25,8 @@ Resource          ../../resources/keywords.txt
 05_Failed execute with Invalid Admin Password
                       NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    Invalid_input            ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
 
-06_Failed execute with Invalid Connection Protocol
-                      NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    https                   1              ${ENDED_NOK}
+06_Success execute with Invalid Connection Protocol
+                      OK        ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    https                   0              ${ENDED_NOK}
 
 *** Keywords ***
 Activate Application Template
