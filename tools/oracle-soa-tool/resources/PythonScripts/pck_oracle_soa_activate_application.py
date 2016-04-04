@@ -300,6 +300,7 @@ inputApplication = rf_prep_str(sys.argv[6])
 inputRevision = rf_prep_str(sys.argv[7])
 inputLabel = rf_prep_str(sys.argv[8])
 inputPartition = rf_prep_str(sys.argv[9])
+inputOnlineMode = rf_prep_str(sys.argv[10])
 
 #pck_weblogic_edit_session_wait START
 print "Execute python script with WLST"
@@ -307,7 +308,8 @@ print "Execute python script with WLST"
 failed = 1;
 try:
     url = '%s://%s:%s' % (inputProtocol, inputHost, inputPort)
-    connect(inputUser, inputPassword, url)
+    if inputOnlineMode == 'YES':
+        connect(inputUser, inputPassword, url)
 
     if inputPartition == None:
         inputPartition = 'default';
@@ -326,7 +328,7 @@ try:
 except Exception, detail:
     print 'Exception: ', detail;
     dumpStack();
-
-disconnect('true');
+if inputOnlineMode == 'YES':
+    disconnect('true');
 exit('y', failed);
 #pck_weblogic_edit_finally_block END

@@ -297,6 +297,7 @@ inputOverwrite = sys.argv[7]
 inputForceDefault = sys.argv[8]
 inputConfigPlan = rf_prep_str(sys.argv[9])
 inputPartition = rf_prep_str(sys.argv[10])
+inputOnlineMode = rf_prep_str(sys.argv[11])
 
 import sys, string, os, os.path, time, traceback, shutil 
 print "Execute python script with WLST"
@@ -312,7 +313,8 @@ try:
         inputPartition='default';
 
     inputServerURL = '%s://%s:%s' % (inputProtocol, inputHost, inputPort);
-    connect(inputUser, inputPassword, inputServerURL);
+    if inputOnlineMode == 'YES':
+        connect(inputUser, inputPassword, inputServerURL);
 
     sca_deployComposite(inputServerURL
         ,sar_path_tmp
@@ -327,6 +329,6 @@ try:
 except Exception, detail:
     print 'Exception: ', detail;
     dumpStack();
-
-disconnect('true');
+if inputOnlineMode == 'YES':
+    disconnect('true');
 exit('y', failed);

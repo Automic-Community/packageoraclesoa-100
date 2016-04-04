@@ -79,6 +79,7 @@ Deploy a Composite Application
     Action Set    &UC4RB_SOA_CONFIG_PLAN#    ${_CONFIG_PLAN}
     Action Set    &UC4RB_SOA_PARTITION#    ${_APP_PARTITION}
     Action Set    &UC4RB_WEBLOGIC_HOME#    ${_WL_HOME}
+    Action Set    &UC4RB_SOA_ONLINE_MODE#    NO
     Set Default Weblogic Server Connection
     Action Execute
     Action Report Should Be Found
@@ -90,6 +91,7 @@ Undeploy a Composite Application
     Action Set    &UC4RB_SOA_APP_REV#    ${_APP_REV}
     Action Set    &UC4RB_SOA_PARTITION#    ${_APP_PARTITION}
     Action Set    &UC4RB_WEBLOGIC_HOME#    ${_WL_HOME}
+    Action Set    &UC4RB_SOA_ONLINE_MODE#    NO
     Set Default Weblogic Server Connection
     Action Execute
     Action Report Should Be Found
@@ -101,6 +103,7 @@ Start a Composite Application
     Action Set    &UC4RB_ORACLE_SOA_LABEL#    ${_APP_LABEL}
     Action Set    &UC4RB_ORACLE_SOA_FAIL_RUNNING#    NO
     Action Set    &UC4RB_WEBLOGIC_HOME#    ${_WL_HOME}
+    Action Set    &UC4RB_SOA_ONLINE_MODE#    NO
     Set Default Weblogic Server Connection
     Action Execute
     Action Report Should Be Found
@@ -112,6 +115,7 @@ Stop a Composite Application
     Action Set    &UC4RB_SOA_LABEL#    ${_APP_LABEL}
     Action Set    &UC4RB_SOA_FAIL_IF_STOPPED#    NO
     Action Set    &UC4RB_WEBLOGIC_HOME#    ${_WL_HOME}
+    Action Set    &UC4RB_SOA_ONLINE_MODE#    NO
     Set Default Weblogic Server Connection
     Action Execute
     Action Report Should Be Found

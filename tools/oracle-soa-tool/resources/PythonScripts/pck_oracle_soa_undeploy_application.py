@@ -254,6 +254,7 @@ inputProtocol = rf_prep_str(sys.argv[5])
 inputAppName = rf_prep_str(sys.argv[6])
 inputRevision = rf_prep_str(sys.argv[7])
 inputPartition = rf_prep_str(sys.argv[8])
+inputOnlineMode = rf_prep_str(sys.argv[9])
 
 import sys, string, os, os.path, time, traceback, shutil
 
@@ -261,7 +262,8 @@ print "Execute python script with WLST"
 failed = 1
 try:
     url = '%s://%s:%s' % (inputProtocol, inputHost, inputPort)
-    connect(inputUser, inputPassword, url)
+    if inputOnlineMode == 'YES':
+        connect(inputUser, inputPassword, url)
 
     if inputPartition == None:
         inputPartition = 'default';
@@ -276,6 +278,6 @@ try:
 except Exception, detail:
     print 'Exception: ', detail;
     dumpStack();
-
-disconnect('true');
+if inputOnlineMode == 'YES':
+    disconnect('true');
 exit('y', failed);

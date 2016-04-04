@@ -5,7 +5,7 @@ ${VVNARASOA02_AGENT_DIR}    C:\\Automic\\Agents\\vvnarasoa02_at\\x64\\
 ${VVNARASOA02_WORKING_DIR}    C:\\PCK_ORACLE_SOA
 ${VVNARASOA02_SOURCE_DIR}    C:\\AT_resources\\
 ${VVNARASOA02_OUTPUT_DIR}    C:\\AT_output\\
-${VVNARASOA02_WL_HOME}    C:\\Oracle\\Middleware\\Oracle_Home
+${VVNARASOA02_WL_HOME}    C:\\Oracle\\Middleware\\Oracle_Home\\oracle_common
 ${VVNARASOA02_WEBLOGIC_HOST}    vvnarasoa02
 ${VVNARASOA02_WEBLOGIC_PORT}    7003
 ${VVNARASOA02_WEBLOGIC_USERNAME}    weblogic

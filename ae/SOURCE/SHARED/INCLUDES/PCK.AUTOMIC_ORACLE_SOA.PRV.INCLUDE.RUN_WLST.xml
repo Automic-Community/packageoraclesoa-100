@@ -11,9 +11,9 @@
 :SWITCH &$PLATFORM#
 :  CASE "WINDOWS"
 :  IF &UC4RB_WEBLOGIC_HOME# <> ''
-     cd "&UC4RB_WEBLOGIC_HOME#\oracle_common\common\bin"
+     cd /d "&UC4RB_WEBLOGIC_HOME#\common\bin"
 :  ELSE
-     cd "%ORACLE_HOME%\oracle_common\common\bin"
+     cd /d "%ORACLE_HOME%\common\bin"
 :  ENDIF
 
 
@@ -24,9 +24,9 @@ set retcode=%ERRORLEVEL%
 
 :  CASE "UNIX"
 :  IF &UC4RB_WEBLOGIC_HOME# <> ''
-     cd "&UC4RB_WEBLOGIC_HOME#/oracle_common/common/bin"
+     cd "&UC4RB_WEBLOGIC_HOME#/common/bin"
 :  ELSE
-     cd "$ORACLE_HOME/oracle_common/common/bin"
+     cd "$ORACLE_HOME/common/bin"
 :  ENDIF
 
 &UC4RB_WEBLOGIC_CMD#

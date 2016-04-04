@@ -245,11 +245,15 @@ def rf_remove_pref(str, index):
 
 def checkDeployStatus(filename, formatAppName, partition):
     returnValue = 2
+    print 'Start: checkDeployStatus'
     for line in open(filename):
+        if str(line).strip() != '':
+            print str(line)
         if formatAppName in str(line) and 'state=on' in str(line) and 'partition=' + partition in str(line):
             returnValue = 0
         if formatAppName in str(line) and 'state=off' in str(line) and 'partition=' + partition in str(line):
             returnValue = 1
+    print 'End: checkDeployStatus'
     return returnValue
 
 #pck_weblogic_utils END
