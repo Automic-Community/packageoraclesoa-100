@@ -13,6 +13,7 @@ Resource          ../../resources/keywords.txt
                       OK         ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              NO             0              ${ENDED_OK}
 
 2. Success deploy application with Online mode
+                      [Setup]    Undeploy a Composite Application
                       OK         ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
 
 3. Success deploy application with Overwrite is YES

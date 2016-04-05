@@ -13,7 +13,7 @@ Resource          ../../resources/keywords.txt
 01_Success execute with Valid inputs
                       OK        ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    0              ${ENDED_OK}
 
-02_Failed execute with Invalid Host
+02_Success execute with Invalid Host
                       NOK       Invalid_input    ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    1              ${ENDED_NOK}
 
 03_Failed execute with Invalid Port
