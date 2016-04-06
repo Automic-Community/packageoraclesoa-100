@@ -1,32 +1,38 @@
 *** Settings ***
 Documentation     NOTE:
 ...               add note here
-Suite Setup       Setup_suite
-Suite Teardown    Teardown_suite
-Force Tags        UNDEPLOY_APPLICATION    BASIC
+Force Tags        UNDEPLOY_APPLICATION    BASIC    #Suite Setup    Setup_suite    #Suite Teardown    Teardown_suite
 Default Tags      win    unix
 Test Template     Undeploy Application Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    Application Name          Revision       Partition                      Oracle Home              Online Mode    RETURN CODE    RETURN STATUS
-1. Success activate application default value
-                      OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              NO             0              ${ENDED_OK}
+*** Test Cases ***    OK_NOK        Application Name          Revision       Partition                      Oracle Home              Online Mode    RETURN CODE    RETURN STATUS
+1. Success undeploy application default value
+                      [Setup]       Setup_suite
+                      OK            ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              NO             0              ${ENDED_OK}
 
-2. Success activate application Online mode
-                      OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
+2. Success undeploy application Online mode
+                      [Setup]       Setup_suite
+                      OK            ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
 
-3. Fail activate application wrong name
-                      NOK       ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              NO             50             ${ENDED_NOK}
+3. Fail undeploy application wrong name
+                      NOK           ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              NO             50             ${ENDED_NOK}
 
-4. Fail activate application wrong revision
-                      NOK       ${_APP_NAME}              9.9            ${_APP_PARTITION}              ${_WL_HOME}              NO             50             ${ENDED_NOK}
+4. Fail undeploy application wrong revision
+                      [Setup]       Setup_suite
+                      NOK           ${_APP_NAME}              9.9            ${_APP_PARTITION}              ${_WL_HOME}              NO             50             ${ENDED_NOK}
+                      [Teardown]    Teardown_suite
 
-5. Fail activate application wrong partition
-                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              NO             50             ${ENDED_NOK}
+5. Fail undeploy application wrong partition
+                      [Setup]       Setup_suite
+                      NOK           ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              NO             50             ${ENDED_NOK}
+                      [Teardown]    Teardown_suite
 
-6. Fail activate application wrong oracle home
-                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    NO             2              ${ENDED_NOK}
+6. Fail undeploy application wrong oracle home
+                      [Setup]       Setup_suite
+                      NOK           ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    NO             2              ${ENDED_NOK}
+                      [Teardown]    Teardown_suite
 
 *** Keywords ***
 Undeploy Application Template
