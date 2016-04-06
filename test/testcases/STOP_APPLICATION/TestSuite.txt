@@ -13,7 +13,7 @@ Resource          prt_keywords.txt
 1. Success stop application default value
                       OK                                          ${_APP_NAME}              ${_APP_REV}     ${_APP_LABEL}    NO                 ${_WL_HOME}    NO             0               ${ENDED_OK}
 
-2. Success stop application default value
+2. Success stop application Online mode
                       OK                                          ${_APP_NAME}              ${_APP_REV}     ${_APP_LABEL}    NO                 ${_WL_HOME}    YES            0               ${ENDED_OK}
 
 3. Fail stop application wrong name
