@@ -313,8 +313,11 @@ try:
         inputPartition='default';
 
     inputServerURL = '%s://%s:%s' % (inputProtocol, inputHost, inputPort);
-    if inputOnlineMode == 'YES':
-        connect(inputUser, inputPassword, inputServerURL);
+    # Test the connection
+    connect(inputUser, inputPassword, inputServerURL);
+    if inputOnlineMode == 'NO':
+        # Switch to offline mode
+        disconnect('true');
 
     sca_deployComposite(inputServerURL
         ,sar_path_tmp

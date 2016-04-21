@@ -167,10 +167,9 @@
 <POST_SCRIPT mode="1" replacementmode="1" state="1">
 <OSCRI><![CDATA[:SET &HND# = PREP_PROCESS_REPORT(,,,"*Response code=500*")
 :PROCESS &HND#
-:   MODIFY_STATE RETCODE=50
+:   MODIFY_STATE RETCODE=500
 :ENDPROCESS
-:CLOSE_PROCESS &HND#
-]]></OSCRI>
+:CLOSE_PROCESS &HND#]]></OSCRI>
 </POST_SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC/>

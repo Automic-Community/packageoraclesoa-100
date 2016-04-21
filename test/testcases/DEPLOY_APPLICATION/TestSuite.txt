@@ -24,7 +24,8 @@ Resource          ../../resources/keywords.txt
                       OK         ${_SAR_LOCATION}                    NO           NO               ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              NO             0              ${ENDED_OK}
 
 5. Fail deploy application with Overwrite is NO
-                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              NO             50             ${ENDED_NOK}
+                      [Setup]    Deploy a Composite Application
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              NO             500            ${ENDED_NOK}
 
 6. Fail deploy application with wrong SAR location
                       NOK        ${_SAR_LOCATION}_NOT_EXIST          NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              NO             2              ${ENDED_NOK}
@@ -33,7 +34,7 @@ Resource          ../../resources/keywords.txt
                       NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              NO             2              ${ENDED_NOK}
 
 8. Fail deploy application with wrong partition
-                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              NO             50             ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              NO             500            ${ENDED_NOK}
 
 9. Fail deploy application with wrong oracle home
                       NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    NO             2              ${ENDED_NOK}

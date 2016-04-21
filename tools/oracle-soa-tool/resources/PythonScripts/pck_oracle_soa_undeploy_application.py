@@ -262,8 +262,11 @@ print "Execute python script with WLST"
 failed = 1
 try:
     url = '%s://%s:%s' % (inputProtocol, inputHost, inputPort)
-    if inputOnlineMode == 'YES':
-        connect(inputUser, inputPassword, url)
+    # Test the connection
+    connect(inputUser, inputPassword, url);
+    if inputOnlineMode == 'NO':
+        # Swtich to offline mode
+        disconnect('true');
 
     if inputPartition == None:
         inputPartition = 'default';
