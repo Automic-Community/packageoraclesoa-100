@@ -263,7 +263,7 @@ failed = 1
 try:
     url = '%s://%s:%s' % (inputProtocol, inputHost, inputPort)
     if inputOnlineMode == 'YES':
-        connect(inputUser, inputPassword, url)
+        connect(inputUser, inputPassword, url);
 
     if inputPartition == None:
         inputPartition = 'default';
