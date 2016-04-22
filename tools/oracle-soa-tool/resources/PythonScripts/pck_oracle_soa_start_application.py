@@ -5,17 +5,17 @@ utilLibPath = sys.argv[6]
 execfile(utilLibPath)
 
 print "Execute python script with WLST"
-inputUser = sys.argv[1]
+inputUser = rf_prep_str(sys.argv[1])
 inputPassword = sys.argv[2]
-inputHost = sys.argv[3]
-inputPort = sys.argv[4]
-inputProtocol = sys.argv[5]
-inputAppName = sys.argv[7]
-inputRevision = sys.argv[8]
-inputFailFlag = sys.argv[9].lower()
+inputHost = rf_prep_str(sys.argv[3])
+inputPort = rf_prep_str(sys.argv[4])
+inputProtocol = rf_prep_str(sys.argv[5])
+inputAppName = rf_prep_str(sys.argv[7])
+inputRevision = rf_prep_str(sys.argv[8])
+inputFailFlag = rf_prep_str(sys.argv[9].lower())
 inputLabel = rf_remove_pref(sys.argv[10], 6)
 inputPartition = rf_remove_pref(sys.argv[11], 6)
-inputTempPath = sys.argv[12]
+inputTempPath = rf_prep_str(sys.argv[12])
 inputOnlineMode = rf_prep_str(sys.argv[13])
 
 inputURL = inputProtocol + '://' + inputHost + ':' + inputPort
@@ -26,7 +26,7 @@ filePath = inputTempPath + '/sca_deploy.out'
 #print out list parameter
 start_stop_App_printInputs(inputUser, inputProtocol, inputHost, inputPort, inputAppName, inputRevision, inputLabel, inputPartition, inputFailFlag)
 if inputOnlineMode == 'YES':
-    connect(inputUser.strip(), inputPassword.strip(), inputURL.strip())
+    connect(inputUser, inputPassword, inputURL)
 formatAppName = inputAppName + '[' + inputRevision + ']'
 
 if inputPartition == '':
