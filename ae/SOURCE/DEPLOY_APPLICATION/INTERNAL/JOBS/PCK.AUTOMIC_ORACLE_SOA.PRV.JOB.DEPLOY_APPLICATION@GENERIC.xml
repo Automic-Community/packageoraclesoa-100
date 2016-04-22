@@ -156,6 +156,7 @@
 :SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "&UC4RB_SOA_CONFIG_PLAN#"')
 :SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "&UC4RB_SOA_PARTITION#"')
 :SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "&UC4RB_SOA_ONLINE_MODE#"')
+:SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "&UC4RB_SOA_TIMEOUT#"')
 
 ! execute python script
 :INC PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.RUN_WLST
@@ -173,7 +174,48 @@
 :PROCESS &HND#
 :   MODIFY_STATE RETCODE=500
 :ENDPROCESS
-:CLOSE_PROCESS &HND#]]></OSCRI>
+:CLOSE_PROCESS &HND#
+
+:SET &HND2# = PREP_PROCESS_REPORT(,,,"*server timed out*")
+:PROCESS &HND2#
+:   PRINT "Warning: Maybe you should consider the username/password you entered are correctly!"
+:   MODIFY_STATE RETCODE=1
+:ENDPROCESS
+:CLOSE_PROCESS &HND2#
+
+:SET &EXE# = 0
+:SET &HND3# = PREP_PROCESS_REPORT(,,,"*Execute python script with WLST*")
+:PROCESS &HND3#
+:   SET &EXE# = &EXE# + 1
+:ENDPROCESS
+:CLOSE_PROCESS &HND3#
+
+:SET &SET# = 0
+:SET &HND3_2# = PREP_PROCESS_REPORT(,,,"*set user and password*")
+:PROCESS &HND3_2#
+:   SET &SET# = &SET# + 1
+:ENDPROCESS
+:CLOSE_PROCESS &HND3_2#
+
+:IF &EXE# <> 0
+:  IF &SET# = 0
+:    PRINT "Warning: Maybe you should consider the username/password you entered are correctly!"
+:    MODIFY_STATE RETCODE=1
+:  ENDIF
+:ENDIF
+
+:SET &HND4# = PREP_PROCESS_REPORT(,,,"*java.net.UnknownHostException*")
+:PROCESS &HND4#
+:   MODIFY_STATE RETCODE=1
+:ENDPROCESS
+:CLOSE_PROCESS &HND4#
+
+:SET &HND5# = PREP_PROCESS_REPORT(,,,"*Server is most likely down*")
+:PROCESS &HND5#
+:   PRINT "Maybe you should consider the port number you entered is correctly!"
+:   MODIFY_STATE RETCODE=1
+:ENDPROCESS
+:CLOSE_PROCESS &HND5#]]></OSCRI>
 </POST_SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC/>
