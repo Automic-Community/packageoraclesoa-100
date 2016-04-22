@@ -68,6 +68,7 @@
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">
 <UC4RB_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 <UC4RB_SOA_APP_REVs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_REV#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_ONLINE_MODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_ONLINE_MODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">NO</UC4RB_SOA_ONLINE_MODEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 </PRPTBOX>
@@ -146,6 +147,7 @@
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">
 <UC4RB_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 <UC4RB_SOA_APP_REVs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_REV#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_ONLINE_MODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_ONLINE_MODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">NO</UC4RB_SOA_ONLINE_MODEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 </PRPTBOX>
@@ -210,6 +212,7 @@
 <PRPTBOX promptset="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">
 <UC4RB_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 <UC4RB_SOA_APP_REVs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_REV#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
+<UC4RB_SOA_ONLINE_MODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_ONLINE_MODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION">NO</UC4RB_SOA_ONLINE_MODEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.UNDEPLOY_APPLICATION"/>
 </PRPTBOX>
@@ -339,15 +342,16 @@ PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION
 = General description =
 Undeploys a currently deployed SOA composite application.
 = Inputs =
-Host: IP or hostname of the Oracle WebLogic Server (for example, myhost).
-Port: Port of the Oracle WebLogic Server (for example, 7001).
-Username: User name for connecting to the running server to get MBean information (for example, weblogic).
-Password: Password of the user name.
-Protocol: Connection Protocol to connect to Oracle WebLogic Server (for example, t3)
-Application Name: Name of the SOA composite application.
-Revision: Revision of the SOA composite application
-Partition: Optional. The name of the partition in which the SOA composite application is located. The default value is default. If you do not specify a partition, the default partition is searched for the SOA composite application. However, no other partitions are searched.
-Oracle Home: Set to the full path of the Oracle home (for example, C:\Oracle\Middleware\Oracle_Home).
+* Host: Hostname of the Oracle WebLogic Server (for example, myhost).
+* Port: Port of the Oracle WebLogic Server (for example, 7001).
+* Username: User name for connecting to the running server to get MBean information (for example, weblogic).
+* Password: Password of the user name.
+* Protocol: Connection Protocol to connect to Oracle WebLogic Server (for example, t3)
+* Application Name: Name of the SOA composite application.
+* Revision: Revision of the SOA composite application.
+* Partition: Optional. The name of the partition in which the SOA composite application is located. The default value is default. If you do not specify a partition, the default partition is searched for the SOA composite application. However, no other partitions are searched.
+* Oracle Common: The full path to Oracle Common directory. This directory contains the relative path to wlst.cmd(.sh) such as /common/bin/wlst.cmd. In Oracle SOA 11g, this directory is ORACLE_HOME (for example: C:\Oracle\Middleware\Oracle_Home)), In Oracle SOA 12c, this directory is ORACLE_HOME/oracle_common (for example: C:\Oracle\Middleware\Oracle_Home\oracle_common).
+* Online Mode: Specifies deploy command is executed in Online/Offline mode. YES is Online mode, NO is Offline mode.
 = Behavior =
 Undeploys a currently deployed SOA composite application.
 = Outputs =
