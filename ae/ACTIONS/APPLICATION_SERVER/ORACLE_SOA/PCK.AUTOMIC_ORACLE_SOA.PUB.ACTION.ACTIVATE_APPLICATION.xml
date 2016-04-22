@@ -69,6 +69,7 @@
 <UC4RB_SOA_APP_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 <UC4RB_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 <UC4RB_SOA_APP_REVs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_REV#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
+<UC4RB_SOA_ONLINE_MODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_ONLINE_MODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION">NO</UC4RB_SOA_ONLINE_MODEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 </PRPTBOX>
@@ -148,6 +149,7 @@
 <UC4RB_SOA_APP_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 <UC4RB_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 <UC4RB_SOA_APP_REVs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_REV#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
+<UC4RB_SOA_ONLINE_MODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_ONLINE_MODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION">NO</UC4RB_SOA_ONLINE_MODEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 </PRPTBOX>
@@ -213,6 +215,7 @@
 <UC4RB_SOA_APP_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 <UC4RB_SOA_APP_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_NAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 <UC4RB_SOA_APP_REVs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APP_REV#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
+<UC4RB_SOA_ONLINE_MODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_ONLINE_MODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION">NO</UC4RB_SOA_ONLINE_MODEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.ACTIVATE_APPLICATION"/>
 </PRPTBOX>
@@ -359,7 +362,8 @@ Application Name: Name of the SOA composite application.
 Revision: Revision of the SOA composite application
 Label: Optional. Label of the SOA composite application. The label identifies the MDS artifacts associated with the application. If the label is not specified, the system finds the latest one.
 Partition: Optional. The name of the partition in which the SOA composite application is located. The default value is default. If you do not specify a partition, the default partition is searched for the SOA composite application. However, no other partitions are searched.
-Oracle Home: Set to the full path of the Oracle home (for example, C:\Oracle\Middleware\Oracle_Home).
+* Oracle Common: The full path to Oracle Common directory. This directory contains the relative path to wlst.cmd(.sh) such as /common/bin/wlst.cmd. In Oracle SOA 11g, this directory is ORACLE_HOME (for example: C:\Oracle\Middleware\Oracle_Home)), In Oracle SOA 12c, this directory is ORACLE_HOME/oracle_common (for example: C:\Oracle\Middleware\Oracle_Home\oracle_common).
+* Online Mode: Specifies deploy command is executed in Online/Offline mode. YES is Online mode, NO is Offline mode.
 
 = Behavior =
 Activates a retired SOA composite application and its instances. You can then create new instances.
