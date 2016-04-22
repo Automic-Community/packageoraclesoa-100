@@ -122,13 +122,13 @@
         <entry name="resetable">1</entry>
       <entry name="initvalue"/>
          </properties>
-    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_HOMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Oracle Home" tooltip="The full path of the Oracle Common home" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_WEBLOGIC_HOMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Oracle Common" tooltip="The full path of the Oracle Common home" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
       <properties>
         <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
         <entry name="xmlkey"/>
         <entry name="xmlpath"/>
-        <entry name="text">Oracle Home</entry>
+        <entry name="text">Oracle Common</entry>
         <entry name="multiline">0</entry>
         <entry name="multilineIcon">0</entry>
         <entry name="multiselect">0</entry>
