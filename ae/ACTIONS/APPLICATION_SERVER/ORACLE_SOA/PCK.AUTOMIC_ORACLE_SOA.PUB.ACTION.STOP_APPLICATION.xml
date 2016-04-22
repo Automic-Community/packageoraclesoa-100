@@ -69,6 +69,7 @@
 <UC4RB_SOA_APPNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APPNAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
 <UC4RB_SOA_FAIL_IF_STOPPEDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_FAIL_IF_STOPPED#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION">NO</UC4RB_SOA_FAIL_IF_STOPPEDs.00>
 <UC4RB_SOA_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
+<UC4RB_SOA_ONLINE_MODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_ONLINE_MODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION">NO</UC4RB_SOA_ONLINE_MODEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
 <UC4RB_SOA_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_REVISION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
@@ -149,6 +150,7 @@
 <UC4RB_SOA_APPNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APPNAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
 <UC4RB_SOA_FAIL_IF_STOPPEDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_FAIL_IF_STOPPED#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION">NO</UC4RB_SOA_FAIL_IF_STOPPEDs.00>
 <UC4RB_SOA_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
+<UC4RB_SOA_ONLINE_MODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_ONLINE_MODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION">NO</UC4RB_SOA_ONLINE_MODEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
 <UC4RB_SOA_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_REVISION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
@@ -215,6 +217,7 @@
 <UC4RB_SOA_APPNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_APPNAME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
 <UC4RB_SOA_FAIL_IF_STOPPEDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_FAIL_IF_STOPPED#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION">NO</UC4RB_SOA_FAIL_IF_STOPPEDs.00>
 <UC4RB_SOA_LABELs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_LABEL#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
+<UC4RB_SOA_ONLINE_MODEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_ONLINE_MODE#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION">NO</UC4RB_SOA_ONLINE_MODEs.00>
 <UC4RB_SOA_PARTITIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_PARTITION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
 <UC4RB_SOA_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SOA_REVISION#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
 <UC4RB_WEBLOGIC_HOMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_WEBLOGIC_HOME#" promptsetname="PCK.AUTOMIC_ORACLE_SOA.PRV.PROMPTSET.STOP_APPLICATION"/>
@@ -346,30 +349,29 @@
 PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION
 
 = General description =
-Stops an application, making it unavailable to users
+Stops a currently running SOA composite application.
 
 = Inputs =
-Host: IP or hostname of the Administration Server
-Port: Port number used to connect to the Administration Server
-Username: Username used to authenticate with WebLogic
-Password: Password used to authenticate with WebLogic
-Application Name: Name under which the application shall be installed
-Retire Gracefully: Retirement policy to gracefully retire an application only after it has completed all in-flight work.Option: retireGracefully
-Timeout: Time (in milliseconds) that WLST waits for the deployment process to complete before canceling the operation. A value of 0 indicates that the operation will not time out. This argument defaults to 300,000 ms (or 5 minutes). Option: timeout
-Fail if application is running: Specifies if the Job should fail in case the application is already stopped. YES/NO
-
+* Host: Hostname of the Oracle WebLogic Server (for example, myhost).
+* Port: Port of the Oracle WebLogic Server (for example, 7001).
+* Username: User name for connecting to the running server to get MBean information (for example, weblogic).
+* Password: Password for the user name.
+* Composite Name: Name of the SOA composite application.
+* Revision: Revision of the SOA composite application.
+* Partition: Optional. The name of the partition in which the SOA composite application is located. The default value is default. If you do not specify a partition, the default partition is searched for the SOA composite application. However, no other partitions are searched.
+* Label: Optional. Label of the SOA composite application. The label identifies the metadata service (MDS) artifacts associated with the application. If the label is not specified, the system finds the latest one.
+* Fail if application is stopped: Specifies if the Job should fail in case the application is already stopped. YES/NO
+* Oracle Common: The full path to Oracle Common directory. This directory contains the relative path to wlst.cmd(.sh) such as /common/bin/wlst.cmd. In Oracle SOA 11g, this directory is ORACLE_HOME (for example: C:\Oracle\Middleware\Oracle_Home)), In Oracle SOA 12c, this directory is ORACLE_HOME/oracle_common (for example: C:\Oracle\Middleware\Oracle_Home\oracle_common).
+* Online Mode: Specifies deploy command is executed in Online/Offline mode. YES is Online mode, NO is Offline mode.
 = Behavior =
-Stops an application, making it unavailable to users. The application must be fully configured and available in the WebLogic domain.
+Stops a currently running SOA composite application.
 Checks if the application is already stopped first. The option 'Fail if application is stopped' specifies wether the job fails if it is already stopped or if it will complete successfully.
 
 = Outputs =
 (none)
  
 = Rollback =
-the rollback function should restore the orginal state of the application
-    if it was running --> after a rollback, the application should run again
-    it it was stopped --> after a rollback, the application should be stopped again
- 
+
 
 = Logging =
 (none)

@@ -9,30 +9,30 @@ Test Template     Undeploy Application Template
 Resource          prt_keywords.txt
 Resource          ../../resources/keywords.txt
 
-*** Test Cases ***    OK_NOK      Host                              Port           Username             Password                 Connection Protocol     Online mode    RETURN CODE    RETURN STATUS
+*** Test Cases ***    OK_NOK     Host                              Port           Username             Password                 Connection Protocol     Timeout    Online mode    RETURN CODE    RETURN STATUS
 01_Success execute with Valid inputs
-                      #[Setup]    Deploy a Composite Application
-                      OK          ${_WL_HOST}                       ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    NO             0              ${ENDED_OK}
+                      [Setup]    Deploy a Composite Application
+                      OK         ${_WL_HOST}                       ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    -1         NO             0              ${ENDED_OK}
 
 02_Failed execute with Invalid Host
-                      NOK         Invalid_input                     ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    NO             1              ${ENDED_NOK}
+                      NOK        Invalid_input                     ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    -1         NO             1              ${ENDED_NOK}
 
 03_Failed execute with Invalid Port
-                      NOK         ${_WL_HOST}                       1000           ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    NO             1              ${ENDED_NOK}
+                      NOK        ${_WL_HOST}                       1000           ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    -1         NO             1              ${ENDED_NOK}
 
 04_Failed execute with Invalid Admin User
-                      NOK         ${_WL_HOST}                       ${_WL_PORT}    Invalid_input        ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    NO             1              ${ENDED_NOK}
+                      NOK        ${_WL_HOST}                       ${_WL_PORT}    Invalid_input        ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    3          NO             1              ${ENDED_NOK}
 
 05_Failed execute with Invalid Admin Password
-                      NOK         ${_WL_HOST}                       ${_WL_PORT}    ${_WL_ADMIN_USER}    Invalid_input            ${_WL_CONN_PROTOCOL}    NO             1              ${ENDED_NOK}
+                      NOK        ${_WL_HOST}                       ${_WL_PORT}    ${_WL_ADMIN_USER}    Invalid_input            ${_WL_CONN_PROTOCOL}    3          NO             1              ${ENDED_NOK}
 
 06_Failed execute with Invalid Connection Protocol
-                      NOK         ${_WL_HOST}                       ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    https                   YES            1              ${ENDED_NOK}
+                      NOK        ${_WL_HOST}                       ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    https                   -1         YES            1              ${ENDED_NOK}
 
 *** Keywords ***
 Undeploy Application Template
     [Arguments]    ${OK_NOK}    ${WEBLOGIC_HOST}    ${WEBLOGIC_PORT}    ${WEBLOGIC_USERNAME}    ${WEBLOGIC_PASSWORD}    ${WEBLOGIC_USE_PROTOCOL}
-    ...    ${ONLINE_MODE}    ${returnCode}    ${returnStatus}
+    ...    ${TIMEOUT}    ${ONLINE_MODE}    ${returnCode}    ${returnStatus}
     [Documentation]    This template is used for test UNDEPLOY_APPLICATION with needed arguments
     ...    All inputs are default and valid, except input variables for WEBLOGIC CONNECTION promptset. Required inputs:
     ...    - ${WEBLOGIC_HOST} : IP or hostname of the Weblogic Server
@@ -49,6 +49,7 @@ Undeploy Application Template
     Action Set    ${PRT_WEBLOGIC_USERNAME}    ${WEBLOGIC_USERNAME}
     Action Set    ${PRT_WEBLOGIC_PASSWORD}    ${WEBLOGIC_PASSWORD}
     Action Set    ${PRT_WEBLOGIC_USE_PROTOCOL}    ${WEBLOGIC_USE_PROTOCOL}
+    Action Set    ${PRT_UNDEPLOY_APPLICATION_TIMEOUT}    ${TIMEOUT}
     Set Default Valid Promptset
     Action Set    ${PRT_UNDEPLOY_APPLICATION_ONLINE_MODE}    ${ONLINE_MODE}
     Action Set Timeout    500
