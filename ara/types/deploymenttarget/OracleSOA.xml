@@ -32,7 +32,7 @@
                 </Property>
             </Group>
 			
-			<Group name="adminserver_connectivity" displayName="AdminServer Connection">
+			<Group name="adminserver_connectivity" displayName="Oracle SOA Server Connection">
                 <Property name="host" type="SingleLineText" mode="EDITABLE" displayName="Host">
 					<Description>Hostname or IP address of the physical machine</Description>
                 </Property>
