@@ -255,8 +255,9 @@ inputAppName = rf_prep_str(sys.argv[6])
 inputRevision = rf_prep_str(sys.argv[7])
 inputPartition = rf_prep_str(sys.argv[8])
 inputOnlineMode = rf_prep_str(sys.argv[9])
+inputTimeOut  = int(sys.argv[10])
 
-import sys, string, os, os.path, time, traceback, shutil
+import sys, string, os, os.path, time, traceback, shutil, threading
 
 print "Execute python script with WLST"
 failed = 1
@@ -267,12 +268,28 @@ try:
 
     if inputPartition == None:
         inputPartition = 'default';
-    sca_undeployComposite(url
-        ,inputAppName
-        ,inputRevision
-        ,user=inputUser
-        ,password=inputPassword
-        ,partition=inputPartition);
+    if inputTimeOut == -1:
+        sca_undeployComposite(url
+          ,inputAppName
+          ,inputRevision
+          ,user=inputUser
+          ,password=inputPassword
+          ,partition=inputPartition);
+    else:
+        userP = 'user=' + inputUser;
+        passwordP = 'password=' + inputPassword;
+        partitionP = 'partition=' + inputPartition;
+        timeoutP = 'timeout=' + str(inputTimeOut);
+        print "\nExecuting with " + timeoutP + " (s)"
+        t = threading.Timer(inputTimeOut, sca_undeployComposite, args=(url
+          ,inputAppName
+          ,inputRevision
+          ,userP
+          ,passwordP 
+          ,partitionP
+          ,timeoutP,))
+        t.start();
+        print "Timed out!"
     failed = 0;
 
 except Exception, detail:

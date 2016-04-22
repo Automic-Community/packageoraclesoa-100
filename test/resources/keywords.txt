@@ -82,8 +82,8 @@ Deploy a Composite Application
     Action Set    &UC4RB_SOA_ONLINE_MODE#    NO
     Set Default Weblogic Server Connection
     Action Execute
-    Action Report Should Be Found
-    Action Return Status Should Be    ${ENDED_OK}
+    #Action Report Should Be Found
+    #Action Return Status Should Be    ${ENDED_OK}
 
 Undeploy a Composite Application
     Init Action    PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION
@@ -94,7 +94,7 @@ Undeploy a Composite Application
     Action Set    &UC4RB_SOA_ONLINE_MODE#    NO
     Set Default Weblogic Server Connection
     Action Execute
-    Action Report Should Be Found
+    #Action Report Should Be Found
 
 Start a Composite Application
     Init Action    PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION

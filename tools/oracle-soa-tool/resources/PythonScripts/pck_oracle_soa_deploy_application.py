@@ -298,8 +298,9 @@ inputForceDefault = sys.argv[8]
 inputConfigPlan = rf_prep_str(sys.argv[9])
 inputPartition = rf_prep_str(sys.argv[10])
 inputOnlineMode = rf_prep_str(sys.argv[11])
+inputTimeOut  = int(sys.argv[12])
 
-import sys, string, os, os.path, time, traceback, shutil 
+import sys, string, os, os.path, time, traceback, shutil, threading 
 print "Execute python script with WLST"
 failed = 1;
 try:
@@ -316,14 +317,34 @@ try:
     if inputOnlineMode == 'YES':
         connect(inputUser, inputPassword, inputServerURL);
 
-    sca_deployComposite(inputServerURL
-        ,sar_path_tmp
-        ,to_boolean(inputOverwrite)
-        ,user=inputUser
-        ,password=inputPassword
-        ,forceDefault=to_boolean(inputForceDefault)
-        ,configplan=configPlanPath_tmp 
-        ,partition=inputPartition);
+    if inputTimeOut == -1:
+        sca_deployComposite(inputServerURL
+          ,sar_path_tmp
+          ,to_boolean(inputOverwrite)
+          ,user=inputUser
+          ,password=inputPassword
+          ,forceDefault=to_boolean(inputForceDefault)
+          ,configplan=configPlanPath_tmp 
+          ,partition=inputPartition);
+    else:
+        userP = 'user=' + inputUser;
+        passwordP = 'password=' + inputPassword;
+        forceDefaultP = 'forceDefault=' + str(to_boolean(inputForceDefault));
+        configplanP = 'configplan=' + str(configPlanPath_tmp);
+        partitionP = 'partition=' + inputPartition;
+        timeoutP = 'timeout=' + str(inputTimeOut);
+        print "\nExecuting with " + timeoutP + " (s)"
+        t = threading.Timer(inputTimeOut, sca_deployComposite, args=(inputServerURL
+          ,sar_path_tmp
+          ,to_boolean(inputOverwrite)
+          ,userP
+          ,passwordP
+          ,forceDefaultP
+          ,configplanP 
+          ,partitionP
+          ,timeoutP,))
+        t.start();
+        print "Timed out!"
     failed = 0;
 
 except Exception, detail:
