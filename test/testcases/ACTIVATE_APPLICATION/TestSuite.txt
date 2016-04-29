@@ -13,23 +13,38 @@ Resource          prt_keywords.txt
 1. Success activate application default value
                       OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              NO             0              ${ENDED_OK}
 
-2. Success activate application Online mode
-                      OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
-
-3. Fail activate application wrong name
+2. Fail activate application wrong name
                       NOK       ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              NO             1              ${ENDED_NOK}
 
-4. Fail activate application wrong revision
+3. Fail activate application wrong revision
                       NOK       ${_APP_NAME}              9.9            ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              NO             1              ${ENDED_NOK}
 
-5. Fail activate application wrong label
+4. Fail activate application wrong label
                       NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              NO             1              ${ENDED_NOK}
 
-6. Fail activate application wrong partition
+5. Fail activate application wrong partition
                       NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              NO             1              ${ENDED_NOK}
 
-7. Fail activate application wrong oracle home
+6. Fail activate application wrong oracle home
                       NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    NO             2              ${ENDED_NOK}
+
+7. Success activate application Online mode
+                      OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
+
+8. Fail activate application wrong name Online mode
+                      NOK       ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              YES             1              ${ENDED_NOK}
+
+9. Fail activate application wrong revision Online mode
+                      NOK       ${_APP_NAME}              9.9            ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              YES             1              ${ENDED_NOK}
+
+10. Fail activate application wrong label Online mode
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              YES             1              ${ENDED_NOK}
+
+11. Fail activate application wrong partition Online mode
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              YES             1              ${ENDED_NOK}
+
+12. Fail activate application wrong oracle home Online mode
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    YES             2              ${ENDED_NOK}
 
 *** Keywords ***
 Activate Application Template

@@ -12,26 +12,44 @@ Resource          prt_keywords.txt
                       [Setup]       Setup_suite
                       OK            ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              NO             0              ${ENDED_OK}
 
-2. Success undeploy application Online mode
-                      [Setup]       Setup_suite
-                      OK            ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
-
-3. Fail undeploy application wrong name
+2. Fail undeploy application wrong name
                       NOK           ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              NO             500            ${ENDED_NOK}
 
-4. Fail undeploy application wrong revision
+3. Fail undeploy application wrong revision
                       [Setup]       Setup_suite
                       NOK           ${_APP_NAME}              9.9            ${_APP_PARTITION}              ${_WL_HOME}              NO             500            ${ENDED_NOK}
                       [Teardown]    Teardown_suite
 
-5. Fail undeploy application wrong partition
+4. Fail undeploy application wrong partition
                       [Setup]       Setup_suite
                       NOK           ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              NO             500            ${ENDED_NOK}
                       [Teardown]    Teardown_suite
 
-6. Fail undeploy application wrong oracle home
+5. Fail undeploy application wrong oracle home
                       [Setup]       Setup_suite
                       NOK           ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    NO             2              ${ENDED_NOK}
+                      [Teardown]    Teardown_suite
+
+6. Success undeploy application Online mode
+                      [Setup]       Setup_suite
+                      OK            ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
+
+7. Fail undeploy application wrong name Online mode
+                      NOK           ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}              YES             500            ${ENDED_NOK}
+
+8. Fail undeploy application wrong revision Online mode
+                      [Setup]       Setup_suite
+                      NOK           ${_APP_NAME}              9.9            ${_APP_PARTITION}              ${_WL_HOME}              YES             500            ${ENDED_NOK}
+                      [Teardown]    Teardown_suite
+
+9. Fail undeploy application wrong partition Online mode
+                      [Setup]       Setup_suite
+                      NOK           ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              YES             500            ${ENDED_NOK}
+                      [Teardown]    Teardown_suite
+
+10. Fail undeploy application wrong oracle home Online mode
+                      [Setup]       Setup_suite
+                      NOK           ${_APP_NAME}              ${_APP_REV}    ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    YES             2              ${ENDED_NOK}
                       [Teardown]    Teardown_suite
 
 *** Keywords ***

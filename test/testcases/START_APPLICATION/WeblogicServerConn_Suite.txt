@@ -25,7 +25,22 @@ Resource          ../../resources/keywords.txt
 05_Failed execute with Invalid Admin Password
                       NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    Invalid_input            ${_WL_CONN_PROTOCOL}    NO             1              ${ENDED_NOK}
 
-06_Failed execute with Invalid Connection Protocol
+06_Success execute with Valid inputs Online mode
+                      OK        ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    YES             0              ${ENDED_OK}
+
+07_Failed execute with Invalid Host Online mode
+                      NOK       Invalid_input    ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    YES             1              ${ENDED_NOK}
+
+08_Failed execute with Invalid Port Online mode
+                      NOK       ${_WL_HOST}      1000           ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    YES             1              ${ENDED_NOK}
+
+09_Failed execute with Invalid Admin User Online mode
+                      NOK       ${_WL_HOST}      ${_WL_PORT}    Invalid_input        ${_WL_ADMIN_PASSWORD}    ${_WL_CONN_PROTOCOL}    YES             1              ${ENDED_NOK}
+
+10_Failed execute with Invalid Admin Password Online mode
+                      NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    Invalid_input            ${_WL_CONN_PROTOCOL}    YES             1              ${ENDED_NOK}
+
+11_Failed execute with Invalid Connection Protocol Online mode
                       NOK       ${_WL_HOST}      ${_WL_PORT}    ${_WL_ADMIN_USER}    ${_WL_ADMIN_PASSWORD}    https                   YES            1              ${ENDED_NOK}
 
 *** Keywords ***

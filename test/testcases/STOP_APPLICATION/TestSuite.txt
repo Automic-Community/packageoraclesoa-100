@@ -13,18 +13,24 @@ Resource          prt_keywords.txt
 1. Success stop application default value
                       OK                                          ${_APP_NAME}              ${_APP_REV}     ${_APP_LABEL}    NO                 ${_WL_HOME}    NO             0               ${ENDED_OK}
 
-2. Success stop application Online mode
-                      OK                                          ${_APP_NAME}              ${_APP_REV}     ${_APP_LABEL}    NO                 ${_WL_HOME}    YES            0               ${ENDED_OK}
-
-3. Fail stop application wrong name
+2. Fail stop application wrong name
                       NOK                                         ${_APP_NAME}_NOT_EXIST    ${_APP_REV}     ${_APP_LABEL}    NO                 ${_WL_HOME}    NO             1               ${ENDED_NOK}
 
-4. Fail stop application running fail equal YES
+3. Fail stop application running fail equal YES
                       NOK                                         ${_APP_NAME}              ${_APP_REV}     ${_APP_LABEL}    YES                ${_WL_HOME}    NO             1               ${ENDED_NOK}
                       #3. Fail stop application wrong revision
                       #                                           NOK                       ${_APP_NAME}    9.9              ${EMPTY}           ${_WL_HOME}    1              ${ENDED_NOK}
                       #4. Fail stop application wrong label
                       #                                           NOK                       ${_APP_NAME}    ${_APP_LABEL}    LABEL_NOT_EXIST    ${_WL_HOME}    1              ${ENDED_NOK}
+
+4. Success stop application Online mode
+                      OK                                          ${_APP_NAME}              ${_APP_REV}     ${_APP_LABEL}    NO                 ${_WL_HOME}    YES            0               ${ENDED_OK}
+
+5. Fail stop application wrong name Online mode
+                      NOK                                         ${_APP_NAME}_NOT_EXIST    ${_APP_REV}     ${_APP_LABEL}    NO                 ${_WL_HOME}    YES            1               ${ENDED_NOK}
+
+6. Fail stop application running fail equal YES Online mode
+                      NOK                                         ${_APP_NAME}              ${_APP_REV}     ${_APP_LABEL}    YES                ${_WL_HOME}    YES            1               ${ENDED_NOK}
 
 *** Keywords ***
 Stop Application Template
