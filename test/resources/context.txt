@@ -36,6 +36,8 @@ ${_APP_LABEL}     /
 ${_APP_PARTITION}    /
 ${_SAR_LOCATION}    /
 ${_CONFIG_PLAN}    /
+${_OS_AGENT_HOSTNAME}    /
+${_OS_AGENT_SNAPSHOT_NAME}    /
 
 *** Key Words ***
 Init WL Agent
@@ -43,6 +45,7 @@ Init WL Agent
     Run Keyword If    '${ENV}' == 'WIN'    Init Win Agent
     Run Keyword If    '${ENV}' == 'UNIX'    Init Unix Agent
     Run Keyword If    '${ENV}' == 'VVNARASOA02' and '${APP}' == 'ORACLE_SOA'    Init VVNARASOA02 For Oracle SOA
+    Revert Test Agent    ${_OS_AGENT_HOSTNAME}    ${_OS_AGENT_SNAPSHOT_NAME}
 
 Init Win Agent
     [Documentation]    TODO: Write agent used to test description here
@@ -64,11 +67,13 @@ Revert Test Agent
     Vm Connect    @{VM}
     Vm Revert    ${agent_host}    ${snapshot_name}
     Log    Wait for agent up...
-    Sleep    5 minutes
+    Sleep    8 minutes
     Log    Agent might be up!
 
 Init VVNARASOA02 For Oracle SOA
     [Documentation]    TODO: Write agent used to test description here
+    Set Global Variable    ${_OS_AGENT_HOSTNAME}    VVNARASOA02
+    Set Global Variable    ${_OS_AGENT_SNAPSHOT_NAME}    ORACLE_SOA_ROBOT
     Set Global Variable    ${/}    /
     Set Global Variable    ${_OS}    WIN
     Set Global Variable    ${_AGENT}    VVNARASOA02
