@@ -4,7 +4,7 @@ Documentation     NOTE:
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
 Force Tags        START_APPLICATION    BASIC
-Default Tags      win    unix
+Default Tags      win    unix    SMOKE_TEST    ALL
 Test Template     Start Application Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt

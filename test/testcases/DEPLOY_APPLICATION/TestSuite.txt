@@ -4,7 +4,7 @@ Documentation     NOTE:
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
 Force Tags        DEPLOY_APPLICATION
-Default Tags      win    unix
+Default Tags      win    unix    ALL
 Test Template     Deploy Application Template
 Resource          ../../resources/keywords.txt
 
@@ -40,27 +40,27 @@ Resource          ../../resources/keywords.txt
                       OK         ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
 
 10. Success deploy application with Overwrite is YES Online mode
-                      OK         ${_SAR_LOCATION}                    YES          YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES             0              ${ENDED_OK}
+                      OK         ${_SAR_LOCATION}                    YES          YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
 
 11. Success deploy application with Force Default is NO Online mode
                       [Setup]    Undeploy a Composite Application
-                      OK         ${_SAR_LOCATION}                    NO           NO               ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES             0              ${ENDED_OK}
+                      OK         ${_SAR_LOCATION}                    NO           NO               ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
 
 12. Fail deploy application with Overwrite is NO Online mode
                       [Setup]    Deploy a Composite Application
-                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES             500            ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            500            ${ENDED_NOK}
 
 13. Fail deploy application with wrong SAR location Online mode
-                      NOK        ${_SAR_LOCATION}_NOT_EXIST          NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES             2              ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}_NOT_EXIST          NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            2              ${ENDED_NOK}
 
 14. Fail deploy application with wrong config plan Online mode
-                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              YES             2              ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              YES            2              ${ENDED_NOK}
 
 15. Fail deploy application with wrong partition Online mode
-                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              YES             500            ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              YES            500            ${ENDED_NOK}
 
 16. Fail deploy application with wrong oracle home Online mode
-                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    YES             2              ${ENDED_NOK}
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    YES            2              ${ENDED_NOK}
 
 *** Keywords ***
 Deploy Application Template

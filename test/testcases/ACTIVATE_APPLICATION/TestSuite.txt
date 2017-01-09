@@ -4,7 +4,7 @@ Documentation     NOTE:
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
 Force Tags        ACTIVATE_APPLICATION    BASIC
-Default Tags      win    unix
+Default Tags      win    unix    ALL
 Test Template     Activate Application Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
@@ -32,19 +32,19 @@ Resource          prt_keywords.txt
                       OK        ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
 
 8. Fail activate application wrong name Online mode
-                      NOK       ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              YES             1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}_NOT_EXIST    ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              YES            1              ${ENDED_NOK}
 
 9. Fail activate application wrong revision Online mode
-                      NOK       ${_APP_NAME}              9.9            ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              YES             1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}              9.9            ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}              YES            1              ${ENDED_NOK}
 
 10. Fail activate application wrong label Online mode
-                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              YES             1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              YES            1              ${ENDED_NOK}
 
 11. Fail activate application wrong partition Online mode
-                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              YES             1              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              YES            1              ${ENDED_NOK}
 
 12. Fail activate application wrong oracle home Online mode
-                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    YES             2              ${ENDED_NOK}
+                      NOK       ${_APP_NAME}              ${_APP_REV}    ${_APP_LABEL}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    YES            2              ${ENDED_NOK}
 
 *** Keywords ***
 Activate Application Template

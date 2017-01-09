@@ -1,6 +1,6 @@
 *** Settings ***
 Force Tags        BASIC    SUDO    COMMON_OPTs    ADMIN_SERVER_CONN
-Default Tags      win    unix
+Default Tags      win    unix    SMOKE_TEST    ALL
 Resource          env/default.txt
 Resource          resources/context.txt
 

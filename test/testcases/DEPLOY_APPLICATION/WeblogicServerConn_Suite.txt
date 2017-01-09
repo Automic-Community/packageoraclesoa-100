@@ -4,7 +4,7 @@ Documentation     NOTE:
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
 Force Tags        DEPLOY_APPLICATION
-Default Tags      win    unix
+Default Tags      win    unix    ALL
 Test Template     Deploy Application Template
 Resource          prt_keywords.txt
 Resource          ../../resources/keywords.txt
