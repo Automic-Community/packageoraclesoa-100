@@ -10,11 +10,11 @@ binaries:
     resources: 
     - name: DEPLOYMENTTARGET#ORACLE_SOA#1
       type: TEXT
-      path: ara/types/deploymenttarget/OracleSOA.xml
+      path: ara/types/deploymenttarget/Oracle SOA.xml
       version: 1.0
     - name: COMPONENT#ORACLE_SOA#2
       type: TEXT
-      path: ara/types/component/OracleSOA.xml
+      path: ara/types/component/Oracle SOA.xml
       version: 1.0
   - object: RESOURCES/LIBS/PCK.AUTOMIC_ORACLE_SOA.PRV.STORE
     resources: 

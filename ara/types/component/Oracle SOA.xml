@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version: 6.0 -->
 <ComponentType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="component.xsd">
-	<Name>OracleSOA</Name>
-	<DefaultDeploymentTargetType>OracleSOA</DefaultDeploymentTargetType>
+	<Name>Oracle SOA</Name>
+	<DefaultDeploymentTargetType>Oracle SOA</DefaultDeploymentTargetType>
 	<Properties>
 
 		<!-- EXECUTABLE SCRIPT -->

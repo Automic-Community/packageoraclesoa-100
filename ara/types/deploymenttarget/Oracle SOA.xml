@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version: 6.0 -->
 <DeploymentTargetType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Deployment_Target.xsd">
-	<Name>OracleSOA</Name>
+	<Name>Oracle SOA</Name>
    
 	<Properties>
    
