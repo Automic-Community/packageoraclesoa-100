@@ -1,0 +1,24 @@
+*** Variables ***
+###########################################--------- Weblogic infor ---------#########################################################
+###-------------------------------------------------VVNARASOA02-----------------------------------------------------###
+${VVNARASOA02_AGENT_DIR}    C:\\Automic\\Agents\\vvnarasoa02_at\\x64\\
+${VVNARASOA02_WORKING_DIR}    C:\\PCK_ORACLE_SOA
+${VVNARASOA02_SOURCE_DIR}    C:\\AT_resources\\
+${VVNARASOA02_OUTPUT_DIR}    C:\\AT_output\\
+${VVNARASOA02_WL_HOME}    C:\\Oracle\\Middleware\\Oracle_Home\\oracle_common
+${VVNARASOA02_WEBLOGIC_HOST}    vvnarasoa02
+${VVNARASOA02_WEBLOGIC_PORT}    7003
+${VVNARASOA02_WEBLOGIC_USERNAME}    weblogic
+${VVNARASOA02_WEBLOGIC_PASSWORD}    ventum2011
+${VVNARASOA02_WEBLOGIC_USE_PROTOCOL}    http
+${VVNARASOA02_SUDOER_USER_WITH_PASS}    ${EMPTY}
+${VVNARASOA02_SUDOER_PASS}    ${EMPTY}
+${VVNARASOA02_SUDOER_USER_WITH_OUT_PASS}    ${EMPTY}
+${VVNARASOA02_NOT_SUDOER}    ${EMPTY}
+${VVNARASOA02_NOT_SUDOER_PASS}    ${EMPTY}
+${VVNARASOA02_APP_NAME}    Project1
+${VVNARASOA02_APP_REV}    1.0
+${VVNARASOA02_APP_LABEL}    ${EMPTY}
+${VVNARASOA02_APP_PARTITION}    default
+${VVNARASOA02_SAR_LOCATION}    C:\\Temp\\sca_Project1.jar
+${VVNARASOA02_CONFIG_PLAN}    ${EMPTY}

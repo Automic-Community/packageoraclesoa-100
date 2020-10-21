@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBI name="PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.RUN_WLST">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[
+:SWITCH &$PLATFORM#
+:  CASE "WINDOWS"
+:  IF &UC4RB_WEBLOGIC_HOME# <> ''
+     cd /d "&UC4RB_WEBLOGIC_HOME#\common\bin"
+:  ELSE
+     cd /d "%ORACLE_HOME%\common\bin"
+:  ENDIF
+
+
+call &UC4RB_WEBLOGIC_CMD#
+set retcode=%ERRORLEVEL%
+
+@if NOT %retcode% == 0 goto :retcode
+
+:  CASE "UNIX"
+:  IF &UC4RB_WEBLOGIC_HOME# <> ''
+     cd "&UC4RB_WEBLOGIC_HOME#/common/bin"
+:  ELSE
+     cd "$ORACLE_HOME/common/bin"
+:  ENDIF
+
+&UC4RB_WEBLOGIC_CMD#
+OUT=$?
+
+if [ "$OUT" -gt "0" ] ;
+  then
+    exit $OUT;
+fi
+
+:  OTHER
+:ENDSWITCH
+]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

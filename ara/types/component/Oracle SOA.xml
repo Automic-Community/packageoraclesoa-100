@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: 6.0 -->
+<ComponentType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="component.xsd">
+	<Name>Oracle SOA</Name>
+	<DefaultDeploymentTargetType>Oracle SOA</DefaultDeploymentTargetType>
+	<Properties>
+
+		<!-- EXECUTABLE SCRIPT -->
+		<Group name="script_group" displayName="Script">
+			<Property name="connect_to_server" type="SingleChoice" mode="EDITABLE" displayName="Connect to Server"> <!-- e.g.: WL_HOME\common\templates\scripts\wlst\basicWLSDomain.py  -->
+				<List>Yes#;#No</List>
+				<Defaultvalue>No</Defaultvalue>
+				<Description>Defines if WLST should connect to a server with the given Host, Port, Username, Password before executing the script. YES/NO</Description>
+			</Property>
+			<Property name="script_path" type="SingleLineText" mode="EDITABLE" displayName="Script Path"> <!-- e.g.: WL_HOME\common\templates\scripts\wlst\basicWLSDomain.py  -->
+				<Defaultvalue></Defaultvalue>
+				<Description>Path to the Python script which will be executed with WLST. Path can be absolute or relative to WL_HOME.</Description>
+			</Property>			
+		</Group>
+
+		<!-- PACKAGE -->
+		<Group name="package_group" displayName="Package">
+			<Property name="package" type="SingleLineText" mode="EDITABLE" displayName="Name"> <!-- e.g.: pkg.war, ...  -->
+				<Defaultvalue>sca_myPackage.sar</Defaultvalue>
+				<Description>Absolute path to a specified SAR file or to all SAR files included in the ZIP file</Description>
+			</Property>
+			<Property name="revision" type="SingleLineText" mode="EDITABLE" displayName="Revision"> <!-- e.g.: 1.0, ...  -->
+				<Defaultvalue></Defaultvalue>
+				<Description>Revision of SOA composite application</Description>
+			</Property>
+			<Property name="config_plan" type="SingleLineText" mode="EDITABLE" displayName="Config Plan">
+				<Defaultvalue></Defaultvalue>
+				<Description>Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file</Description>
+			</Property>
+			<Property name="label" type="SingleLineText" mode="EDITABLE" displayName="Label">
+				<Defaultvalue></Defaultvalue>
+				<Description>Label of the SOA composite application</Description>
+			</Property>
+			<Property name="partition" type="SingleLineText" mode="EDITABLE" displayName="Partition">
+				<Defaultvalue></Defaultvalue>
+				<Description>Partition of the SOA composite application</Description>
+			</Property>
+			<Property name="options" type="SingleLineText" mode="EDITABLE" displayName="Options"> <!-- e.g.: libraryModule=true,deploymentOrder=125  -->
+				<Defaultvalue></Defaultvalue>
+				<Description>Optional. Comma-separated list of deployment options, specified as name-value pairs</Description>
+			</Property>
+		</Group>
+
+		<!-- JMS -->
+		<Group name="jms_group" displayName="JMS">
+			<Property name="jms_server" type="SingleLineText" mode="EDITABLE" displayName="Server name">
+				<Description>JMS server name</Description>
+			</Property>
+			<Property name="jms_module" type="SingleLineText" mode="EDITABLE" displayName="Module name">
+				<Description>JMS module name</Description>
+			</Property>
+			<Property name="jms_subdeployment" type="SingleLineText" mode="EDITABLE" displayName="Subdeployment name">
+				<Description>JMS subdeployment name</Description>
+			</Property>
+			<Property name="jms_resource_name" type="SingleLineText" mode="EDITABLE" displayName="Resource name">
+				<Description>JMS resource name (for message queues and topics)</Description>
+			</Property>
+			<Property name="submodule_targets" type="SingleLineText" mode="EDITABLE" displayName="Submodule targets">
+				<Description>JMS resource JNDI name</Description>
+			</Property>
+
+		</Group>
+
+		<!-- JDBC -->
+		<Group name="jdbc_group" displayName="JDBC">
+			<Property name="jdbc_name" type="SingleLineText" mode="EDITABLE" displayName="JDBC name">
+				<Description>Name of the JDBC</Description>
+			</Property>
+			<Property name="jndi_name" type="SingleLineText" mode="EDITABLE" displayName="JNDI name">
+				<Description>Name of the JNDI</Description>
+			</Property>
+			<Property name="jdbc_driver" type="SingleLineText" mode="EDITABLE" displayName="Driver class">
+				<Description>Driver / Java class name used for the connection eg: oracle.jdbc.xa.client.OracleXADataSource</Description>
+			</Property>
+			<Property name="jdbc_url" type="SingleLineText" mode="EDITABLE" displayName="Connection URL">
+				<Description>Datasource connection url eg: jdbc:oracle:thin:@server:port:sid or jdbc:weblogic:sqlserver://server:port</Description>
+			</Property>
+			<Property name="jdbc_username" type="SingleLineText" mode="EDITABLE" displayName="Username">
+				<Description>Username used to authenticate with the datasource</Description>
+			</Property>
+			<Property name="jdbc_password" type="Protected" mode="EDITABLE" displayName="Password">
+				<Description>Password used to authenticate with the datasource</Description>
+			</Property>
+			<Property name="jdbc_database" type="SingleLineText" mode="EDITABLE" displayName="Database">
+				<Description>Name of the database</Description>
+			</Property>
+			<Property name="jdbc_driver_properties" type="SingleLineText" mode="EDITABLE" displayName="Driver properties">
+				<Description>Additional driver properties eg: portNumber=1433,databaseName=mydb,serverName=myserver</Description>
+			</Property>
+			<Property name="jdbc_test_table" type="SingleLineText" mode="EDITABLE" displayName="Test table name">
+				<Description>Test table name or test query used to test database connections. Eg 'SQL SELECT 1 FROM DUAL'</Description>
+			</Property>
+		</Group>
+		
+		<!-- Persistent Store -->
+		<Group name="persistent_store" displayName="Persistent Store">
+			<Property name="persistentstore_name" type="SingleLineText" mode="EDITABLE" displayName="Persistent Store name">
+				<Description>Name of the persistent store</Description>
+			</Property>
+            <Property name="target_server" type="SingleLineText" mode="EDITABLE" displayName="Target Server name">
+				<Description>The server instances, clusters, or migratable targets defined in the current domain that are candidates for hosting a file store, JDBC store, or replicated store</Description>
+			</Property>
+			<Property name="filestore_dir" type="SingleLineText" mode="EDITABLE" displayName="File Store directory">
+				<Description>Path to the directory in which the filestore will be stored</Description>
+			</Property>
+			<Property name="filestore_params" type="SingleLineText" mode="EDITABLE" displayName="File Store parameters">
+				<Description>Additional parameters that can be specified for firestore</Description>
+			</Property>
+			<Property name="jdbcstore_prefix" type="SingleLineText" mode="EDITABLE" displayName="JDBC Store prefix">
+				<Description>Prefix for the tables that are stored within the datasource</Description>
+			</Property>
+			<Property name="jdbcstore_params" type="SingleLineText" mode="EDITABLE" displayName="JDBC Store parameters">
+				<Description>Additional parameters that can be specified for jdbcstore</Description>
+			</Property>
+		</Group>
+		
+		<!-- Cluster -->
+		<Group name="cluster" displayName="Cluster">
+			<Property name="multicast_address" type="SingleLineText" mode="EDITABLE" displayName="Multicast Address">
+				<Description>IP address dedicate to multicast communications for cluster (IP address between 224.0.0.0 and 239.255.255.255)</Description>
+			</Property>
+			<Property name="multicast_port" type="SingleLineText" mode="EDITABLE" displayName="Multicast Port">
+				<Description>Port dedicate to multicast communications for cluster</Description>
+			</Property>
+			<Property name="frontend_host" type="SingleLineText" mode="EDITABLE" displayName="Frontend Host Name">
+				<Description>Name of the host that represents the cluster (endpoint for WSDL generation)</Description>
+			</Property>
+			<Property name="frontend_http_port" type="SingleLineText" mode="EDITABLE" displayName="Frontend Host HTTP Port">
+				<Description>HTTP Port that represents the cluster (endpoint for WSDL generation)</Description>
+			</Property>
+			<Property name="frontend_https_port" type="SingleLineText" mode="EDITABLE" displayName="Frontend Host HTTPS Port">
+				<Description>HTTPS Port that represents the cluster (endpoint for WSDL generation)</Description>
+			</Property>
+			<Property name="cluster_properties" type="SingleLineText" mode="EDITABLE" displayName="Addtional Parameters">
+				<Description>Addtional parameters that can be specified for cluster</Description>
+			</Property>
+		</Group>
+		
+		<!-- Machine -->
+		<Group name="machine" displayName="Machine">
+			<Property name="machine_properties" type="SingleLineText" mode="EDITABLE" displayName="Addtional Parameters">
+				<Description>Addtional parameters that can be specified for machine</Description>
+			</Property>
+		</Group>
+		
+		<!-- Domain -->
+		<Group name="domain" displayName="Domain">
+			<Property name="domain_properties" type="SingleLineText" mode="EDITABLE" displayName="Addtional Parameters">
+				<Description>Addtional parameters that can be specified for domain</Description>
+			</Property>
+		</Group>
+
+	</Properties>
+	<DynamicProperties>
+
+		<!-- SNAPSHOTS -->
+		<Property name="/snapshot/archive_path" highlighted="false">
+			<Value></Value>
+			<Description>The path where all snapshots will be stored.</Description>
+		</Property>
+		<Property name="/snapshot/source_path" highlighted="false">
+			<Value></Value>
+			<Description>The path to the directory, that the snapshot will be taken of.</Description>
+		</Property>
+		<Property name="/snapshot/snapshot_filter_include" highlighted="false">
+			<Value></Value>
+			<Description>Filter the snapshot by filename. Multiple filters can be given using , as seperator. Eg: dir1/*,*.txt</Description>
+		</Property>
+		<Property name="/snapshot/snapshot_filter_exclude" highlighted="false">
+			<Value></Value>
+			<Description>Filter the snapshot by filename. Multiple filters can be given using , as seperator. Eg: dir1/*,*.txt</Description>
+		</Property>
+
+		<!-- GENERAL -->
+		<Property name="/oracle_soa/application_name" highlighted="false">
+			<Value>{@application/system/name}</Value>
+			<Description>Name of the application which will be used for install and uninstall actions among others</Description>
+		</Property>
+		<Property name="/oracle_soa/revision" protected="false" highlighted="false" type="SingleLineText" allowCustomValues="false">
+			<Value>{/custom/revision}</Value>
+			<Description>Revision of SOA composite application</Description>
+		</Property>
+		<Property name="/oracle_soa/label" highlighted="false">
+			<Value>{/custom/label}</Value>
+			<Description>Label of the SOA composite application</Description>
+		</Property>
+		<Property name="/oracle_soa/partition" highlighted="false">
+			<Value>{/custom/partition}</Value>
+			<Description>Partition of the SOA composite application</Description>
+		</Property>
+
+		<Property name="/oracle_soa/config_plan" highlighted="false">
+			<Value>{/custom/config_plan}</Value>
+			<Description>Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file.</Description>
+		</Property>
+
+		<Property name="/oracle_soa/oracle_home" highlighted="false">
+			<Value>{@target/custom/oracle_home}</Value>
+			<Description>Oracle Home directory</Description>
+		</Property>
+		<Property name="/oracle_soa/server" highlighted="false">
+			<Value>{@endpoints/custom/server}</Value>
+			<Description>Name of the WebLogic server(s)</Description>
+		</Property>
+		<Property name="/oracle_soa/cluster" highlighted="false">
+			<Value>{@endpoints/custom/cluster}</Value>
+			<Description>Name of the WebLogic cluster(s)</Description>
+		</Property>
+		<Property name="/oracle_soa/machine" highlighted="false">
+			<Value>{@endpoints/custom/machine}</Value>
+			<Description>Name(s) of the machine(s) the WebLogic server(s) are located on</Description>
+		</Property>
+		<Property name="/oracle_soa/targets" highlighted="false">
+			<Value>{/oracle_soa/server},{/oracle_soa/cluster}</Value>
+			<Description>Deployment targets equals target servers and clusters</Description>
+		</Property>
+
+		<Property name="/oracle_soa/submodule_targets" highlighted="false">
+			<Value>{/custom/submodule_targets}</Value>
+			<Description>Submodule level targets for JMS modules. For example,submod@mod-jms.xml@target or submoduleName@target</Description>
+		</Property>
+		<Property name="/oracle_soa/package" highlighted="false">
+			<Value>{/target/target_files_dirs}/{/custom/package}</Value>
+			<Description>Absolute path to a specified SAR file or to all SAR files included in the ZIP file.</Description>
+		</Property>
+		<Property name="/oracle_soa/options" highlighted="false">
+			<Value>{/custom/options}</Value>
+			<Description>Optional. Comma-separated list of deployment options, specified as name-value pairs</Description>
+		</Property>
+
+		<!-- EXECUTABLE SCRIPT -->
+		<Property name="/oracle_soa/script/connect_to_server" highlighted="false">
+			<Value>{/custom/connect_to_server}</Value>
+			<Description>Defines if WLST should connect to a server with the given Host, Port, Username, Password before executing the script. YES/NO</Description>
+		</Property>
+		<Property name="/oracle_soa/script/script_path" highlighted="false">
+			<Value>{/custom/script_path}</Value>
+			<Description>Path to the Python script which will be executed with WLST. Path can be absolute or relative to WL_HOME.</Description>
+		</Property>
+
+		<!-- JMS -->
+		<Property name="/oracle_soa/jms/server" highlighted="false">
+			<Value>{/custom/jms_server}</Value>
+			<Description>JMS server name</Description>
+		</Property>
+		<Property name="/oracle_soa/jms/module" highlighted="false">
+			<Value>{/custom/jms_module}</Value>
+			<Description>JMS module name</Description>
+		</Property>
+		<Property name="/oracle_soa/jms/subdeployment" highlighted="false">
+			<Value>{/custom/jms_subdeployment}</Value>
+			<Description>JMS subdeployment name</Description>
+		</Property>
+		<Property name="/oracle_soa/jms/resource_name" highlighted="false">
+			<Value>{/custom/jms_resource_name}</Value>
+			<Description>JMS resource name (for message queues and topics)</Description>
+		</Property>
+		<Property name="/oracle_soa/jms/resource_jndi_name" highlighted="false">
+			<Value>{/oracle_soa/jms/resource_name}</Value>
+			<Description>JMS resource JNDI name</Description>
+		</Property>
+
+		<!-- JDBC -->
+		<Property name="/oracle_soa/jdbc/driver" highlighted="false">
+			<Value>{/custom/jdbc_driver}</Value>
+			<Description>Driver / Java class name used for the connection eg: oracle.jdbc.xa.client.OracleXADataSource</Description>
+		</Property>
+		<Property name="/oracle_soa/jdbc/name" highlighted="false">
+			<Value>{/custom/jdbc_name}</Value>
+			<Description>Name of the datasource</Description>
+		</Property>
+		<Property name="/oracle_soa/jdbc/jndi_name" highlighted="false">
+			<Value>{/custom/jndi_name}</Value>
+			<Description>JNDI name of the datasource</Description>
+		</Property>
+		<Property name="/oracle_soa/jdbc/url" highlighted="false">
+			<Value>{/custom/jdbc_url}</Value>
+			<Description>Datasource connection url eg: jdbc:oracle:thin:@server:port:sid or jdbc:weblogic:sqlserver://server:port</Description>
+		</Property>
+		<Property name="/oracle_soa/jdbc/username" highlighted="false">
+			<Value>{/custom/jdbc_username}</Value>
+			<Description>Username used to authenticate with the datasource</Description>
+		</Property>
+		<Property name="/oracle_soa/jdbc/password" highlighted="false">
+			<Value>{/custom/jdbc_password}</Value>
+			<Description>Password used to authenticate with the datasource</Description>
+		</Property>
+		<Property name="/oracle_soa/jdbc/database" highlighted="false">
+			<Value>{/custom/jdbc_database}</Value>
+			<Description>Name of the database</Description>
+		</Property>
+		<Property name="/oracle_soa/jdbc/driver_properties" highlighted="false">
+			<Value>{/custom/jdbc_driver_properties}</Value>
+			<Description>Additional driver properties eg: portNumber=1433,databaseName=mydb,serverName=myserver</Description>
+		</Property>
+		<Property name="/oracle_soa/jdbc/test_table" highlighted="false">
+			<Value>{/custom/jdbc_test_table}</Value>
+			<Description>Test table name or test query used to test database connections. Eg 'SQL SELECT 1 FROM DUAL'</Description>
+		</Property>
+		
+		<!-- PersistentStore -->
+		<Property name="/oracle_soa/persistentstore/name" highlighted="false">
+			<Value>{/custom/persistentstore_name}</Value>
+			<Description>Name of the persistent store</Description>
+		</Property>
+		<Property name="/oracle_soa/persistentstore/target_server" highlighted="false">
+			<Value>{/custom/target_server}</Value>
+			<Description>The server instances, clusters, or migratable targets defined in the current domain that are candidates for hosting a file store, JDBC store, or replicated store</Description>
+		</Property>
+		<Property name="/oracle_soa/persistentstore/filestore/directory" highlighted="false">
+			<Value>{/custom/filestore_dir}</Value>
+			<Description>Path to the directory in which the filestore will be stored</Description>
+		</Property>
+		
+		<Property name="/oracle_soa/persistentstore/filestore/params" highlighted="false">
+			<Value>{/custom/filestore_params}</Value>
+			<Description>Additional parameters that can be specified for firestore</Description>
+		</Property>
+		
+		<Property name="/oracle_soa/persistentstore/jdbcstore/prefix" highlighted="false">
+			<Value>{/custom/jdbcstore_prefix}</Value>
+			<Description>Prefix for the tables that are stored within the datasource</Description>
+		</Property>
+		
+		<Property name="/oracle_soa/persistentstore/jdbcstore/params" highlighted="false">
+			<Value>{/custom/jdbcstore_params}</Value>
+			<Description>Additional parameters that can be specified for jdbcstore</Description>
+		</Property>
+		
+		<!-- SERVER -->
+		<Property name="/oracle_soa/server/host" highlighted="false">
+			<Value>{@target/custom/host}</Value>
+			<Description>Hostname or IP address of the physical machine</Description>
+		</Property>
+		<Property name="/oracle_soa/server/port" highlighted="false">
+			<Value>{@target/custom/port}</Value>
+			<Description>Port number which should be used to connect</Description>
+		</Property>
+		<Property name="/oracle_soa/server/protocol" highlighted="false">
+			<Value>{@target/custom/protocol}</Value>
+			<Description>Connection protocol to connect WLST to server</Description>
+		</Property>
+		<Property name="/oracle_soa/server/username" highlighted="false">
+			<Value>{@target/custom/username}</Value>
+			<Description>Username used to authenticate with WebLogic</Description>
+		</Property>
+		<Property name="/oracle_soa/server/password" highlighted="false">
+			<Value>{@target/custom/password}</Value>
+			<Description>Password used to authenticate with WebLogic</Description>
+		</Property>
+		<Property name="/oracle_soa/server/url" highlighted="false">
+			<Value>{/oracle_soa/server/protocol}://{/oracle_soa/server/host}:{/oracle_soa/server/port}</Value>
+			<Description>URL of the Administration Server</Description>
+		</Property>
+		<Property name="/oracle_soa/server/start_script" highlighted="false">
+			<Value>{@target/custom/start_script}</Value>
+			<Description>Script to use to start up the Domain Administration Server</Description>
+		</Property>
+		<Property name="/oracle_soa/server/shutdown_script" highlighted="false">
+			<Value>{@target/custom/shutdown_script}</Value>
+			<Description>Script to use to shutdown the Domain Administration Server</Description>
+		</Property>
+		<Property name="/oracle_soa/server/service" highlighted="false">
+			<Value>{@target/custom/service}</Value>
+			<Description>Windows Service name of Administration Server</Description>
+		</Property>
+
+		<!-- CLUSTER -->
+		<Property name="/oracle_soa/cluster/multicast_address" highlighted="false">
+			<Value>{/custom/multicast_address}</Value>
+			<Description>IP address dedicate to multicast communications for cluster (IP address between 224.0.0.0 and 239.255.255.255)</Description>
+		</Property>
+		<Property name="/oracle_soa/cluster/multicast_port" highlighted="false">
+			<Value>{/custom/multicast_port}</Value>
+			<Description>Port dedicate to multicast communications for cluster</Description>
+		</Property>
+		<Property name="/oracle_soa/cluster/frontend_host" highlighted="false">
+			<Value>{/custom/frontend_host}</Value>
+			<Description>Name of the host that represents the cluster (endpoint for WSDL generation)</Description>
+		</Property>
+		<Property name="/oracle_soa/cluster/frontend_http_port" highlighted="false">
+			<Value>{/custom/frontend_http_port}</Value>
+			<Description>HTTP Port that represents the cluster (endpoint for WSDL generation)</Description>
+		</Property>
+		<Property name="/oracle_soa/cluster/frontend_https_port" highlighted="false">
+			<Value>{/custom/frontend_https_port}</Value>
+			<Description>HTTPS Port that represents the cluster (endpoint for WSDL generation)</Description>
+		</Property>
+		<Property name="/oracle_soa/cluster/cluster_properties" highlighted="false">
+			<Value>{/custom/cluster_properties}</Value>
+			<Description>Addtional parameters that can be specified for cluster</Description>
+		</Property>
+		
+		<!-- MACHINE -->
+		<Property name="/oracle_soa/machine/machine_properties" highlighted="false">
+			<Value>{/custom/machine_properties}</Value>
+			<Description>Addtional parameters that can be specified for machine</Description>
+		</Property>
+		<Property name="/oracle_soa/machine/nm_host" highlighted="false">
+			<Value>{@target/custom/nm_host}</Value>
+			<Description>IP or hostname of the Node Manager</Description>
+		</Property>
+		<Property name="/oracle_soa/machine/nm_port" highlighted="false">
+			<Value>{@target/custom/nm_port}</Value>
+			<Description>Port number used to connect to the Node Manager</Description>
+		</Property>
+		<Property name="/oracle_soa/machine/nm_username" highlighted="false">
+			<Value>{@target/custom/nm_username}</Value>
+			<Description>Username of the operator who is connecting WLST to Node Manager</Description>
+		</Property>
+		<Property name="/oracle_soa/machine/nm_password" highlighted="false">
+			<Value>{@target/custom/nm_password}</Value>
+			<Description>Password of the operator who is connecting WLST to Node Manager</Description>
+		</Property>
+		<Property name="/oracle_soa/machine/nm_type" highlighted="false">
+			<Value>{@target/custom/nm_type}</Value>
+			<Description>The Node Manager type user want to connect to</Description>
+		</Property>
+		<Property name="/oracle_soa/machine/start_script" highlighted="false">
+			<Value>{@target/custom/nm_start_script}</Value>
+			<Description>Script to use to start up the Node Manager</Description>
+		</Property>
+		<Property name="/oracle_soa/machine/shutdown_script" highlighted="false">
+			<Value>{@target/custom/nm_shutdown_script}</Value>
+			<Description>Script to use to shutdownn the Node Manager</Description>
+		</Property>
+		<Property name="/oracle_soa/machine/service" highlighted="false">
+			<Value>{@target/custom/nm_service}</Value>
+			<Description>Windows Service name of the node manager</Description>
+		</Property>
+		
+		<!-- DOMAIN -->
+		<Property name="/oracle_soa/domain/domain_dir" highlighted="false">
+			<Value>{@target/custom/domain_dir}</Value>
+			<Description>Path of the domain directory to which user want to save the Node Manager secret file (nm_password.properties) and SerializedSystemIni.dat file. This argument defaults to the directory in which WLST was started</Description>
+		</Property>
+		<Property name="/oracle_soa/domain/domain_name" highlighted="false">
+			<Value>{@target/custom/domain_name}</Value>
+			<Description>Name of the WebLogic domain that user want to manage</Description>
+		</Property>
+		<Property name="/oracle_soa/domain/domain_properties" highlighted="false">
+			<Value>{/custom/domain_properties}</Value>
+			<Description>Addtional parameters that can be specified for domain</Description>
+		</Property>
+
+		<!-- SOURCE -->
+		<Property name="/source/protocol" highlighted="false" type="SingleChoice">
+			<Value>UC4_FILE_TRANSFER</Value>
+			<Description>Defines the protocol to use to get the component from source.</Description>
+			<List>HTTP#;#HTTPS#;#FTP#;#FTPS#;#SMB#;#SFTP#;#SCP#;#SVN#;#CVS#;#TFS#;#UC4_FILE_TRANSFER</List>
+		</Property>
+		<Property name="/source/source_files_dirs" highlighted="false">		
+			<Description>Remote file/directory to be downloaded. Directory not supported for HTTP(S). Not required for TFS, CVS, SVN</Description>
+		</Property>
+		<Property name="/target/target_files_dirs" highlighted="false">	
+			<Value>{@target/custom/staging_base_directory}/{@application/system/name}/{/system/name}/{@deployment_package/system/name}</Value>
+			<Description>Name of a local file/directory where downloaded file/directory is stored. HTTP(S):Directory not supported. CVS, TFS: must be a directory.</Description>
+		</Property>
+		<Property name="/target/overwrite_target" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>
+			<Description>Overwrite local files/directory if exist. For SVN, all files will be exported but already present files will not be overwritten. For TFS, overwrites all items in the workspace(CLI: /force)</Description>
+			<List>Yes#;#No</List>
+		</Property>
+
+		<!-- HTTP -->
+		<Property name="/source/http/url" highlighted="false">
+			<Description>URL</Description>
+		</Property>
+		<Property name="/source/http/port" highlighted="false">
+			<Value>80</Value>
+			<Description>Port of HTTP connection</Description>
+		</Property>
+		<Property name="/source/http/username" highlighted="false">
+			<Description>Username to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/http/password" highlighted="false"  type="Protected">
+			<Description>Password to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/http/connection_timeout" highlighted="false" type="Float">
+			<Value>5000</Value>
+			<Description>Timeout in miliseconds to wait to build up a connection to the target host. Default: 5000.</Description>
+		</Property>
+		<Property name="/source/http/proxy_host" highlighted="false">
+			<Description>Proxy host to use.</Description>
+		</Property>
+		<Property name="/source/http/proxy_port" highlighted="false">
+			<Description>Proxy port to use.</Description>
+		</Property>
+		<Property name="/source/http/proxy_user" highlighted="false">
+			<Description>Username if proxy requires authentication.</Description>
+		</Property>
+		<Property name="/source/http/proxy_pwd" highlighted="false"  type="Protected">
+			<Description>Password if proxy requires authentication.</Description>
+		</Property>
+
+		<!-- HTTPS -->
+		<Property name="/source/https/url" highlighted="false">
+			<Description>URL</Description>
+		</Property>
+		<Property name="/source/https/port" highlighted="false">
+			<Value>443</Value>
+			<Description>Port of HTTPS connection</Description>
+		</Property>
+		<Property name="/source/https/username" highlighted="false">
+			<Description>Username to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/https/password" highlighted="false"  type="Protected" >
+			<Description>Password to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/https/connection_timeout" highlighted="false" type="Float">
+			<Value>5000</Value>
+			<Description>Timeout in miliseconds to wait to build up a connection to the target host. Default: 5000.</Description>
+		</Property>
+		<Property name="/source/https/proxy_host" highlighted="false">
+			<Description>Proxy host to use.</Description>
+		</Property>
+		<Property name="/source/https/proxy_port" highlighted="false">
+			<Description>Proxy port to use.</Description>
+		</Property>
+		<Property name="/source/https/proxy_user" highlighted="false">
+			<Description>Username if proxy requires authentication.</Description>
+		</Property>
+		<Property name="/source/https/proxy_pwd" highlighted="false"  type="Protected">
+			<Description>Password if proxy requires authentication.</Description>
+		</Property>
+
+		<!-- FTP -->
+		<Property name="/source/ftp/host" highlighted="false">
+			<Description>Host to connect to.</Description>
+		</Property>
+		<Property name="/source/ftp/port" highlighted="false">
+			<Value>21</Value>
+			<Description>Port to connect to.</Description>
+		</Property>		
+		<Property name="/source/ftp/username" highlighted="false">
+			<Description>Username to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/ftp/password" highlighted="false"  type="Protected">
+			<Description>Password to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/ftp/recursive_download" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>	
+			<Description>Recursively get files and directories. If set to no, only direct children of the directory are downloaded</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/ftp/connection_timeout" highlighted="false" type="Float">
+			<Value>5000</Value>
+			<Description>Timeout in miliseconds to wait to build up a connection to the target host. Default: 5000.</Description>
+		</Property>
+		<Property name="/source/ftp/proxy_host" highlighted="false">
+			<Description>Proxy host to use.</Description>
+		</Property>
+		<Property name="/source/ftp/proxy_port" highlighted="false">
+			<Description>Proxy port to use.</Description>
+		</Property>
+		<Property name="/source/ftp/proxy_user" highlighted="false">
+			<Description>Username if proxy requires authentication.</Description>
+		</Property>
+		<Property name="/source/ftp/proxy_pwd" highlighted="false"  type="Protected">
+			<Description>Password if proxy requires authentication.</Description>
+		</Property>	
+		<Property name="/source/ftp/transfer_mode" highlighted="false" type="SingleChoice" >
+			<Value>BINARY</Value>
+			<Description>Text/Binary transfer modes.</Description>
+			<List>BINARY#;#TEXT</List>
+		</Property>				
+
+		<!-- FTPS -->
+		<Property name="/source/ftps/host" highlighted="false">
+			<Description>Host to connect to.</Description>
+		</Property>
+		<Property name="/source/ftps/port" highlighted="false">
+			<Value>990</Value>
+			<Description>Port to connect to.</Description>
+		</Property>		
+		<Property name="/source/ftps/username" highlighted="false">
+			<Description>Username to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/ftps/password" highlighted="false" type="Protected">
+			<Description>Password to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/ftps/recursive_download" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>	
+			<Description>Recursively get files and directories. If set to no, only direct children of the directory are downloaded</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/ftps/connection_timeout" highlighted="false" type="Float">
+			<Value>5000</Value>
+			<Description>Timeout in miliseconds to wait to build up a connection to the target host. Default: 5000.</Description>
+		</Property>
+		<Property name="/source/ftps/proxy_host" highlighted="false">
+			<Description>Proxy host to use.</Description>
+		</Property>
+		<Property name="/source/ftps/proxy_port" highlighted="false">
+			<Description>Proxy port to use.</Description>
+		</Property>
+		<Property name="/source/ftps/proxy_user" highlighted="false">
+			<Description>Username if proxy requires authentication.</Description>
+		</Property>
+		<Property name="/source/ftps/proxy_pwd" highlighted="false" type="Protected">
+			<Description>Password if proxy requires authentication.</Description>
+		</Property>	
+		<Property name="/source/ftps/transfer_mode" highlighted="false" type="SingleChoice" >
+			<Value>BINARY</Value>
+			<Description>Text/Binary transfer modes.</Description>
+			<List>BINARY#;#TEXT</List>
+		</Property>			
+
+		<!-- SFTP -->
+		<Property name="/source/sftp/host" highlighted="false">
+			<Description>Host to connect to.</Description>
+		</Property>
+		<Property name="/source/sftp/port" highlighted="false">
+			<Value>22</Value>
+			<Description>Port to connect to.</Description>
+		</Property>		
+		<Property name="/source/sftp/username" highlighted="false">
+			<Description>Username to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/sftp/password" highlighted="false" type="Protected">
+			<Description>Password to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/sftp/recursive_download" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>	
+			<Description>Recursively get files and directories. If set to no, only direct children of the directory are downloaded</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/sftp/connection_timeout" highlighted="false" type="Float">
+			<Value>5000</Value>
+			<Description>Timeout in miliseconds to wait to build up a connection to the target host. Default: 5000.</Description>
+		</Property>
+		<Property name="/source/sftp/preserve_att" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>
+			<Description>Preserves creation/modification times and modes of the original files. Default: yes</Description>
+			<List>Yes#;#No</List>
+		</Property>
+
+
+		<!-- SCP -->
+		<Property name="/source/scp/host" highlighted="false">
+			<Description>Host to connect to.</Description>
+		</Property>
+		<Property name="/source/scp/port" highlighted="false">
+			<Value>22</Value>
+			<Description>Port to connect to.</Description>
+		</Property>		
+		<Property name="/source/scp/username" highlighted="false">
+			<Description>Username to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/scp/password" highlighted="false" type="Protected">
+			<Description>Password to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/scp/preserve_att" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>
+			<Description>Preserves creation/modification times and modes of the original files. Default: yes</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/scp/recursive_download" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>	
+			<Description>Recursively get files and directories. If set to no, only direct children of the directory are downloaded</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/scp/connection_timeout" highlighted="false" type="Float">
+			<Value>5000</Value>
+			<Description>Timeout in miliseconds to wait to build up a connection to the target host. Default: 5000.</Description>
+		</Property>
+
+		<!-- SMB -->
+		<Property name="/source/smb/host" highlighted="false">
+			<Description>Host to connect to.</Description>
+		</Property>
+		<Property name="/source/smb/port" highlighted="false">
+			<Value>139</Value>
+			<Description>Port to connect to.</Description>
+		</Property>		
+		<Property name="/source/smb/username" highlighted="false">
+			<Description>Username to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/smb/password" highlighted="false" type="Protected">
+			<Description>Password to authenticate with the server (if required by the server)</Description>
+		</Property>
+		<Property name="/source/smb/preserve_att" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>
+			<Description>Preserves creation/modification times and modes of the original files. Default: yes</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/smb/recursive_download" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>	
+			<Description>Recursively get files and directories. If set to no, only direct children of the directory are downloaded</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/smb/connection_timeout" highlighted="false" type="Float">
+			<Value>5000</Value>
+			<Description>Timeout in miliseconds to wait to build up a connection to the target host. Default: 5000.</Description>
+		</Property>
+		<Property name="/source/smb/domain_name" highlighted="false">
+			<Description>Required if target machine belongs to a windows domain.</Description>
+		</Property>
+
+		<!-- UC4 File Transfer -->
+		<Property  name="/source/uc4_ft/host" highlighted="false" type="Reference" referenceTo="Agent">
+			<Description>The source host (agent name).</Description>
+		</Property>
+		<Property name="/source/uc4_ft/transfer_format" highlighted="false" type="SingleChoice">
+			<Value>BINARY</Value>
+			<Description>Transfer format setting. Default: text</Description>
+			<List>BINARY#;#TEXT</List>
+		</Property>		
+		<Property name="/source/uc4_ft/use_compression" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>
+			<Description>Use the compression for the transfer (needs CPU!). Default: no</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/uc4_ft/transfer_subdirs" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>
+			<Description>Option to transfer the content of the sub directories as well(works only if source file is a directory). Default: yes</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/uc4_ft/parallel_transfer" highlighted="false" type="Float">
+			<Value>5</Value>
+			<Description>Number of parallel transfers (works only if source file is a directory). Default: 5</Description>
+		</Property>
+
+		<!-- SVN -->
+		<Property name="/source/svn/uri" highlighted="false">
+			<Description>Repository URI. Example: svn://repo/app/trunk or https://repo:1942/app/trunk.</Description>
+		</Property>
+		<Property name="/source/svn/username" highlighted="false">
+			<Description>Username used for authentication with the repository.</Description>
+		</Property>		
+		<Property name="/source/svn/password" highlighted="false" type="Protected">
+			<Description>Password used for authentication with the repository.</Description>
+		</Property>
+		<Property name="/source/svn/revision" highlighted="false">
+			<Description>Revision number. In case no revision is specified, revision will be HEAD. CLI option -r.</Description>
+		</Property>
+		<Property name="/source/svn/trust_server_cert" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>
+			<Description>Defines whether to accept unknown SSL server certificates or not. CLI option --trust-server-cert. Default: Yes</Description>
+			<List>Yes#;#No</List>
+		</Property>
+
+		<!-- CVS -->
+		<Property name="/source/cvs/uri" highlighted="false">
+			<Description>Repository URI. Example: ":pserver:username@cvs.server.local:/usr/local/cvs/application".</Description>
+		</Property>
+		<Property name="/source/cvs/module" highlighted="false">
+			<Description>Module that should be exported.</Description>
+		</Property>		
+		<Property name="/source/cvs/password" highlighted="false" type="Protected">
+			<Description>Password used for authentication with the repository.</Description>
+		</Property>
+		<Property name="/source/cvs/revision" highlighted="false">
+			<Description>Revision number. In case no revision is specified, revision will be HEAD. CLI option -r.</Description>
+		</Property>
+
+		<!-- TFS -->
+		<Property name="/source/tfs/util_path" highlighted="false">
+			<Description>Path to the tf.exe utility which will be used to communicate with Team Foundation Server. If no path was specified, the default value (C:/Program Files/Microsoft Visual Studio 9.0/Common7/IDE/Tf) will be assumed. </Description>
+		</Property>
+		<Property name="/source/tfs/item" highlighted="false">
+			<Description>File or folder to retrieve. If no itemspec is provided, Team Foundation Server performs a recursive get operation of the current workspace. For ex: $/Project/</Description>
+		</Property>		
+		<Property name="/source/tfs/version" highlighted="false">
+			<Description>Optional version specification. The versionspec is the version of the item you want to retrieve. You can specify a version by: Date/time (D10/20/2005), Changeset version (C1256), Label (Lmylabel), Latest version (T), Workspace version (Workspacename;owner). If no version is provided, Team Foundation Server retrieves the latest server version of the specified itemspec into your workspace.</Description>
+		</Property>
+		<Property name="/source/tfs/retrieve_all" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>
+			<Description>Replace the file on disk, even if the workspace version is the same as the requested server version. Used when "Overwrite files" option is set to NO.(CLI option /all)</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/tfs/overwrite" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>
+			<Description>Forcibly overwrite the writable current workspace version with a specified server version. Used only when "Overwrite files" option is set to NO.(CLI option /overwrite)</Description>
+			<List>Yes#;#No</List>
+		</Property>
+		<Property name="/source/tfs/recursive" highlighted="false" type="SingleChoice">
+			<Value>Yes</Value>
+			<Description>Recursively retrieves all items that match your itemspec.</Description>
+			<List>Yes#;#No</List>
+		</Property>
+
+		<!-- STAGING -->
+		<Property name="/staging/working_files_dirs" highlighted="false">
+			<Value>{/staging/working_base_dir}/{@application/system/name}/{/system/name}</Value>
+			<Description>Files/Directory on the staging server after downloaded from source.</Description>
+		</Property>
+		<Property name="/staging/agent" highlighted="false">
+			<Value>{@target/custom/staging_remote_agent}</Value>
+			<Description>Agent which will be used for staging</Description>
+		</Property>	
+		<Property name="/staging/working_base_dir" highlighted="false">
+			<Value>{@target/custom/staging_remote_directory}</Value>
+			<Description>Base directory on the staging server where package should be downloaded to.</Description>
+		</Property>	
+
+
+	</DynamicProperties>
+
+</ComponentType>

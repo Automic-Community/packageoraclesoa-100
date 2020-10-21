@@ -1,0 +1,39 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Setup_suite
+Suite Teardown    Teardown_suite
+Force Tags        #_action_short_name_#    _template_
+Default Tags      win    unix
+Test Template     #_action_keyword_template_name_#
+Resource          ../../resources/keywords.txt
+Resource          prt_keywords.txt
+
+*** Test Cases ***    #_test_case_args_header_#    RETURN CODE   RETURN STATUS   MESSAGE
+Test Case 1          #_test_case_args_#      0      ${ENDED_OK}    ${EMPTY}
+ 
+*** Keywords ***
+
+#_action_keyword_template_name_#
+    #_template_documentation_#
+    [Arguments]    #_test_case_args_#    ${returnCode}    ${returnStatus}    ${message}
+    Init Action    #_action_variable_name_#
+#_action_promptset_set_#    
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${header_logging}
+    Action Report Should Contain    ${param_logging} 
+    Action Report Should Contain    ${execution_logging}    
+    Action Report Should Contain    ${message}
+    Action Report Should Contain    ${footer_logging_OK}
+        
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log   Start testing for #_action_keyword_template_name_#
+    
+Teardown_suite
+    [Documentation]    TODO: Write all steps for cleanup after testing here
+    Log   Testing for #_action_keyword_template_name_# end

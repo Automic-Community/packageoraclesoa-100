@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<DOCU name="PCK.AUTOMIC_ORACLE_SOA.PUB.DOC">
+<HEADER state="1">
+<Title>Oracle_SOA Package documentation</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[About Automic's Oracle_SOA Package
+================================
+
+Manage SOA composite application deployments to a Oracle SOA server using these actions
+* Start Application
+* Stop Application
+* Activate Application
+* Deploy Application
+* Undeploy Application
+
+=Supported Fusion Middleware versions=
+
+Currently the following Application Servers are supported:
+
+* Oracle SOA Suite 12c (12.1.3)
+
+=Setup=
+
+* Java JDK 1.7 or higher must be installed and executeable as 'java'.
+
+* The Agent to execute the wsadmin tool will be the OS Agent. The executing OS Agent is expected to be on the Oracle SOA Suite Server.
+
+* Set environment variable ORACLE_HOME to the WebLogic home directory.
+
+=Rollback=
+These actions do not support rollback.
+]]></DOC>
+</DOCU_Docu>
+</DOCU>
+</uc-export>

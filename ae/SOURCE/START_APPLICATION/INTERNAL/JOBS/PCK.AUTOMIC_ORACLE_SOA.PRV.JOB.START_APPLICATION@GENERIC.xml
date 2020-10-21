@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBS_GENERIC AttrType="GENERIC" name="PCK.AUTOMIC_ORACLE_SOA.PRV.JOB.START_APPLICATION@GENERIC">
+<XHEADER state="1">
+<Title>WebLogic :: Start Application</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<Active>1</Active>
+<OH_SubType/>
+<CustomAttributes KeyListID="0" dataRequestID="0"/>
+</XHEADER>
+<OUTPUTREG state="1">
+<FileReg/>
+</OUTPUTREG>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_JOBS state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<HostDst>|&lt;GENERIC&gt;|HOST</HostDst>
+<HostATTR_Type>GENERIC</HostATTR_Type>
+<CodeName/>
+<Login/>
+<IntAccount/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<AutoDeactNo>0</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
+<DeactWhen>ANY_OK</DeactWhen>
+<DeactDelay>0</DeactDelay>
+<AutoDeactAlways>0</AutoDeactAlways>
+<AttDialog>0</AttDialog>
+<ActAtRun>1</ActAtRun>
+<Consumption>0</Consumption>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+</ATTR_JOBS>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| |</FcstStatus>
+
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<PRE_SCRIPT mode="1" replacementmode="1" state="1">
+<PSCRI><![CDATA[:INCLUDE PCK.ITPA_SHARED.PUB.INCLUDE.START_STOP_JOB_ACCORDING_TO_AGENT_OS
+]]></PSCRI>
+</PRE_SCRIPT>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[:DEFINE &STRING_ARR#, string, 100
+:SWITCH &$PLATFORM#
+:  CASE "WINDOWS"
+@echo off
+:  CASE "UNIX"
+! <Begin of sudo script>
+:  INC PCK.ITPA_SHARED.PUB.INCLUDE.SUDOERS_HEADER
+:  OTHER
+:ENDSWITCH
+
+:INC PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.START_APPLICATION_LOGGING_PARAMS
+:IF &UC4RB_WEBLOGIC_HOST# = ''
+:  PRINT "Host must not be empty"
+:  EXIT 1
+:ENDIF
+
+:IF &UC4RB_WEBLOGIC_HOME# <> ''
+:  INC PCK.AUTOMIC_FILESYSTEM.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_WEBLOGIC_HOME"
+:  SET &UC4RB_CHECKME# = &UC4RB_WEBLOGIC_HOME#
+:  INC PCK.AUTOMIC_FILESYSTEM.PRV.INCLUDE.CHECK_DIR_EXISTS
+:ENDIF
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
+
+! Attach python script for start application
+:SET &UC4RB_CONVERTED_STRING# = "START_APPLICATION"
+:INC PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.ATTACH_PYTHON
+
+! Attach utils library
+:ATTACH_RES "PCK.AUTOMIC_ORACLE_SOA.PRV.STORE", "UTILS", C, N
+:SET &UC4RB_ORACLE_SOA_UTILS# = "&$AGENT_RESOURCES_CLIENT#pck_oracle_soa_utils.py"
+
+! decrypt password
+:INC PCK.ITPA_SHARED.PUB.INCLUDE.ATTACH
+:SET &UC4RB_ENCRYPTED_PASSWORD_TMP# = "&UC4RB_WEBLOGIC_PASSWORD#"
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.DECRYPT_PASSWORD
+
+! prepare general args
+:INC PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.PREPARE_ARGS
+
+! add custom args depends on your action
+:SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "&UC4RB_ORACLE_SOA_UTILS#"')
+:SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "&UC4RB_ORACLE_SOA_APP_NAME#"')
+:SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "&UC4RB_ORACLE_SOA_REVISION#"')
+:SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "&UC4RB_ORACLE_SOA_FAIL_RUNNING#"')
+:SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "_PREF:&UC4RB_ORACLE_SOA_LABEL#"')
+:SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "_PREF:&UC4RB_ORACLE_SOA_PARTITION#"')
+:SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "&UC4RB_BACKUP_DIRECTORY#"')
+:SET &UC4RB_WEBLOGIC_CMD# = STR_CAT(&UC4RB_WEBLOGIC_CMD#, ' "&UC4RB_SOA_ONLINE_MODE#"')
+
+! execute python script
+:INC PCK.AUTOMIC_ORACLE_SOA.PRV.INCLUDE.RUN_WLST
+:INC PCK.ITPA_SHARED.PUB.INCLUDE.SUDOERS_FOOTER
+]]></MSCRI>
+</SCRIPT>
+<OUTPUTSCAN state="1">
+<Inherit>N</Inherit>
+<filterobjects/>
+<HostFsc/>
+<LoginFsc/>
+</OUTPUTSCAN>
+<POST_SCRIPT mode="1" replacementmode="1" state="1">
+<OSCRI/>
+</POST_SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBS_GENERIC>
+</uc-export>

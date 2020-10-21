@@ -1,0 +1,6 @@
+--doc This is test suite of #_action_short_name_#
+--name  #_action_short_name_#
+--exclude _template_
+# This is a comment
+Init_Environments.txt
+testcases

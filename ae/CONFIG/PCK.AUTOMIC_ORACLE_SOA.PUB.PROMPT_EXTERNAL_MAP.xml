@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<VARA OVD_VRName="FREI" data_type="STATIC" name="PCK.AUTOMIC_ORACLE_SOA.PUB.PROMPT_EXTERNAL_MAP" replacementmode="2">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>STATIC</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>Static</lblSource>
+<source>STATIC</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<Variables>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_SOA_APP_LABEL#" Value="EXT:/oracle_soa/label" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_SOA_APP_NAME#" Value="EXT:/oracle_soa/application_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_SOA_APP_REV#" Value="EXT:/oracle_soa/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_SOA_PARTITION#" Value="EXT:/oracle_soa/partition" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_HOME#" Value="EXT:/oracle_soa/oracle_home" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_HOST#" Value="EXT:/oracle_soa/server/host" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_PASSWORD#" Value="EXT:/oracle_soa/server/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_PORT#" Value="EXT:/oracle_soa/server/port" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.ACTIVATE_APPLICATION/UC4RB_SOA_ONLINE_MODE#" Value="NO" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_SOA_CONFIG_PLAN#" Value="EXT:/oracle_soa/config_plan" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_SOA_FORCE_DEFAULT#" Value="YES" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_SOA_OVERWRITE#" Value="NO" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_SOA_PARTITION#" Value="EXT:/oracle_soa/partition" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_SOA_SAR_LOCATION#" Value="EXT:/oracle_soa/package" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_WEBLOGIC_HOME#" Value="EXT:/oracle_soa/oracle_home" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_WEBLOGIC_HOST#" Value="EXT:/oracle_soa/server/host" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_WEBLOGIC_PASSWORD#" Value="EXT:/oracle_soa/server/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_WEBLOGIC_PORT#" Value="EXT:/oracle_soa/server/port" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.DEPLOY_APPLICATION/UC4RB_SOA_ONLINE_MODE#" Value="NO" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_ORACLE_SOA_APP_NAME#" Value="EXT:/oracle_soa/application_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_ORACLE_SOA_FAIL_RUNNING#" Value="NO" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_ORACLE_SOA_LABEL#" Value="EXT:/oracle_soa/label" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_ORACLE_SOA_PARTITION#" Value="EXT:/oracle_soa/partition" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_ORACLE_SOA_REVISION#" Value="EXT:/oracle_soa/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_WEBLOGIC_HOME#" Value="EXT:/oracle_soa/oracle_home" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_WEBLOGIC_HOST#" Value="EXT:/oracle_soa/server/host" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_WEBLOGIC_PASSWORD#" Value="EXT:/oracle_soa/server/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_WEBLOGIC_PORT#" Value="EXT:/oracle_soa/server/port" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.START_APPLICATION/UC4RB_SOA_ONLINE_MODE#" Value="NO" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_APPNAME#" Value="EXT:/oracle_soa/application_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_FAIL_IF_STOPPED#" Value="NO" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_LABEL#" Value="EXT:/oracle_soa/label" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_PARTITION#" Value="EXT:/oracle_soa/partition" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_REVISION#" Value="EXT:/oracle_soa/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_HOME#" Value="EXT:/oracle_soa/oracle_home" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_HOST#" Value="EXT:/oracle_soa/server/host" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_PASSWORD#" Value="EXT:/oracle_soa/server/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_PORT#" Value="EXT:/oracle_soa/server/port" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.STOP_APPLICATION/UC4RB_SOA_ONLINE_MODE#" Value="NO" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/UC4RB_SOA_APP_NAME#" Value="EXT:/oracle_soa/application_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/UC4RB_SOA_APP_REV#" Value="EXT:/oracle_soa/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/UC4RB_SOA_PARTITION#" Value="EXT:/oracle_soa/partition" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/UC4RB_WEBLOGIC_HOME#" Value="EXT:/oracle_soa/oracle_home" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/UC4RB_WEBLOGIC_HOST#" Value="EXT:/oracle_soa/server/host" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/UC4RB_WEBLOGIC_PASSWORD#" Value="EXT:/oracle_soa/server/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/UC4RB_WEBLOGIC_PORT#" Value="EXT:/oracle_soa/server/port" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/UC4RB_WEBLOGIC_USE_PROTOCOL#" Value="EXT:/oracle_soa/server/protocol" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/UC4RB_WEBLOGIC_USERNAME#" Value="EXT:/oracle_soa/server/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_ORACLE_SOA.PUB.ACTION.UNDEPLOY_APPLICATION/UC4RB_SOA_ONLINE_MODE#" Value="NO" Value1="" Value2="" Value3="" Value4=""/>
+</Variables>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</VARA>
+</uc-export>

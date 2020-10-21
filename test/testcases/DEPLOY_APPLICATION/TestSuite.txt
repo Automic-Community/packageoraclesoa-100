@@ -1,0 +1,106 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Setup_suite
+Suite Teardown    Teardown_suite
+Force Tags        DEPLOY_APPLICATION
+Default Tags      win    unix    ALL
+Test Template     Deploy Application Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    OK_NOK     Sar Location                        Overwrite    Force Default    Config Plan                  Partition                      Oracle Home              Online Mode    RETURN CODE    RETURN STATUS
+1. Success deploy application with default value
+                      OK         ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              NO             0              ${ENDED_OK}
+
+2. Success deploy application with Overwrite is YES
+                      OK         ${_SAR_LOCATION}                    YES          YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              NO             0              ${ENDED_OK}
+
+3. Success deploy application with Force Default is NO
+                      [Setup]    Undeploy a Composite Application
+                      OK         ${_SAR_LOCATION}                    NO           NO               ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              NO             0              ${ENDED_OK}
+
+4. Fail deploy application with Overwrite is NO
+                      [Setup]    Deploy a Composite Application
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              NO             500            ${ENDED_NOK}
+
+5. Fail deploy application with wrong SAR location
+                      NOK        ${_SAR_LOCATION}_NOT_EXIST          NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              NO             2              ${ENDED_NOK}
+
+6. Fail deploy application with wrong config plan
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              NO             2              ${ENDED_NOK}
+
+7. Fail deploy application with wrong partition
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              NO             500            ${ENDED_NOK}
+
+8. Fail deploy application with wrong oracle home
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    NO             2              ${ENDED_NOK}
+
+9. Success deploy application with Online mode
+                      [Setup]    Undeploy a Composite Application
+                      OK         ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
+
+10. Success deploy application with Overwrite is YES Online mode
+                      OK         ${_SAR_LOCATION}                    YES          YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
+
+11. Success deploy application with Force Default is NO Online mode
+                      [Setup]    Undeploy a Composite Application
+                      OK         ${_SAR_LOCATION}                    NO           NO               ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            0              ${ENDED_OK}
+
+12. Fail deploy application with Overwrite is NO Online mode
+                      [Setup]    Deploy a Composite Application
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            500            ${ENDED_NOK}
+
+13. Fail deploy application with wrong SAR location Online mode
+                      NOK        ${_SAR_LOCATION}_NOT_EXIST          NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}              YES            2              ${ENDED_NOK}
+
+14. Fail deploy application with wrong config plan Online mode
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}_NOT_EXIST    ${_APP_PARTITION}              ${_WL_HOME}              YES            2              ${ENDED_NOK}
+
+15. Fail deploy application with wrong partition Online mode
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}_NOT_EXIST    ${_WL_HOME}              YES            500            ${ENDED_NOK}
+
+16. Fail deploy application with wrong oracle home Online mode
+                      NOK        ${_SAR_LOCATION}                    NO           YES              ${_CONFIG_PLAN}              ${_APP_PARTITION}              ${_WL_HOME}_NOT_EXIST    YES            2              ${ENDED_NOK}
+
+*** Keywords ***
+Deploy Application Template
+    [Arguments]    ${ok_nok}    ${sar}    ${overwrite}    ${force}    ${config}    ${partition}
+    ...    ${oracle_home}    ${online_mode}    ${returnCode}    ${returnStatus}
+    [Documentation]    This template is used for test DEPLOY_APPLICATION with needed arguments
+    ...    - ${OK_NOK}: boolean value indicate if the runbook(action) should be ENDED_OK or ENDED_NOT_OK. value of this variable should be OK or NOK.
+    ...    - ${sar}: Absolute path to a specified SAR file or to all SAR files included in the ZIP file.
+    ...    - ${overwrite}: Indicates whether to overwrite an existing SOA composite application file. false (default): Does not overwrite the file. true: Overwrites the file.
+    ...    - ${force}: Indicates whether to set the new composite as the default. true (default): Makes it the default composite. false: Does not make it the default composite.
+    ...    - ${config}: Absolute path of a configuration plan to be applied to a specified SAR file or to all SAR files included in the ZIP file.
+    ...    - ${partition}: string value indicate partition of deploy application
+    ...    - ${oracle_home}: string value indicate Oracle Home in target machine
+    ...    - ${retcode}: expected return code after execute action(runbook)
+    ...    - ${status}: expected return status after execute action(runbook)
+    Init Action    ${ACTION_DEPLOY_APPLICATION}
+    Set Default Weblogic Server Connection
+    Action Set    ${PRT_DEPLOY_APPLICATION_SAR}    ${sar}
+    Action Set    ${PRT_DEPLOY_APPLICATION_OVERWRITE}    ${overwrite}
+    Action Set    ${PRT_DEPLOY_APPLICATION_FORCE}    ${force}
+    Action Set    ${PRT_DEPLOY_APPLICATION_CONFIG}    ${config}
+    Action Set    ${PRT_DEPLOY_APPLICATION_PARTITION}    ${partition}
+    Action Set    ${PRT_DEPLOY_APPLICATION_ORACLE_HOME}    ${oracle_home}
+    Action Set    ${PRT_DEPLOY_APPLICATION_ONLINE_MODE}    ${online_mode}
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${header_logging}
+    Action Report Should Contain    ${param_logging}
+    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${execution_logging}
+    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${footer_logging_OK}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start testing for Deploy Application Template
+    Undeploy a Composite Application
+
+Teardown_suite
+    [Documentation]    TODO: Write all steps for cleanup after testing here
+    Log    Testing for Deploy Application Template end
+    Undeploy a Composite Application
