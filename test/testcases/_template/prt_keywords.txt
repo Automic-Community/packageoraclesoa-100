@@ -1,4 +1,0 @@
-*** Keywords ***
-Set Default Valid Promptset
-    [Arguments]    #_test_case_args_# 
-    #_action_promptset_set_# 
